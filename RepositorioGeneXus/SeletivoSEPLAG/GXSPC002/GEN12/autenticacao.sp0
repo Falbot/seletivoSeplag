@@ -1,0 +1,236 @@
+spec_i([ svcgrp,9,autenticacao,autenticacao,0,por,'18_0_8-180599' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'POSTGRESQL_EXTENSIONS','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'DS_READ_REPLICA','No')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',root)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CNTDLG','2')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',seletivoSEPLAG_DES)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','JDBC')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','15')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',autenticacao)).
+rule_i(0,prop('Folder',o(8,'API'))).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SERVICES_BASE_PATH',autenticacao)).
+rule_i(0,prop('GENERATE_GRPC_API','0')).
+rule_i(0,prop('GENERATE_REST_API','-1')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('ObjDesc',autenticacao)).
+rule_i(0,prop('ObjName',autenticacao)).
+rule_i(0,rule([ a(22,[ 'Rfr','"Atualizar"','5' ]) ],[],[],[])).
+rule_i(0,maingen(12)).
+rule_i(0,prop('PGMTYPE',main)).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Isvalid',[ 'IsValid',boolean,4,0,'',0,'Is Valid','',16 ]).
+attri_i('Usuario',[ 'Usuario',svchar,100,0,'',0,'Usuario','',5 ]).
+attri_i('Token',[ 'Token',vchar,2097152,0,'',0,'Token','',12 ]).
+attri_i('Sucsess',[ 'Sucsess',boolean,4,0,'',0,'Sucsess','',11 ]).
+attri_i('Success',[ 'Success',boolean,4,0,'',0,'Success','',15 ]).
+attri_i('Senha',[ 'Senha',svchar,100,0,'',0,'Senha','',6 ]).
+attri_i('Retorno',[ 'Retorno',svchar,40,0,'',0,'Retorno','',10 ]).
+attri_i('Refreshtoken',[ 'RefreshToken',vchar,2097152,0,'',0,'Refresh Token','',14 ]).
+attri_i('Httpresponse',[ 'HttpResponse',o(httpresponse),4,0,'',0,'Http Response','',7 ]).
+attri_i('Httprequest',[ 'HttpRequest',o(httprequest),4,0,'',0,'Http Request','',9 ]).
+attri_i('Httpclient',[ 'HttpClient',o(httpclient),4,0,'',0,'Http Client','',8 ]).
+attri_i('Restcode',[ 'Gx_restcode',int,3,0,'ZZ9',0,'HTTP Status Code','',17 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+dom_info_i(72,[ 'GeneXus\HttpMethod' ]).
+ 
+ 
+break_i(2,rpt,0,[],[ [],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,2).
+b_group_i(2,2,lit,0,3,0).
+b_group_i(1,1,lit,0,1,0).
+ 
+b_line_i(2,2,1,cmd,2,[ t('',146,2,0),t([ t('Token',3,2,7),t('After',3,2,13) ],29,2,13) ]).
+b_line_i(3,2,2,cmd,2,[ t('',141,3,0),t('''After pGerarToken''',3,3,6),t(',',7,2,25),t('Status',3,2,27),t(')',4,2,33) ]).
+b_line_i(4,2,2,cmd,2,[ t('',107,4,0),t('Restcode',23,2,0),t(=,10,2,0),t('200',3,2,0) ]).
+b_line_i(5,2,2,cmd,2,[ t('',147,5,0) ]).
+b_line_i(1,1,1,cmd,1,[ t('',207,1,0) ]).
+b_line_i(2,1,1,cmd,1,[ t('',211,2,0),t('RestMethod(POST)',3,1,29) ]).
+b_line_i(3,1,1,cmd,1,[ t('',209,3,0),t('Token(',3,1,37),t('Usuario',23,1,43),t(',',7,1,51),t('Senha',23,1,52),t(',',7,1,62),t('Token',23,1,63),t(',',7,1,74),t('Success',23,1,75),t(')',4,1,83) ]).
+b_line_i(4,1,1,cmd,1,[ t('',104,3,91),t(o(1,pGerarToken),28,1,91),t('Usuario',23,1,104),t(',',7,1,0),t('Senha',23,1,114),t(',',7,1,0),t('Token',23,1,122),t(',',7,1,0),t('Success',23,1,130) ]).
+b_line_i(5,1,1,cmd,1,[ t('',210,3,138) ]).
+b_line_i(6,1,1,cmd,1,[ t('',211,5,0),t('RestMethod(POST)',3,1,160) ]).
+b_line_i(7,1,1,cmd,1,[ t('',209,6,0),t('RefreshToken(',3,1,175),t('Token',23,1,188),t(',',7,1,194),t('Refreshtoken',23,1,195),t(',',7,1,208),t('Success',23,1,209),t(')',4,1,217) ]).
+b_line_i(8,1,1,cmd,1,[ t('',104,6,223),t(o(1,pGerarRefreshToken),28,1,223),t('Token',23,1,243),t(',',7,1,0),t('Refreshtoken',23,1,251),t(',',7,1,0),t('Success',23,1,266) ]).
+b_line_i(9,1,1,cmd,1,[ t('',210,6,274) ]).
+b_line_i(10,1,1,cmd,1,[ t('',208,7,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+warn_gen_i(msg(events(3,[]),src0312,[ '''Msg'' command is out of scope. It is not guaranteed to work; check the command documentation for further details.' ])).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+calling_main_i(42,9).
+ 
+att_prop_i(2,'Httpclient','VarServiceExtName','',d).
+att_prop_i(2,'Httprequest','VarServiceExtName','',d).
+att_prop_i(2,'Httpresponse','VarServiceExtName','',d).
+att_prop_i(2,'Refreshtoken','VarServiceExtName','',d).
+att_prop_i(2,'Retorno','VarServiceExtName','',d).
+att_prop_i(2,'Senha','VarServiceExtName','',d).
+att_prop_i(2,'Success','VarServiceExtName','',d).
+att_prop_i(2,'Sucsess','VarServiceExtName','',d).
+att_prop_i(2,'Token','VarServiceExtName','',d).
+att_prop_i(2,'Usuario','VarServiceExtName','',d).
+att_prop_i(2,'Isvalid','VarServiceExtName','',d).
+ 
+ 
+ 
+var_prop_i(2,'Restmethod',idBasedOn,72,v).
+var_prop_i(2,'Restmethod','AttValidationFailedMsg','GXSPC_OutOfRange',d).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_parm_i(proc,40,'PGERARREFRESHTOKEN',[ [ vchar,2097152,0,0 ],[ vchar,2097152,0,0 ],[ boolean,4,0,0 ] ],[ [ 'Token',in,[] ],[ 'RefreshToken',out,[] ],[ 'Success',out,[] ] ]).
+pgm_parm_i(proc,39,'PGERARTOKEN',[ [ svchar,100,0,0 ],[ svchar,100,0,0 ],[ vchar,2097152,0,0 ],[ boolean,4,0,0 ] ],[ [ 'Usuario',in,[] ],[ 'Senha',in,[] ],[ 'Token',out,[] ],[ 'Success',out,[] ] ]).
+ 
+pgm_callprotocol_i(svcgrp,9,'AUTENTICACAO','INTERNAL','').
+pgm_callprotocol_i(proc,40,'PGERARREFRESHTOKEN','INTERNAL','Unsecure').
+pgm_callprotocol_i(proc,39,'PGERARTOKEN','INTERNAL','Unsecure').
+ 
+ 
+ 
+pgm_sub_parm_i(svcgrp,9,'AUTENTICACAO','Token',[ [ svchar,100,0,0 ],[ svchar,100,0,0 ],[ vchar,2097152,0,0 ],[ boolean,4,0,0 ] ],[ [ 'Usuario',in,[] ],[ 'Senha',in,[] ],[ 'Token',out,[] ],[ 'Success',out,[] ] ]).
+pgm_sub_parm_i(svcgrp,9,'AUTENTICACAO','RefreshToken',[ [ vchar,2097152,0,0 ],[ vchar,2097152,0,0 ],[ boolean,4,0,0 ] ],[ [ 'Token',in,[] ],[ 'RefreshToken',out,[] ],[ 'Success',out,[] ] ]).
+ 
+ 
+module_info_i('GeneXus','PACKAGE','com.genexuscore').
+module_info_i('GeneXus','PackageName','GeneXus.jar').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

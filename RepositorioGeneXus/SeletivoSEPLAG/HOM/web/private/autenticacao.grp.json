@@ -1,0 +1,28 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"autenticacao",
+"BasePath":"autenticacao",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"token",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_token",
+"Implementation":"pGerarToken",
+"PathRegexp":"token",
+"Path":"token"
+
+},
+{
+"Verb":"POST",
+"Name":"refreshtoken",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_refreshtoken",
+"Implementation":"pGerarRefreshToken",
+"PathRegexp":"refreshtoken",
+"Path":"refreshtoken"
+
+}]}

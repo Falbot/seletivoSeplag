@@ -1,0 +1,432 @@
+spec_i([ mnproc,3,'dp Listar Pessoas',dpListarPessoas,0,por,'18_0_8-180599' ]).
+ 
+struct_i(2,1,[],[]).
+ 
+level_i(2,[ 3,[ [ 3,many ] ],[],[],[ [ [ 3 ],[ 7,8,9,10,11,12 ] ] ],[ [ [ 3 ],[] ] ],[ 7 ],'IPESSOA',[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+level_option_i(2,server_paging,[ y,[] ]).
+level_option_i(2,lvl_paging,[ [ t('(',0),t('Pagenumber',23),t(-,5),t('1',3),t(')',4),t(*,6),t('Pagesize',23) ],[ t('Pagesize',23) ] ]).
+ 
+ta_i(2,[ [ [ 3,7 ],[ 3,8 ],[ 3,9 ],[ 3,10 ],[ 3,11 ],[ 3,12 ] ] ]).
+ 
+las_i(2,[ [ 7,8,9,10,11,12 ] ]).
+ 
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'POSTGRESQL_EXTENSIONS','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'DS_READ_REPLICA','No')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',root)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CNTDLG','2')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',seletivoSEPLAG)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','JDBC')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','15')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',dpListarPessoas)).
+rule_i(0,prop('Folder',o(8,'DataProvider'))).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('OutputCollectionName',dpListarPessoas)).
+rule_i(0,prop('OutputCollection','0')).
+rule_i(0,prop('OutputSDT',o(26,sdtListaPessoas))).
+rule_i(0,prop(idINFER_SDT,idINFER_STRUCTURE_NO)).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop(idISWEBSERVICE,'0')).
+rule_i(0,prop('ObjDesc','dp Listar Pessoas')).
+rule_i(0,prop('ObjName',dpListarPessoas)).
+rule_i(0,rule([ a(22,[ 'Rfr','"Atualizar"','5' ]) ],[],[],[])).
+rule_i(0,maingen(12)).
+rule_i(0,parm([ 'Pagenumber','Pagesize','Gxm2rootcol' ],[])).
+rule_i(0,parmio([ [ 'Pagenumber',in ],[ 'Pagesize',in ],[ 'Gxm2rootcol',out ] ])).
+ 
+a_i(1,2,t,3,[],[ [],'IPESSOA',[] ]).
+ 
+v_i(t,i,1,[]).
+v_i(t,o,1,7).
+v_i(t,o,1,8).
+v_i(t,o,1,9).
+v_i(t,o,1,10).
+v_i(t,o,1,11).
+v_i(t,o,1,12).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i(7,[ pes_id,int,4,0,'ZZZ9',0,pes_id,'',0 ]).
+attri_i(8,[ pes_nome,svchar,200,0,'@!',0,pes_nome,'',0 ]).
+attri_i(9,[ pes_data_nascimento,date,8,0,'99/99/9999',0,pes_data_nascimento,'',0 ]).
+attri_i(10,[ pes_sexo,svchar,9,0,'@!',0,pes_sexo,'',0 ]).
+attri_i(11,[ pes_mae,svchar,200,0,'@!',0,pes_mae,'',0 ]).
+attri_i(12,[ pes_pai,svchar,200,0,'@!',0,pes_pai,'',0 ]).
+attri_i('Gxm1sdtlistapessoas',[ 'Gxm1sdtlistapessoas',o('sdtListaPessoas.sdtListaPessoasItem'),0,0,'',0,'Gxm1sdtlistapessoas','',8 ]).
+attri_i('Gxm2rootcol',[ 'Gxm2rootcol',o(objectcollection('sdtListaPessoas.sdtListaPessoasItem')),0,0,'',0,'Gxm2rootcol','',7 ]).
+attri_i('Pagenumber',[ 'PageNumber',int,10,0,'ZZZZZZZZZ9',0,'Page Number','',6 ]).
+attri_i('Pagesize',[ 'PageSize',int,10,0,'ZZZZZZZZZ9',0,'Page Size','',5 ]).
+ 
+table_i(3,[ pessoa,[ 7,8,9,10,11,12 ],pessoa,pessoa ]).
+ 
+index_i(3,[ 'IPESSOA',u,[ 7 ],'Ipessoa' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [ 12,11,10,9,8,7 ],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,3).
+b_group_i(1,2,nvg,2,3,3).
+b_group_i(2,1,lit,0,4,5).
+b_group_i(1,3,lit,0,12,0).
+ 
+b_line_i(3,2,1,cmd,4,[ t('',121,3,0) ]).
+b_line_i([ 3,2 ],2,1,cmd,3,[ t('',107,3,0),t('Gxm1sdtlistapessoas',23,3,0),t(=,10,3,0),t([ 'sdtListaPessoas.sdtListaPessoasItem',[ t('(',0,3,0),t(')',4,3,0) ],n ],46,3,0) ]).
+b_line_i([ 3,3 ],2,1,cmd,3,[ t('',107,3,0),t([ t('Gxm2rootcol',23,3,0),t('add(',1,3,0) ],31,3,0),t('Gxm1sdtlistapessoas',23,3,0),t(')',4,3,0) ]).
+b_line_i(5,2,1,cmd,5,[ t('',107,5,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_id',3,5,0) ],29,5,0),t(=,10,5,0),t(7,2,5,0) ]).
+b_line_i(6,2,1,cmd,5,[ t('',107,6,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_nome',3,5,0) ],29,5,0),t(=,10,5,0),t(8,2,5,0) ]).
+b_line_i(7,2,1,cmd,5,[ t('',107,7,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_data_nascimento',3,5,0) ],29,5,0),t(=,10,5,0),t('toformattedstring(',1,5,0),t(9,2,5,0),t(')',4,5,0) ]).
+b_line_i(8,2,1,cmd,5,[ t('',107,8,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_sexo',3,5,0) ],29,5,0),t(=,10,5,0),t(10,2,5,0) ]).
+b_line_i(9,2,1,cmd,5,[ t('',107,9,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_mae',3,5,0) ],29,5,0),t(=,10,5,0),t(11,2,5,0) ]).
+b_line_i(10,2,1,cmd,5,[ t('',107,10,0),t([ t('Gxm1sdtlistapessoas',23,5,0),t('Pes_pai',3,5,0) ],29,5,0),t(=,10,5,0),t(12,2,5,0) ]).
+b_line_i(11,2,1,cmd,5,[ t('',128,11,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+calling_main_i(42,1).
+ 
+att_prop_i(3,12,'ExternalName',pes_pai,d).
+att_prop_i(3,12,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,12,'EmptyAsNull','Yes',d).
+att_prop_i(3,12,idBasedOn,'',d).
+att_prop_i(3,12,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,12,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(3,12,'AttRegEx','',d).
+att_prop_i(3,12,'AttValidationFailedMsg','',d).
+att_prop_i(3,12,'DownloadOffline','0',d).
+att_prop_i(3,12,'VarServiceExtName','',d).
+att_prop_i(3,12,'FullName',pes_pai,v).
+att_prop_i(3,11,'ExternalName',pes_mae,d).
+att_prop_i(3,11,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,11,'EmptyAsNull','Yes',d).
+att_prop_i(3,11,idBasedOn,'',d).
+att_prop_i(3,11,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,11,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(3,11,'AttRegEx','',d).
+att_prop_i(3,11,'AttValidationFailedMsg','',d).
+att_prop_i(3,11,'DownloadOffline','0',d).
+att_prop_i(3,11,'VarServiceExtName','',d).
+att_prop_i(3,11,'FullName',pes_mae,v).
+att_prop_i(3,10,'ExternalName',pes_sexo,d).
+att_prop_i(3,10,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,10,'EmptyAsNull','Yes',d).
+att_prop_i(3,10,idBasedOn,'',d).
+att_prop_i(3,10,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,10,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(3,10,'AttRegEx','',d).
+att_prop_i(3,10,'AttValidationFailedMsg','',d).
+att_prop_i(3,10,'DownloadOffline','0',d).
+att_prop_i(3,10,'VarServiceExtName','',d).
+att_prop_i(3,10,'FullName',pes_sexo,v).
+att_prop_i(3,9,'ExternalName',pes_data_nascimento,d).
+att_prop_i(3,9,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,9,'EmptyAsNull','Yes',d).
+att_prop_i(3,9,idBasedOn,'',d).
+att_prop_i(3,9,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,9,'AttRegEx','',d).
+att_prop_i(3,9,'AttValidationFailedMsg','',d).
+att_prop_i(3,9,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(3,9,'DownloadOffline','0',d).
+att_prop_i(3,9,'VarServiceExtName','',d).
+att_prop_i(3,9,'FullName',pes_data_nascimento,v).
+att_prop_i(3,8,'ExternalName',pes_nome,d).
+att_prop_i(3,8,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,8,'EmptyAsNull','Yes',d).
+att_prop_i(3,8,idBasedOn,'',d).
+att_prop_i(3,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,8,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(3,8,'AttRegEx','',d).
+att_prop_i(3,8,'AttValidationFailedMsg','',d).
+att_prop_i(3,8,'DownloadOffline','0',d).
+att_prop_i(3,8,'VarServiceExtName','',d).
+att_prop_i(3,8,'FullName',pes_nome,v).
+att_prop_i(3,7,'ExternalName',pes_id,d).
+att_prop_i(3,7,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(3,7,'EmptyAsNull','Yes',d).
+att_prop_i(3,7,idBasedOn,'',d).
+att_prop_i(3,7,'AUTONUMBER','-1',v).
+att_prop_i(3,7,'AUTONUMBER_START','1',d).
+att_prop_i(3,7,'AUTONUMBER_STEP','1',d).
+att_prop_i(3,7,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(3,7,'ATT_INITIAL_VALUE','',d).
+att_prop_i(3,7,'AttRegEx','',d).
+att_prop_i(3,7,'AttValidationFailedMsg','',d).
+att_prop_i(3,7,'DownloadOffline','0',d).
+att_prop_i(3,7,'VarServiceExtName','',d).
+att_prop_i(3,7,'FullName',pes_id,v).
+ 
+ 
+tbl_att_prop_i(3,3,7,'AllowNulls',n).
+tbl_att_prop_i(3,3,7,'AUTONUMBER',y).
+tbl_att_prop_i(3,3,8,'AllowNulls',n).
+tbl_att_prop_i(3,3,9,'AllowNulls',n).
+tbl_att_prop_i(3,3,10,'AllowNulls',n).
+tbl_att_prop_i(3,3,11,'AllowNulls',n).
+tbl_att_prop_i(3,3,12,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+struct_dt_i([ 26,57,0 ],name,sdtListaPessoas).
+struct_dt_i([ 26,57,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 26,57,0 ],'ObjName',sdtListaPessoas).
+struct_dt_i([ 26,57,0 ],'ObjDesc','sdt Lista Pessoas').
+struct_dt_i([ 26,57,0 ],'ExternalName',sdtListaPessoas).
+struct_dt_i([ 26,57,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 26,57,0 ],'JsonInputFormat','JsonInputWrapped').
+struct_dt_i([ 26,57,0 ],collection,'True').
+struct_dt_i([ 26,57,0 ],datatype,[ 26,57,84 ]).
+struct_dt_i([ 26,57,0 ],'CollectionItemName',sdtListaPessoasItem).
+struct_dt_i([ 26,57,0 ],'XmlName','').
+struct_dt_i([ 26,57,0 ],'XmlCollectionItemName','').
+struct_dt_i([ 26,57,0 ],'XmlNamespace','').
+struct_dt_i([ 26,57,0 ],'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,57,0 ],'XmlInclude',idXmlIncludeAlways).
+struct_dt_i([ 26,57,0 ],'JsonName','').
+struct_dt_i([ 26,57,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,57,0 ],'JsonCollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,57,84 ],name,sdtListaPessoasItem).
+struct_dt_i([ 26,57,84 ],namespace,'SeletivoSEPLAG.sdtListaPessoas').
+struct_dt_i([ 26,57,0 ],fullname,sdtListaPessoas).
+struct_dt_i([ 26,57,84 ],fullname,'sdtListaPessoas.sdtListaPessoasItem').
+struct_dt_i([ 26,57,0 ],camelname,'Sdtlistapessoas').
+struct_dt_i([ 26,57,84 ],camelname,'Sdtlistapessoasitem').
+ 
+struct_dt_elem_i([ 26,57,84 ],1,name,'Pes_id').
+struct_dt_elem_i([ 26,57,84 ],1,camelname,pes_id).
+struct_dt_elem_i([ 26,57,84 ],1,length,4).
+struct_dt_elem_i([ 26,57,84 ],1,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],1,sign,0).
+struct_dt_elem_i([ 26,57,84 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,57,84 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,57,84 ],1,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],1,'ExternalName',pes_id).
+struct_dt_elem_i([ 26,57,84 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],1,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],1,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],1,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,57,84 ],2,name,'Pes_nome').
+struct_dt_elem_i([ 26,57,84 ],2,camelname,pes_nome).
+struct_dt_elem_i([ 26,57,84 ],2,length,200).
+struct_dt_elem_i([ 26,57,84 ],2,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],2,type,[ 13,200,0 ]).
+struct_dt_elem_i([ 26,57,84 ],2,pic,'@!').
+struct_dt_elem_i([ 26,57,84 ],2,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],2,'ExternalName',pes_nome).
+struct_dt_elem_i([ 26,57,84 ],2,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],2,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],2,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],2,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,57,84 ],3,name,'Pes_data_nascimento').
+struct_dt_elem_i([ 26,57,84 ],3,camelname,pes_data_nascimento).
+struct_dt_elem_i([ 26,57,84 ],3,length,10).
+struct_dt_elem_i([ 26,57,84 ],3,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],3,type,[ 13,10,0 ]).
+struct_dt_elem_i([ 26,57,84 ],3,pic,'').
+struct_dt_elem_i([ 26,57,84 ],3,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],3,'ExternalName',pes_data_nascimento).
+struct_dt_elem_i([ 26,57,84 ],3,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],3,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],3,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],3,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,57,84 ],4,name,'Pes_sexo').
+struct_dt_elem_i([ 26,57,84 ],4,camelname,pes_sexo).
+struct_dt_elem_i([ 26,57,84 ],4,length,9).
+struct_dt_elem_i([ 26,57,84 ],4,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],4,type,[ 13,9,0 ]).
+struct_dt_elem_i([ 26,57,84 ],4,pic,'@!').
+struct_dt_elem_i([ 26,57,84 ],4,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],4,'ExternalName',pes_sexo).
+struct_dt_elem_i([ 26,57,84 ],4,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],4,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],4,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],4,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],4,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],4,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],4,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],4,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,57,84 ],5,name,'Pes_mae').
+struct_dt_elem_i([ 26,57,84 ],5,camelname,pes_mae).
+struct_dt_elem_i([ 26,57,84 ],5,length,200).
+struct_dt_elem_i([ 26,57,84 ],5,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],5,type,[ 13,200,0 ]).
+struct_dt_elem_i([ 26,57,84 ],5,pic,'@!').
+struct_dt_elem_i([ 26,57,84 ],5,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],5,'ExternalName',pes_mae).
+struct_dt_elem_i([ 26,57,84 ],5,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],5,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],5,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],5,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],5,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],5,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],5,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],5,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,57,84 ],6,name,'Pes_pai').
+struct_dt_elem_i([ 26,57,84 ],6,camelname,pes_pai).
+struct_dt_elem_i([ 26,57,84 ],6,length,200).
+struct_dt_elem_i([ 26,57,84 ],6,decimals,0).
+struct_dt_elem_i([ 26,57,84 ],6,type,[ 13,200,0 ]).
+struct_dt_elem_i([ 26,57,84 ],6,pic,'@!').
+struct_dt_elem_i([ 26,57,84 ],6,collection,'False').
+struct_dt_elem_i([ 26,57,84 ],6,'ExternalName',pes_pai).
+struct_dt_elem_i([ 26,57,84 ],6,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,57,84 ],6,'XmlType','Element').
+struct_dt_elem_i([ 26,57,84 ],6,'XmlName','').
+struct_dt_elem_i([ 26,57,84 ],6,'XmlNamespace','').
+struct_dt_elem_i([ 26,57,84 ],6,soaptype,'').
+struct_dt_elem_i([ 26,57,84 ],6,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,57,84 ],6,'JsonName','').
+struct_dt_elem_i([ 26,57,84 ],6,'JsonInclude',idJsonEmpty).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(mnproc,3,'DPLISTARPESSOAS','INTERNAL','').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

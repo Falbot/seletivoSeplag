@@ -1,0 +1,11 @@
+bc_dt_elem_i([ 0,4,0 ],'End_id',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'End_tipo_logradouro',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'End_logradouro',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'End_numero',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'End_bairro',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'Cid_id',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'Cid_nome',readonly,yes).
+bc_dt_elem_i([ 0,4,0 ],'Cid_nome',allownulls,no).
+bc_dt_elem_i([ 0,4,0 ],'Cid_uf',readonly,yes).
+bc_dt_elem_i([ 0,4,0 ],'Cid_uf',allownulls,no).
+ 

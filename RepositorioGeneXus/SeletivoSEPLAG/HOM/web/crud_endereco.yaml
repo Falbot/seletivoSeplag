@@ -1,0 +1,284 @@
+openapi: 3.0.0
+info:
+  title: "crud_endereco"
+  description: "crud_endereco"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/endereco
+paths:
+  /Create:
+    post:
+      tags:
+        - crud_endereco  
+      operationId: "crud_endereco.Create"
+      summary: "Create"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateOutput"
+        404:
+          description: "Not found"
+
+  /Read_GetList:
+    get:
+      tags:
+        - crud_endereco  
+      operationId: "crud_endereco.Read_GetList"
+      summary: "Read_GetList"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaEnderecos_sdtListaEnderecosItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_endereco  
+      operationId: "crud_endereco.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codgendereco"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update:
+    put:
+      tags:
+        - crud_endereco  
+      operationId: "crud_endereco.Update"
+      summary: "Update"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Delete:
+    delete:
+      tags:
+        - crud_endereco  
+      operationId: "crud_endereco.Delete"
+      summary: "Delete"
+      parameters:
+        - name: "Codgendereco"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    CreateOutput:
+      properties:
+        RetornoPK:
+          type: "integer"
+          format: "int32"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+    Read_GetByKeyOutput:
+      properties:
+        ListaEndereco:
+          description: "sdt Lista Endereco"
+          $ref: "#/components/schemas/sdtListaEndereco"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+
+    CreateInput:  
+      properties:
+        DadosEndereco:
+          description: "sdt Endereco"
+          $ref: "#/components/schemas/sdtEndereco"
+
+
+
+    UpdateInput:  
+      properties:
+        ListaEndereco:
+          description: "sdt Lista Endereco"
+          $ref: "#/components/schemas/sdtListaEndereco"
+
+  
+    sdtEndereco:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaEnderecos_sdtListaEnderecosItem:
+      properties:
+        end_id:
+          description: "end_id"
+          type: "integer"
+          format: "int32"
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+
+
+
+    sdtListaEndereco:
+      properties:
+        end_id:
+          description: "end_id"
+          type: "integer"
+          format: "int32"
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+
+
+
+ 

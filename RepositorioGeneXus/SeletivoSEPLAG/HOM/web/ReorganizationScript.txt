@@ -1,0 +1,50 @@
+CREATE TABLE unidade_endereco (unid_id smallint NOT NULL , end_id smallint NOT NULL , PRIMARY KEY(unid_id, end_id))
+CREATE INDEX IUNIDADE_ENDERECO1 ON unidade_endereco (end_id )
+
+CREATE TABLE servidor_temporario (pes_id smallint NOT NULL , st_data_admissao date NOT NULL , st_data_demissao date NOT NULL , PRIMARY KEY(pes_id, st_data_admissao))
+
+CREATE TABLE servidor_efetivo (pes_id smallint NOT NULL , se_matricula VARCHAR(20) NOT NULL , PRIMARY KEY(pes_id, se_matricula))
+CREATE UNIQUE INDEX USERVIDOR_EFETIVO ON servidor_efetivo (se_matricula )
+
+CREATE TABLE pessoa_endereco (pes_id smallint NOT NULL , end_id smallint NOT NULL , PRIMARY KEY(pes_id, end_id))
+CREATE INDEX IPESSOA_ENDERECO1 ON pessoa_endereco (end_id )
+
+CREATE SEQUENCE lot_id MINVALUE 1 INCREMENT 1
+CREATE TABLE lotacao (lot_id smallint NOT NULL DEFAULT nextval('lot_id'), pes_id smallint NOT NULL , unid_id smallint NOT NULL , lot_data_lotacao date NOT NULL , lot_data_remocao date NOT NULL , lot_portaria VARCHAR(100) NOT NULL , PRIMARY KEY(lot_id))
+CREATE INDEX ILOTACAO1 ON lotacao (unid_id )
+CREATE INDEX ILOTACAO2 ON lotacao (pes_id )
+
+CREATE SEQUENCE fp_id MINVALUE 1 INCREMENT 1
+CREATE TABLE foto_pessoa (fp_id smallint NOT NULL DEFAULT nextval('fp_id'), pes_id smallint NOT NULL , fp_data date NOT NULL , fp_bucket VARCHAR(50) NOT NULL , fp_hash VARCHAR(50) NOT NULL , PRIMARY KEY(fp_id))
+CREATE INDEX IFOTO_PESSOA1 ON foto_pessoa (pes_id )
+
+CREATE SEQUENCE end_id MINVALUE 1 INCREMENT 1
+CREATE TABLE endereco (end_id smallint NOT NULL DEFAULT nextval('end_id'), end_tipo_logradouro VARCHAR(50) NOT NULL , end_logradouro VARCHAR(200) NOT NULL , end_numero bigint NOT NULL , end_bairro VARCHAR(100) NOT NULL , cid_id smallint NOT NULL , PRIMARY KEY(end_id))
+CREATE INDEX IENDERECO1 ON endereco (cid_id )
+
+CREATE SEQUENCE pes_id MINVALUE 1 INCREMENT 1
+CREATE TABLE pessoa (pes_id smallint NOT NULL DEFAULT nextval('pes_id'), pes_nome VARCHAR(200) NOT NULL , pes_data_nascimento date NOT NULL , pes_sexo VARCHAR(9) NOT NULL , pes_mae VARCHAR(200) NOT NULL , pes_pai VARCHAR(200) NOT NULL , PRIMARY KEY(pes_id))
+
+CREATE SEQUENCE unid_id MINVALUE 1 INCREMENT 1
+CREATE TABLE unidade (unid_id smallint NOT NULL DEFAULT nextval('unid_id'), unid_nome VARCHAR(200) NOT NULL , unid_sigla VARCHAR(20) NOT NULL , PRIMARY KEY(unid_id))
+
+CREATE SEQUENCE cid_id MINVALUE 1 INCREMENT 1
+CREATE TABLE cidade (cid_id smallint NOT NULL DEFAULT nextval('cid_id'), cid_nome VARCHAR(200) NOT NULL , cid_uf CHAR(2) NOT NULL , PRIMARY KEY(cid_id))
+
+ALTER TABLE endereco ADD CONSTRAINT IENDERECO1 FOREIGN KEY (cid_id) REFERENCES cidade (cid_id)
+
+ALTER TABLE foto_pessoa ADD CONSTRAINT IFOTO_PESSOA1 FOREIGN KEY (pes_id) REFERENCES pessoa (pes_id)
+
+ALTER TABLE lotacao ADD CONSTRAINT ILOTACAO2 FOREIGN KEY (pes_id) REFERENCES pessoa (pes_id)
+ALTER TABLE lotacao ADD CONSTRAINT ILOTACAO1 FOREIGN KEY (unid_id) REFERENCES unidade (unid_id)
+
+ALTER TABLE pessoa_endereco ADD CONSTRAINT IPESSOA_ENDERECO2 FOREIGN KEY (pes_id) REFERENCES pessoa (pes_id)
+ALTER TABLE pessoa_endereco ADD CONSTRAINT IPESSOA_ENDERECO1 FOREIGN KEY (end_id) REFERENCES endereco (end_id)
+
+ALTER TABLE servidor_efetivo ADD CONSTRAINT ISERVIDOR_EFETIVO1 FOREIGN KEY (pes_id) REFERENCES pessoa (pes_id)
+
+ALTER TABLE servidor_temporario ADD CONSTRAINT ISERVIDOR_TEMPORARIO1 FOREIGN KEY (pes_id) REFERENCES pessoa (pes_id)
+
+ALTER TABLE unidade_endereco ADD CONSTRAINT IUNIDADE_ENDERECO2 FOREIGN KEY (unid_id) REFERENCES unidade (unid_id)
+ALTER TABLE unidade_endereco ADD CONSTRAINT IUNIDADE_ENDERECO1 FOREIGN KEY (end_id) REFERENCES endereco (end_id)
+

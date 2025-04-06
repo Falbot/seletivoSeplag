@@ -1,0 +1,11 @@
+﻿<ConnectionInformation>
+	<DBName>KB_SeletivoSEPLAG</DBName>
+	<IntegratedSecurity>False</IntegratedSecurity>
+	<ServerInstance>DSAFEMT0046\LABORATORIO</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>D:\ProjetosGenexus\KB\GX18\SeletivoSEPLAG</Directory>
+	<DataFile>KB_SeletivoSEPLAG.mdf</DataFile>
+	<LogFile>KB_SeletivoSEPLAG_log.ldf</LogFile>
+	<HostName>DSAFEMT0046</HostName>
+	<DetachOnClose>False</DetachOnClose>
+</ConnectionInformation>

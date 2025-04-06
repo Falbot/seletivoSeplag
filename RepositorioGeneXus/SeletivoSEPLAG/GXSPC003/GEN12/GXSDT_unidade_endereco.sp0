@@ -1,0 +1,44 @@
+ 
+spec_i([ sdt,[ 0,11,0 ],unidade_endereco,unidade_endereco,0,por,'18_0_8-180599' ]).
+ 
+struct_dt_i([ 0,11,0 ],name,unidade_endereco).
+struct_dt_i([ 0,11,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 0,11,0 ],significantName,unidade_endereco).
+struct_dt_i([ 0,11,0 ],'ObjName',unidade_endereco).
+struct_dt_i([ 0,11,0 ],'ObjDesc',unidade_endereco).
+struct_dt_i([ 0,11,0 ],'ExternalName',unidade_endereco).
+struct_dt_i([ 0,11,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 0,11,0 ],key,[ 4,13 ]).
+struct_dt_i([ 0,11,0 ],lvl,13).
+struct_dt_i([ 0,11,0 ],fullname,unidade_endereco).
+ 
+struct_dt_elem_i([ 0,11,0 ],1,name,'Unid_id').
+struct_dt_elem_i([ 0,11,0 ],1,camelname,unid_id).
+struct_dt_elem_i([ 0,11,0 ],1,length,4).
+struct_dt_elem_i([ 0,11,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,11,0 ],1,sign,0).
+struct_dt_elem_i([ 0,11,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,11,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,11,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,11,0 ],1,attributeid,'4').
+struct_dt_elem_i([ 0,11,0 ],1,'ExternalName',unid_id).
+struct_dt_elem_i([ 0,11,0 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 0,11,0 ],2,name,'End_id').
+struct_dt_elem_i([ 0,11,0 ],2,camelname,end_id).
+struct_dt_elem_i([ 0,11,0 ],2,length,4).
+struct_dt_elem_i([ 0,11,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,11,0 ],2,sign,0).
+struct_dt_elem_i([ 0,11,0 ],2,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,11,0 ],2,pic,'ZZZ9').
+struct_dt_elem_i([ 0,11,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,11,0 ],2,attributeid,'13').
+struct_dt_elem_i([ 0,11,0 ],2,'ExternalName',end_id).
+struct_dt_elem_i([ 0,11,0 ],2,'ExternalNamespace','SeletivoSEPLAG').
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','PACKAGE','com.genexuscore').
+module_info_i('GeneXus\Common','PackageName','GeneXus.jar').

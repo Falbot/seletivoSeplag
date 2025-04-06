@@ -1,2 +1,5 @@
-*.war filter=lfs diff=lfs merge=lfs -text
+ROOT.war filter=lfs diff=lfs merge=lfs -text
+KB_SeletivoSEPLAG.mdf filter=lfs diff=lfs merge=lfs -text
+KB_SeletivoSEPLAG_log.ldf filter=lfs diff=lfs merge=lfs -text
+_4ji.cfs filter=lfs diff=lfs merge=lfs -text
 *.jar filter=lfs diff=lfs merge=lfs -text

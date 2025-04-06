@@ -1,0 +1,61 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_endereco",
+"BasePath":"endereco",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create",
+"Implementation":"pCriarEndereco",
+"PathRegexp":"create",
+"Path":"create"
+
+},
+{
+"Name":"read_getlist",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist",
+"Implementation":"dpListarEnderecos",
+"Verb":"GET",
+"PathRegexp":"read_getlist",
+"Path":"read_getlist"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarEndereco",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update",
+"Implementation":"pAtualizarEndereco",
+"PathRegexp":"update",
+"Path":"update"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete",
+"Implementation":"pExcluirEndereco",
+"PathRegexp":"delete",
+"Path":"delete"
+
+}]}

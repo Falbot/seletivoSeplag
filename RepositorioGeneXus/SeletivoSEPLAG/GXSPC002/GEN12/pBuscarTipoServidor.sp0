@@ -1,0 +1,312 @@
+spec_i([ proc,42,'Buscar Tipo Servidor',pBuscarTipoServidor,78,por,'18_0_8-180599' ]).
+ 
+struct_i(3,1,[],[]).
+struct_i(2,1,[],[]).
+ 
+level_i(3,[ 12,[ [ 12,many ] ],[],[],[ [ [ 12 ],[ 7 ] ] ],[ [ [ 12 ],[] ] ],[ 7 ],'ISERVIDOR_TEMPORARIO',[ 12,[ [ [],'Pes_id',7 ] ] ],[] ]).
+level_i(2,[ 11,[ [ 11,many ] ],[],[],[ [ [ 11 ],[ 7 ] ] ],[ [ [ 11 ],[] ] ],[ 7 ],'ISERVIDOR_EFETIVO',[ 11,[ [ [],'Pes_id',7 ] ] ],[] ]).
+ 
+tw_i(3,[]).
+tw_i(2,[]).
+ 
+lwi_i(3,[ [] ]).
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+level_option_i(2,when_none,'GXLvl2').
+level_option_i(3,when_none,'GXLvl2').
+ 
+ta_i(3,[ [ [ 12,7 ] ] ]).
+ta_i(2,[ [ [ 11,7 ] ] ]).
+ 
+las_i(3,[ [ 7 ] ]).
+las_i(2,[ [ 7 ] ]).
+ 
+lac_i(3,[ [] ]).
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'POSTGRESQL_EXTENSIONS','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'DS_READ_REPLICA','No')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',root)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CNTDLG','2')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',seletivoSEPLAG_DES)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','JDBC')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','15')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',pBuscarTipoServidor)).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','No')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop(sessiontype,'RW')).
+rule_i(0,prop('Folder',o(8,'Procedures'))).
+rule_i(0,prop('ObjDesc','Buscar Tipo Servidor')).
+rule_i(0,prop('ObjName',pBuscarTipoServidor)).
+rule_i(0,maingen(12)).
+rule_i(0,parm([ 'Pes_id','Tiposervidor' ],[])).
+rule_i(0,parmio([ [ 'Pes_id',in ],[ 'Tiposervidor',out ] ])).
+rule_i(0,output('FIL')).
+rule_i(0,rule([ a(13,[ endtrn ]) ],[],[],[])).
+ 
+a_i(1,2,t,11,[],[ [ [ [],'Pes_id',7 ] ],'ISERVIDOR_EFETIVO',[] ]).
+a_i(2,3,t,12,[],[ [ [ [],'Pes_id',7 ] ],'ISERVIDOR_TEMPORARIO',[] ]).
+ 
+v_i(t,i,1,'Pes_id').
+v_i(t,o,1,7).
+v_i(t,i,2,'Pes_id').
+v_i(t,o,2,7).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',12 ]).
+attri_i(32,[ st_data_admissao,date,8,0,'99/99/9999',0,st_data_admissao,'',0 ]).
+attri_i(26,[ se_matricula,svchar,20,0,'',0,se_matricula,'',0 ]).
+attri_i(7,[ pes_id,int,4,0,'ZZZ9',0,pes_id,'',0 ]).
+attri_i('GXLvl2',[ 'GXLvl2',int,1,0,'',0,'',[],10 ]).
+attri_i('Tiposervidor',[ 'TipoServidor',svchar,40,0,'',0,'Tipo Servidor','',9 ]).
+attri_i('Pes_id',[ pes_id,int,4,0,'ZZZ9',0,pes_id,'',8 ]).
+ 
+table_i(11,[ servidor_efetivo,[ 7,26 ],servidor_efetivo,servidor_efetivo ]).
+table_i(12,[ servidor_temporario,[ 7,32 ],servidor_temporario,servidor_temporario ]).
+ 
+index_i(11,[ 'ISERVIDOR_EFETIVO',u,[ 7,26 ],'Iservidor_efetivo' ]).
+index_i(12,[ 'ISERVIDOR_TEMPORARIO',u,[ 7,32 ],'Iservidor_temporario' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+start_i(3,0,0,[ [ [ 7,23,'Pes_id',= ] ],many ]).
+start_i(2,0,0,[ [ [ 7,23,'Pes_id',= ] ],many ]).
+ 
+end_i(3,0,0,[ [ [ t(7,2),t(=,10),t('Pes_id',23) ] ] ]).
+end_i(2,0,0,[ [ [ t(7,2),t(=,10),t('Pes_id',23) ] ] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [],[ 7 ],[] ]).
+break_i(3,nvg,1,[],[ [],[ 7 ],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,0).
+b_group_i(1,2,nvg,2,2,2).
+b_group_i(2,1,lit,0,3,3).
+b_group_i(1,3,lit,0,6,4).
+b_group_i(1,4,nvg,3,6,6).
+b_group_i(3,1,lit,0,7,7).
+b_group_i(1,5,lit,0,10,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[ t('',107,1,0),t('Tiposervidor',23,0,0),t(=,10,0,0),t('''''',3,0,0) ]).
+b_line_i([ 2,0 ],1,1,cmd,0,[ t('',107,2,0),t('GXLvl2',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
+b_line_i(2,2,1,cmd,3,[ t('',121,2,0),t(table,3,2,10),t(11,3,2,10) ]).
+b_line_i([ 2,1 ],2,1,cmd,2,[ t('',107,2,0),t('GXLvl2',23,2,0),t(=,10,2,0),t('1',3,2,0) ]).
+b_line_i(4,2,1,cmd,3,[ t('',107,4,0),t('Tiposervidor',23,3,0),t(=,10,3,0),t('''EFETIVO''',3,3,0) ]).
+b_line_i(5,2,1,cmd,3,[ t('',128,5,0) ]).
+b_line_i([ 5,1 ],1,3,cmd,3,[ t('',109,5,0),t('GXLvl2',23,3,0),t(=,10,3,0),t('0',3,3,0) ]).
+b_line_i(6,3,1,cmd,7,[ t('',121,6,0),t(table,3,6,11),t(12,3,6,11) ]).
+b_line_i(8,3,1,cmd,7,[ t('',107,8,0),t('Tiposervidor',23,7,0),t(=,10,7,0),t('''TEMPORARIO''',3,7,0) ]).
+b_line_i(9,3,1,cmd,7,[ t('',128,9,0) ]).
+b_line_i(10,1,5,cmd,8,[ t('',111,10,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',11909,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ 
+ 
+calling_main_i(42,6).
+ 
+att_prop_i(2,7,'ExternalName',pes_id,d).
+att_prop_i(2,7,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(2,7,'EmptyAsNull','Yes',d).
+att_prop_i(2,7,idBasedOn,'',d).
+att_prop_i(2,7,'AUTONUMBER','-1',v).
+att_prop_i(2,7,'AUTONUMBER_START','1',d).
+att_prop_i(2,7,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,7,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,7,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,7,'AttRegEx','',d).
+att_prop_i(2,7,'AttValidationFailedMsg','',d).
+att_prop_i(2,7,'DownloadOffline','0',d).
+att_prop_i(2,7,'VarServiceExtName','',d).
+att_prop_i(2,7,'FullName',pes_id,v).
+att_prop_i(2,26,'ExternalName',se_matricula,d).
+att_prop_i(2,26,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(2,26,'EmptyAsNull','Yes',d).
+att_prop_i(2,26,idBasedOn,'',d).
+att_prop_i(2,26,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,26,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,26,'AttRegEx','',d).
+att_prop_i(2,26,'AttValidationFailedMsg','',d).
+att_prop_i(2,26,'DownloadOffline','0',d).
+att_prop_i(2,26,'VarServiceExtName','',d).
+att_prop_i(2,26,'FullName',se_matricula,v).
+att_prop_i(2,32,'ExternalName',st_data_admissao,d).
+att_prop_i(2,32,'ExternalNamespace','SeletivoSEPLAG',d).
+att_prop_i(2,32,'EmptyAsNull','Yes',d).
+att_prop_i(2,32,idBasedOn,'',d).
+att_prop_i(2,32,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,32,'AttRegEx','',d).
+att_prop_i(2,32,'AttValidationFailedMsg','',d).
+att_prop_i(2,32,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,32,'DownloadOffline','0',d).
+att_prop_i(2,32,'VarServiceExtName','',d).
+att_prop_i(2,32,'FullName',st_data_admissao,v).
+ 
+ 
+tbl_att_prop_i(2,11,7,'AllowNulls',n).
+tbl_att_prop_i(2,11,26,'AllowNulls',n).
+tbl_att_prop_i(2,12,7,'AllowNulls',n).
+tbl_att_prop_i(2,12,32,'AllowNulls',n).
+ 
+var_prop_i(2,'Pes_id',idBasedOn,'',v).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,42,'PBUSCARTIPOSERVIDOR','INTERNAL','Unsecure').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

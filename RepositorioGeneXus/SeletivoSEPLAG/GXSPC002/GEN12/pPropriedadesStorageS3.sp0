@@ -1,0 +1,227 @@
+spec_i([ proc,30,'Propriedades Storage S3',pPropriedadesStorageS3,78,por,'18_0_8-180599' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'POSTGRESQL_EXTENSIONS','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'DS_READ_REPLICA','No')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',root)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CNTDLG','2')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',seletivoSEPLAG_DES)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','JDBC')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','15')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',pPropriedadesStorageS3)).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','No')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop(sessiontype,'RW')).
+rule_i(0,prop('Folder',o(8,'Procedures'))).
+rule_i(0,prop('ObjDesc','Propriedades Storage S3')).
+rule_i(0,prop('ObjName',pPropriedadesStorageS3)).
+rule_i(0,maingen(12)).
+rule_i(0,parm([ 'Properties' ],[])).
+rule_i(0,parmio([ [ 'Properties',out ] ])).
+rule_i(0,output('FIL')).
+rule_i(0,rule([ a(13,[ endtrn ]) ],[],[],[])).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',9 ]).
+attri_i('Properties',[ 'Properties',o(properties),4,0,'',0,'Properties','',8 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[ t('',107,1,0),t('Properties',23,0,0),t(=,10,0,0),t([ properties,[ t('(',0,1,18),t(')',4,1,19) ],n ],46,0,0) ]).
+b_line_i(2,1,1,cmd,0,[ t('',107,2,0),t([ t('Properties',23,2,1),t('set(',1,2,13) ],31,2,1),t('"STORAGE_PROVIDER_ACCESSKEYID"',3,2,18),t(',',7,0,49),t('"teste1"',3,2,51),t(')',4,0,60) ]).
+b_line_i(3,1,1,cmd,0,[ t('',107,3,0),t([ t('Properties',23,3,1),t('set(',1,3,13) ],31,3,1),t('"STORAGE_PROVIDER_SECRETACCESSKEY"',3,3,18),t(',',7,0,53),t('"12345678"',3,3,55),t(')',4,0,66) ]).
+b_line_i(4,1,1,cmd,0,[ t('',107,4,0),t([ t('Properties',23,4,1),t('set(',1,4,13) ],31,4,1),t('"BUCKET_NAME"',3,4,18),t(',',7,0,32),t('"seletivo"',3,4,34),t(')',4,0,45) ]).
+b_line_i(5,1,1,cmd,0,[ t('',107,5,0),t([ t('Properties',23,5,1),t('set(',1,5,13) ],31,5,1),t('"FOLDER_NAME"',3,5,18),t(',',7,0,32),t('"pessoa"',3,5,34),t(')',4,0,43) ]).
+b_line_i(6,1,1,cmd,0,[ t('',107,6,0),t([ t('Properties',23,6,1),t('set(',1,6,13) ],31,6,1),t('"STORAGE_PROVIDER_DEFAULT_ACL"',3,6,18),t(',',7,0,49),t('"Default"',3,6,51),t(')',4,0,61) ]).
+b_line_i(7,1,1,cmd,0,[ t('',107,7,0),t([ t('Properties',23,7,1),t('set(',1,7,13) ],31,7,1),t('"STORAGE_PROVIDER_DEFAULT_EXPIRATION"',3,7,18),t(',',7,0,56),t('"1440"',3,7,58),t(')',4,0,65) ]).
+b_line_i(8,1,1,cmd,0,[ t('',107,8,0),t([ t('Properties',23,8,1),t('set(',1,8,13) ],31,8,1),t('"STORAGE_PROVIDER_REGION"',3,8,18),t(',',7,0,43),t('"us-east-1"',3,8,44),t(')',4,0,55) ]).
+b_line_i(9,1,1,cmd,0,[ t('',107,9,0),t([ t('Properties',23,9,1),t('set(',1,9,13) ],31,9,1),t('"STORAGE_ENDPOINT"',3,9,18),t(',',7,0,37),t('"custom"',3,9,39),t(')',4,0,48) ]).
+b_line_i(10,1,1,cmd,0,[ t('',107,10,0),t([ t('Properties',23,10,1),t('set(',1,10,13) ],31,10,1),t('"STORAGE_CUSTOM_ENDPOINT"',3,10,18),t(',',7,0,44),t('"http://minio:9001"',3,10,46),t(')',4,0,66) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',11909,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ 
+ 
+calling_main_i(42,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,30,'PPROPRIEDADESSTORAGES3','INTERNAL','Unsecure').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

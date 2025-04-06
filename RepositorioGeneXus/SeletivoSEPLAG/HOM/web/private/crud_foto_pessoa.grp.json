@@ -1,0 +1,61 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_foto_pessoa",
+"BasePath":"foto_pessoa",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create",
+"Implementation":"pCriarFotoPessoa",
+"PathRegexp":"create",
+"Path":"create"
+
+},
+{
+"Name":"read_getlist",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist",
+"Implementation":"dpListarFotoPessoas",
+"Verb":"GET",
+"PathRegexp":"read_getlist",
+"Path":"read_getlist"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarFotoPessoa",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update",
+"Implementation":"pAtualizarFotoPessoa",
+"PathRegexp":"update",
+"Path":"update"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete",
+"Implementation":"pExcluirFotoPessoa",
+"PathRegexp":"delete",
+"Path":"delete"
+
+}]}

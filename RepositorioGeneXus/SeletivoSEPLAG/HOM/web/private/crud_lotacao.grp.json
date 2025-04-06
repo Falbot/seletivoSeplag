@@ -1,0 +1,61 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_lotacao",
+"BasePath":"lotacao",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create",
+"Implementation":"pCriarLotacao",
+"PathRegexp":"create",
+"Path":"create"
+
+},
+{
+"Name":"read_getlist",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist",
+"Implementation":"dpListarLotacoes",
+"Verb":"GET",
+"PathRegexp":"read_getlist",
+"Path":"read_getlist"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarLotacao",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update",
+"Implementation":"pAtualizarLotacao",
+"PathRegexp":"update",
+"Path":"update"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete",
+"Implementation":"pExcluirLotacao",
+"PathRegexp":"delete",
+"Path":"delete"
+
+}]}

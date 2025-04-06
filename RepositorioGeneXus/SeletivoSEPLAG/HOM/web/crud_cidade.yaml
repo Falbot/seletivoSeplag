@@ -1,0 +1,230 @@
+openapi: 3.0.0
+info:
+  title: "crud_cidade"
+  description: "crud_cidade"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/cidade
+paths:
+  /Create:
+    post:
+      tags:
+        - crud_cidade  
+      operationId: "crud_cidade.Create"
+      summary: "Create"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetList:
+    get:
+      tags:
+        - crud_cidade  
+      operationId: "crud_cidade.Read_GetList"
+      summary: "Read_GetList"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaCidades_sdtListaCidadesItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_cidade  
+      operationId: "crud_cidade.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codgcidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update:
+    put:
+      tags:
+        - crud_cidade  
+      operationId: "crud_cidade.Update"
+      summary: "Update"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Delete:
+    delete:
+      tags:
+        - crud_cidade  
+      operationId: "crud_cidade.Delete"
+      summary: "Delete"
+      parameters:
+        - name: "Codgcidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    Read_GetByKeyOutput:
+      properties:
+        ListaCidade:
+          description: "sdt Lista Cidade"
+          $ref: "#/components/schemas/sdtListaCidade"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+
+    CreateInput:  
+      properties:
+        DadosCidade:
+          description: "sdt Cidade"
+          $ref: "#/components/schemas/sdtCidade"
+
+
+
+    UpdateInput:  
+      properties:
+        ListaCidade:
+          description: "sdt Lista Cidade"
+          $ref: "#/components/schemas/sdtListaCidade"
+
+  
+    sdtCidade:
+      properties:
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaCidades_sdtListaCidadesItem:
+      properties:
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+
+
+
+    sdtListaCidade:
+      properties:
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+
+
+
+ 

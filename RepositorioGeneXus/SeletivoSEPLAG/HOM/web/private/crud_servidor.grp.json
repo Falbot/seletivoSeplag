@@ -1,0 +1,83 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_servidor",
+"BasePath":"servidor",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create_servidorefetivo",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create_servidorefetivo",
+"Implementation":"pCriarServidorEfetivo",
+"PathRegexp":"create_servidorefetivo",
+"Path":"create_servidorefetivo"
+
+},
+{
+"Verb":"POST",
+"Name":"create_servidortemporario",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create_servidortemporario",
+"Implementation":"pCriarServidorTemporario",
+"PathRegexp":"create_servidortemporario",
+"Path":"create_servidortemporario"
+
+},
+{
+"Name":"read_getlist_servidor",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist_servidor",
+"Implementation":"dpListarServidores",
+"Verb":"GET",
+"PathRegexp":"read_getlist_servidor",
+"Path":"read_getlist_servidor"
+
+},
+{
+"Name":"read_getbykey_servidorefetivoporunidade",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey_servidorefetivoporunidade",
+"Implementation":"dpListarServidoresEfetivosPorUnidade",
+"Verb":"GET",
+"PathRegexp":"read_getbykey_servidorefetivoporunidade",
+"Path":"read_getbykey_servidorefetivoporunidade"
+
+},
+{
+"Name":"read_getbyname_enderecofuncional",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbyname_enderecofuncional",
+"Implementation":"pEnderecoLotacaoEfetivo",
+"Verb":"GET",
+"PathRegexp":"read_getbyname_enderecofuncional",
+"Path":"read_getbyname_enderecofuncional"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarServidor",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update_demissaoservidortemporario",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update_demissaoservidortemporario",
+"Implementation":"pAtualizarServidorTemporario",
+"PathRegexp":"update_demissaoservidortemporario",
+"Path":"update_demissaoservidortemporario"
+
+}]}

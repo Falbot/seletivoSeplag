@@ -1,0 +1,37 @@
+
+<ObjectSpec>
+<SpecVersion>18_0_8-180599</SpecVersion>
+<Object>
+<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
+<ObjCls>1</ObjCls>
+<ObjId>17</ObjId>
+<ObjName>pCriarUnidade</ObjName>
+<ObjDesc>Criar Unidade</ObjDesc>
+<ObjPgmName>pCriarUnidade</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>12</GenId>
+<GenName>Default (Java)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Dadosunidade</VarId>
+<VarName>&amp;DadosUnidade</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Retornopk</VarId>
+<VarName>&amp;RetornoPK</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Messages</VarId>
+<VarName>&amp;Messages</VarName></Variable></Parameter></Parameters>
+<Levels></Levels></ObjectSpec>

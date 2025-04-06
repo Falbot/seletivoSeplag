@@ -1,0 +1,43 @@
+ 
+spec_i([ sdt,[ 0,8,0 ],servidor_efetivo,servidor_efetivo,0,por,'18_0_8-180599' ]).
+ 
+struct_dt_i([ 0,8,0 ],name,servidor_efetivo).
+struct_dt_i([ 0,8,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 0,8,0 ],significantName,servidor_efetivo).
+struct_dt_i([ 0,8,0 ],'ObjName',servidor_efetivo).
+struct_dt_i([ 0,8,0 ],'ObjDesc',servidor_efetivo).
+struct_dt_i([ 0,8,0 ],'ExternalName',servidor_efetivo).
+struct_dt_i([ 0,8,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 0,8,0 ],key,[ 7,26 ]).
+struct_dt_i([ 0,8,0 ],lvl,11).
+struct_dt_i([ 0,8,0 ],fullname,servidor_efetivo).
+ 
+struct_dt_elem_i([ 0,8,0 ],1,name,'Pes_id').
+struct_dt_elem_i([ 0,8,0 ],1,camelname,pes_id).
+struct_dt_elem_i([ 0,8,0 ],1,length,4).
+struct_dt_elem_i([ 0,8,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],1,sign,0).
+struct_dt_elem_i([ 0,8,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,8,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],1,attributeid,'7').
+struct_dt_elem_i([ 0,8,0 ],1,'ExternalName',pes_id).
+struct_dt_elem_i([ 0,8,0 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 0,8,0 ],2,name,'Se_matricula').
+struct_dt_elem_i([ 0,8,0 ],2,camelname,se_matricula).
+struct_dt_elem_i([ 0,8,0 ],2,length,20).
+struct_dt_elem_i([ 0,8,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],2,type,[ 13,20,0 ]).
+struct_dt_elem_i([ 0,8,0 ],2,pic,'').
+struct_dt_elem_i([ 0,8,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],2,attributeid,'26').
+struct_dt_elem_i([ 0,8,0 ],2,'ExternalName',se_matricula).
+struct_dt_elem_i([ 0,8,0 ],2,'ExternalNamespace','SeletivoSEPLAG').
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','PACKAGE','com.genexuscore').
+module_info_i('GeneXus\Common','PackageName','GeneXus.jar').

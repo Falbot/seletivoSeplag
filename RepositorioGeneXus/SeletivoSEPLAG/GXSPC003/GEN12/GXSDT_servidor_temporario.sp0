@@ -1,0 +1,53 @@
+ 
+spec_i([ sdt,[ 0,10,0 ],servidor_temporario,servidor_temporario,0,por,'18_0_8-180599' ]).
+ 
+struct_dt_i([ 0,10,0 ],name,servidor_temporario).
+struct_dt_i([ 0,10,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 0,10,0 ],significantName,servidor_temporario).
+struct_dt_i([ 0,10,0 ],'ObjName',servidor_temporario).
+struct_dt_i([ 0,10,0 ],'ObjDesc',servidor_temporario).
+struct_dt_i([ 0,10,0 ],'ExternalName',servidor_temporario).
+struct_dt_i([ 0,10,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 0,10,0 ],key,[ 7,32 ]).
+struct_dt_i([ 0,10,0 ],lvl,12).
+struct_dt_i([ 0,10,0 ],fullname,servidor_temporario).
+ 
+struct_dt_elem_i([ 0,10,0 ],1,name,'Pes_id').
+struct_dt_elem_i([ 0,10,0 ],1,camelname,pes_id).
+struct_dt_elem_i([ 0,10,0 ],1,length,4).
+struct_dt_elem_i([ 0,10,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],1,sign,0).
+struct_dt_elem_i([ 0,10,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,10,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,10,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],1,attributeid,'7').
+struct_dt_elem_i([ 0,10,0 ],1,'ExternalName',pes_id).
+struct_dt_elem_i([ 0,10,0 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 0,10,0 ],2,name,'St_data_admissao').
+struct_dt_elem_i([ 0,10,0 ],2,camelname,st_data_admissao).
+struct_dt_elem_i([ 0,10,0 ],2,length,8).
+struct_dt_elem_i([ 0,10,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],2,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,10,0 ],2,pic,'99/99/9999').
+struct_dt_elem_i([ 0,10,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],2,attributeid,'32').
+struct_dt_elem_i([ 0,10,0 ],2,'ExternalName',st_data_admissao).
+struct_dt_elem_i([ 0,10,0 ],2,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 0,10,0 ],3,name,'St_data_demissao').
+struct_dt_elem_i([ 0,10,0 ],3,camelname,st_data_demissao).
+struct_dt_elem_i([ 0,10,0 ],3,length,8).
+struct_dt_elem_i([ 0,10,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],3,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,10,0 ],3,pic,'99/99/9999').
+struct_dt_elem_i([ 0,10,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],3,attributeid,'33').
+struct_dt_elem_i([ 0,10,0 ],3,'ExternalName',st_data_demissao).
+struct_dt_elem_i([ 0,10,0 ],3,'ExternalNamespace','SeletivoSEPLAG').
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','PACKAGE','com.genexuscore').
+module_info_i('GeneXus\Common','PackageName','GeneXus.jar').

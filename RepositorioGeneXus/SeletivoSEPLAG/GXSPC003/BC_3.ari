@@ -1,0 +1,8 @@
+bc_dt_elem_i([ 0,3,0 ],'Pes_id',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_nome',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_data_nascimento',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_sexo',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_mae',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_pai',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Pes_idade',readonly,yes).
+ 

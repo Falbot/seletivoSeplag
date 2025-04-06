@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CreatePackage">
+
+	<!-- Model Properties -->
+	<PropertyGroup>
+		<ModelId>3</ModelId>
+		<Generator>Java</Generator>
+		<CacheExpiration>36</CacheExpiration>
+		<OpenAPI>true</OpenAPI>
+		<StaticDir>static</StaticDir>
+		<NationalLanguageSupport>true</NationalLanguageSupport>
+		<StorageProvider>AmazonS3</StorageProvider>
+		<WebNotifProvider>GeneXus</WebNotifProvider>
+		<CloudServices>true</CloudServices>
+		<OfflineSupport>false</OfflineSupport>
+		<Https>false</Https>
+		<JavaPath>C:\Java_64\jdk18.0.1.1\bin</JavaPath>
+		<PackageName></PackageName>
+		<UseNativeSoap>false</UseNativeSoap>
+		<Searchable>false</Searchable>
+		<JDBCDrivers>org.postgresql.Driver</JDBCDrivers>
+		<PostgreSQL>true</PostgreSQL>
+		<GAMDBMSType>15</GAMDBMSType>
+	</PropertyGroup>
+
+	<!-- Deploy Properties -->
+	<PropertyGroup>
+		<ApplicationKey>5D059DC6C9B4E875E5BEA6D49D3EEA8EEF7672B2E5A0E6D286B3F3F7DF2611B4</ApplicationKey>
+		<ApplicationServer>Tomcat 10.x</ApplicationServer>
+		<ApplicationServerMSBuild>D:\GX\GX17u9\ApplicationServers\Templates\JavaWeb\msbuild\TomcatContextSettings.msbuild</ApplicationServerMSBuild>
+		<ApplicationServerTemplate>D:\GX\GX17u9\ApplicationServers\Templates\JavaWeb\Generic_Servlet_v5_0.stg</ApplicationServerTemplate>
+		<AppName>SeletivoSEPLAG</AppName>
+		<AppUpdate>NONE</AppUpdate>
+		<DeploymentUnit>DeploymentUnit1</DeploymentUnit>
+		<DeployTarget>DOCKER</DeployTarget>
+		<DeployTargetTask>D:\GX\GX17u9\DeploymentTargets\Docker\docker.targets</DeployTargetTask>
+		<EnableKBN>False</EnableKBN>
+		<IncludeGAMBackend>False</IncludeGAMBackend>
+		<IsCMD>false</IsCMD>
+		<KBPath>D:\Des\GX17u9\SeletivoSEPLAG</KBPath>
+		<PackageFormat>Automatic</PackageFormat>
+		<ProjectName>DeploymentUnit1_20250402110515</ProjectName>
+		<RestSpecFolder>D:\Des\GX17u9\SeletivoSEPLAG\GXRESTSPC\SeletivoSEPLAG</RestSpecFolder>
+		<SourcePath>D:\Des\GX17u9\SeletivoSEPLAG\HOM</SourcePath>
+		<TargetJRE>9</TargetJRE>
+		<TimeStamp>20250402110515</TimeStamp>
+	</PropertyGroup>
+
+	<!-- General Properties -->
+	<PropertyGroup>
+		<GX_PROGRAM_DIR Condition=" '$(GX_PROGRAM_DIR)' == '' ">D:\GX\GX17u9</GX_PROGRAM_DIR>
+		<AdditionalItems Condition=" '$(AdditionalItems)' == ''">$(DeploymentUnit)_user.gxdproj</AdditionalItems>
+	</PropertyGroup>
+
+	<!-- Destination paths -->
+	<PropertyGroup>
+		<DeployFileFullPath>$(SourcePath)\Deploy\$(DeployTarget)</DeployFileFullPath>
+		<DeployFullPath>$(DeployFileFullPath)\$(DeploymentUnit)\$(TimeStamp)</DeployFullPath>
+	</PropertyGroup>
+
+	<!-- Languages -->
+	<ItemGroup> 
+		<Language Include="Portuguese">
+			<QualifiedName>Portuguese</QualifiedName>
+			<Description>Portuguese</Description>
+			<Code>pt</Code>
+			<MessageCode>por</MessageCode>
+		</Language>
+	</ItemGroup>
+
+	<!-- Objects -->
+	<ItemGroup> 
+		<Object Include="ws_autenticacao">
+			<Type>Procedure</Type>
+			<QualifiedName>ws_autenticacao</QualifiedName>
+			<Description>ws_autenticacao</Description>
+			<Generate>true</Generate>
+			<Selected>true</Selected>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+	</ItemGroup>
+
+	<!-- Selected Objects -->
+	<ItemGroup> 
+		<SelectedObject Include="ws_autenticacao">
+			<Type>Procedure</Type>
+			<QualifiedName>ws_autenticacao</QualifiedName>
+			<Description>ws_autenticacao</Description>
+		</SelectedObject>
+	</ItemGroup>
+
+	<Target Name="ValidateDeployment">
+		<!-- overrideable on custom targets -->
+
+	</Target>
+
+	<Import Project="$(GX_PROGRAM_DIR)\Imports.targets"/>
+	<Import Project="$(AdditionalItems)" Condition="'$(AdditionalItems)'!='' and Exists('$(AdditionalItems)')" />
+
+</Project>
+

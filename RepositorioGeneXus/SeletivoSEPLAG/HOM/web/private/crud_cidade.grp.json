@@ -1,0 +1,61 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_cidade",
+"BasePath":"cidade",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create",
+"Implementation":"pCriarCidade",
+"PathRegexp":"create",
+"Path":"create"
+
+},
+{
+"Name":"read_getlist",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist",
+"Implementation":"dpListarCidades",
+"Verb":"GET",
+"PathRegexp":"read_getlist",
+"Path":"read_getlist"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarCidade",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update",
+"Implementation":"pAtualizarCidade",
+"PathRegexp":"update",
+"Path":"update"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete",
+"Implementation":"pExcluirCidade",
+"PathRegexp":"delete",
+"Path":"delete"
+
+}]}

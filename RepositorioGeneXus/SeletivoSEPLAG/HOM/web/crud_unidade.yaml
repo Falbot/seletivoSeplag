@@ -1,0 +1,298 @@
+openapi: 3.0.0
+info:
+  title: "crud_unidade"
+  description: "crud_unidade"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/unidade
+paths:
+  /Create:
+    post:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Create"
+      summary: "Create"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateOutput"
+        404:
+          description: "Not found"
+
+  /Read_GetList:
+    get:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Read_GetList"
+      summary: "Read_GetList"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaUnidades_sdtListaUnidadesItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codgunidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update:
+    put:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Update"
+      summary: "Update"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Delete:
+    delete:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Delete"
+      summary: "Delete"
+      parameters:
+        - name: "Codgunidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+  /Delete_Endereco:
+    delete:
+      tags:
+        - crud_unidade  
+      operationId: "crud_unidade.Delete_Endereco"
+      summary: "Delete_Endereco"
+      parameters:
+        - name: "Codgunidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Codendereco"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    CreateOutput:
+      properties:
+        RetornoPK:
+          type: "integer"
+          format: "int32"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+    Read_GetByKeyOutput:
+      properties:
+        ListaUnidade:
+          description: "sdt Lista Unidade"
+          $ref: "#/components/schemas/sdtListaUnidade"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+
+
+    CreateInput:  
+      properties:
+        DadosUnidade:
+          description: "sdt Unidade"
+          $ref: "#/components/schemas/sdtUnidade"
+
+
+
+    UpdateInput:  
+      properties:
+        ListaUnidade:
+          description: "sdt Lista Unidade"
+          $ref: "#/components/schemas/sdtListaUnidade"
+
+
+  
+    sdtUnidade:
+      properties:
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        DadosEndereco:
+          description: "sdt Endereco"
+          $ref: "#/components/schemas/sdtEndereco"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaUnidades_sdtListaUnidadesItem:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+
+
+
+    sdtListaUnidade:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+
+
+
+    sdtEndereco:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+
+
+
+ 

@@ -1,0 +1,72 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"crud_unidade",
+"BasePath":"unidade",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"create",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_create",
+"Implementation":"pCriarUnidade",
+"PathRegexp":"create",
+"Path":"create"
+
+},
+{
+"Name":"read_getlist",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getlist",
+"Implementation":"dpListarUnidades",
+"Verb":"GET",
+"PathRegexp":"read_getlist",
+"Path":"read_getlist"
+
+},
+{
+"Name":"read_getbykey",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_read_getbykey",
+"Implementation":"pListarUnidade",
+"Verb":"GET",
+"PathRegexp":"read_getbykey",
+"Path":"read_getbykey"
+
+},
+{
+"Verb":"PUT",
+"Name":"update",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_update",
+"Implementation":"pAtualizarUnidade",
+"PathRegexp":"update",
+"Path":"update"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete",
+"Implementation":"pExcluirUnidade",
+"PathRegexp":"delete",
+"Path":"delete"
+
+},
+{
+"Verb":"DELETE",
+"Name":"delete_endereco",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_delete_endereco",
+"Implementation":"pExcluirUnidadeEndereco",
+"PathRegexp":"delete_endereco",
+"Path":"delete_endereco"
+
+}]}

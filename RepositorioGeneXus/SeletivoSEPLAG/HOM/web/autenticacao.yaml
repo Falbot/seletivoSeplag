@@ -1,0 +1,83 @@
+openapi: 3.0.0
+info:
+  title: "autenticacao"
+  description: "autenticacao"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/autenticacao
+paths:
+  /Token:
+    post:
+      tags:
+        - autenticacao  
+      operationId: "autenticacao.Token"
+      summary: "Token"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TokenInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TokenOutput"
+        404:
+          description: "Not found"
+
+  /RefreshToken:
+    post:
+      tags:
+        - autenticacao  
+      operationId: "autenticacao.RefreshToken"
+      summary: "RefreshToken"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RefreshTokenInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RefreshTokenOutput"
+        404:
+          description: "Not found"
+
+components:
+  schemas:
+    TokenOutput:
+      properties:
+        Token:
+          type: "string"
+        Success:
+          type: "boolean"
+
+    RefreshTokenOutput:
+      properties:
+        RefreshToken:
+          type: "string"
+        Success:
+          type: "boolean"
+
+    TokenInput:  
+      properties:
+        Usuario:
+          type: "string"
+        Senha:
+          type: "string"
+
+    RefreshTokenInput:  
+      properties:
+        Token:
+          type: "string"
+  
+ 

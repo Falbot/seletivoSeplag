@@ -1,0 +1,10 @@
+bc_dt_elem_i([ 0,5,0 ],'Fp_id',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Pes_id',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Pes_nome',readonly,yes).
+bc_dt_elem_i([ 0,5,0 ],'Pes_nome',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Pes_data_nascimento',readonly,yes).
+bc_dt_elem_i([ 0,5,0 ],'Pes_data_nascimento',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Fp_data',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Fp_bucket',allownulls,no).
+bc_dt_elem_i([ 0,5,0 ],'Fp_hash',allownulls,no).
+ 

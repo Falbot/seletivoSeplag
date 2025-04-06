@@ -1,0 +1,87 @@
+ 
+spec_i([ sdt,[ 26,63,0 ],sdtListaCidades,sdtListaCidades,0,por,'18_0_8-180599' ]).
+ 
+struct_dt_i([ 26,63,0 ],name,sdtListaCidades).
+struct_dt_i([ 26,63,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 26,63,0 ],'ObjName',sdtListaCidades).
+struct_dt_i([ 26,63,0 ],'ObjDesc','Lista Cidades').
+struct_dt_i([ 26,63,0 ],'ExternalName',sdtListaCidades).
+struct_dt_i([ 26,63,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 26,63,0 ],'JsonInputFormat','JsonInputWrapped').
+struct_dt_i([ 26,63,0 ],collection,'True').
+struct_dt_i([ 26,63,0 ],datatype,[ 26,63,90 ]).
+struct_dt_i([ 26,63,0 ],'CollectionItemName',sdtListaCidadesItem).
+struct_dt_i([ 26,63,0 ],'XmlName','').
+struct_dt_i([ 26,63,0 ],'XmlCollectionItemName','').
+struct_dt_i([ 26,63,0 ],'XmlNamespace','').
+struct_dt_i([ 26,63,0 ],'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,63,0 ],'XmlInclude',idXmlIncludeAlways).
+struct_dt_i([ 26,63,0 ],'JsonName','').
+struct_dt_i([ 26,63,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,63,0 ],'JsonCollectionSerialization',idXmlCollectionWrapped).
+struct_dt_i([ 26,63,90 ],name,sdtListaCidadesItem).
+struct_dt_i([ 26,63,90 ],namespace,'SeletivoSEPLAG.sdtListaCidades').
+struct_dt_i([ 26,63,0 ],fullname,sdtListaCidades).
+struct_dt_i([ 26,63,90 ],fullname,'sdtListaCidades.sdtListaCidadesItem').
+struct_dt_i([ 26,63,0 ],modified,yes).
+struct_dt_i([ 26,63,90 ],modified,yes).
+ 
+struct_dt_elem_i([ 26,63,90 ],1,name,'Cid_id').
+struct_dt_elem_i([ 26,63,90 ],1,camelname,cid_id).
+struct_dt_elem_i([ 26,63,90 ],1,length,4).
+struct_dt_elem_i([ 26,63,90 ],1,decimals,0).
+struct_dt_elem_i([ 26,63,90 ],1,sign,0).
+struct_dt_elem_i([ 26,63,90 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,63,90 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,63,90 ],1,collection,'False').
+struct_dt_elem_i([ 26,63,90 ],1,'ExternalName',cid_id).
+struct_dt_elem_i([ 26,63,90 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,63,90 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,63,90 ],1,'XmlName','').
+struct_dt_elem_i([ 26,63,90 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,63,90 ],1,soaptype,'').
+struct_dt_elem_i([ 26,63,90 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,63,90 ],1,'JsonName','').
+struct_dt_elem_i([ 26,63,90 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,63,90 ],2,name,'Cid_nome').
+struct_dt_elem_i([ 26,63,90 ],2,camelname,cid_nome).
+struct_dt_elem_i([ 26,63,90 ],2,length,200).
+struct_dt_elem_i([ 26,63,90 ],2,decimals,0).
+struct_dt_elem_i([ 26,63,90 ],2,type,[ 13,200,0 ]).
+struct_dt_elem_i([ 26,63,90 ],2,pic,'@!').
+struct_dt_elem_i([ 26,63,90 ],2,collection,'False').
+struct_dt_elem_i([ 26,63,90 ],2,'ExternalName',cid_nome).
+struct_dt_elem_i([ 26,63,90 ],2,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,63,90 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,63,90 ],2,'XmlName','').
+struct_dt_elem_i([ 26,63,90 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,63,90 ],2,soaptype,'').
+struct_dt_elem_i([ 26,63,90 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,63,90 ],2,'JsonName','').
+struct_dt_elem_i([ 26,63,90 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,63,90 ],3,name,'Cid_uf').
+struct_dt_elem_i([ 26,63,90 ],3,camelname,cid_uf).
+struct_dt_elem_i([ 26,63,90 ],3,length,2).
+struct_dt_elem_i([ 26,63,90 ],3,decimals,0).
+struct_dt_elem_i([ 26,63,90 ],3,type,[ 5,2,0 ]).
+struct_dt_elem_i([ 26,63,90 ],3,pic,'@!').
+struct_dt_elem_i([ 26,63,90 ],3,collection,'False').
+struct_dt_elem_i([ 26,63,90 ],3,'ExternalName',cid_uf).
+struct_dt_elem_i([ 26,63,90 ],3,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,63,90 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,63,90 ],3,'XmlName','').
+struct_dt_elem_i([ 26,63,90 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,63,90 ],3,soaptype,'').
+struct_dt_elem_i([ 26,63,90 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,63,90 ],3,'JsonName','').
+struct_dt_elem_i([ 26,63,90 ],3,'JsonInclude',idJsonEmpty).
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','PACKAGE','com.genexuscore').
+module_info_i('GeneXus\Common','PackageName','GeneXus.jar').
+module_info_i('GeneXus','PACKAGE','com.genexuscore').
+module_info_i('GeneXus','PackageName','GeneXus.jar').

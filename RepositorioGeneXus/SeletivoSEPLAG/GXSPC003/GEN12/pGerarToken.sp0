@@ -1,0 +1,2853 @@
+spec_i([ proc,39,'p Gerar Token',pGerarToken,78,por,'18_0_8-180599' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'POSTGRESQL_EXTENSIONS','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'DS_READ_REPLICA','No')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',root)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CNTDLG','2')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',seletivoSEPLAG)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','JDBC')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','15')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',pGerarToken)).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','No')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop(sessiontype,'RW')).
+rule_i(0,prop('Folder',o(8,'Procedures'))).
+rule_i(0,prop('ObjDesc','p Gerar Token')).
+rule_i(0,prop('ObjName',pGerarToken)).
+rule_i(0,maingen(12)).
+rule_i(0,parm([ 'Usuario','Senha','Token','Success' ],[])).
+rule_i(0,parmio([ [ 'Usuario',in ],[ 'Senha',in ],[ 'Token',out ],[ 'Success',out ] ])).
+rule_i(0,output('FIL')).
+rule_i(0,rule([ a(13,[ endtrn ]) ],[],[],[])).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',27 ]).
+attri_i('Verification',[ 'Verification',boolean,4,0,'',0,'Verification','',19 ]).
+attri_i('Usuario',[ 'Usuario',svchar,100,0,'',0,'Usuario','',22 ]).
+attri_i('Token',[ 'Token',vchar,2097152,0,'',0,'Token','',16 ]).
+attri_i('Symmetrickeygenerator',[ 'SymmetricKeyGenerator',o('SecurityAPICommons\SymmetricKeyGenerator'),0,0,'',0,'Symmetric Key Generator','',12 ]).
+attri_i('Symmetrickey',[ 'SymmetricKey',svchar,64,0,'',0,'Symmetric Key','',13 ]).
+attri_i('Success',[ 'Success',boolean,4,0,'',0,'Success','',26 ]).
+attri_i('Senha',[ 'Senha',svchar,100,0,'',0,'Senha','',24 ]).
+attri_i('Privateclaims',[ 'PrivateClaims',o('GeneXusJWT\PrivateClaims'),0,0,'',0,'Private Claims','',15 ]).
+attri_i('Payload',[ payload,svchar,40,0,'',0,payload,'',18 ]).
+attri_i('Jwtoptions',[ 'JWTOptions',o('GeneXusJWT\JWTOptions'),0,0,'',0,'JWTOptions','',14 ]).
+attri_i('Jwtcreator',[ 'JWTCreator',o('GeneXusJWT\JWTCreator'),0,0,'',0,'JWTCreator','',20 ]).
+attri_i('Header',[ header,svchar,40,0,'',0,header,'',17 ]).
+attri_i('Dateutil',[ 'DateUtil',o('GeneXusJWT\Deprecated\DateUtil'),0,0,'',0,'Date Util','',21 ]).
+attri_i('Claims',[ claims,int,4,0,'ZZZ9',0,claims,'',25 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+enum_value_i(3,89,'"iss"',iss,'"iss"',[ none ]).
+enum_value_i(3,89,'"exp"',exp,'"exp"',[ none ]).
+enum_value_i(3,89,'"sub"',sub,'"sub"',[ none ]).
+enum_value_i(3,89,'"aud"',aud,'"aud"',[ none ]).
+enum_value_i(3,89,'"nbf"',nbf,'"nbf"',[ none ]).
+enum_value_i(3,89,'"iat"',iat,'"iat"',[ none ]).
+enum_value_i(3,89,'"jti"',jti,'"jti"',[ none ]).
+enum_value_i(3,88,'"HS256"','HS256','"HS256"',[ none ]).
+enum_value_i(3,88,'"HS512"','HS512','"HS512"',[ none ]).
+enum_value_i(3,88,'"RS256"','RS256','"RS256"',[ none ]).
+enum_value_i(3,88,'"RS512"','RS512','"RS512"',[ none ]).
+enum_value_i(3,88,'"ES256"','ES256','"ES256"',[ none ]).
+enum_value_i(3,88,'"ES384"','ES384','"ES384"',[ none ]).
+enum_value_i(3,88,'"ES512"','ES512','"ES512"',[ none ]).
+ 
+enum_value_info_i(3,89,'GeneXusJWT\RegisteredClaim').
+enum_value_info_i(3,88,'GeneXusJWT\JWTAlgorithm').
+ 
+enum_type_i(3,89,char,3,0).
+enum_type_i(3,88,char,20,0).
+ 
+ 
+ 
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[]).
+b_line_i(2,1,1,cmd,0,[ t('',107,2,0),t('Success',23,0,0),t(=,10,0,0),t('FALSE',41,0,0) ]).
+b_line_i(3,1,1,cmd,0,[ t('',107,3,0),t('Token',23,0,0),t(=,10,0,0),t('''''',3,0,0) ]).
+b_line_i(4,1,1,cmd,0,[]).
+b_line_i(5,1,1,cmd,0,[]).
+b_line_i(6,1,1,cmd,0,[ t('',109,6,0),t('Usuario',23,0,4),t(=,10,0,13),t('''seletivo@seplag.mt.gov.br''',3,6,15),t('.AND.',9,0,43),t('Senha',23,0,49),t(=,10,0,56),t('''@seletivo123''',3,6,58) ]).
+b_line_i(7,1,1,cmd,0,[]).
+b_line_i(8,1,1,cmd,0,[]).
+b_line_i(9,1,1,cmd,0,[ t('',107,9,0),t('Symmetrickey',23,0,0),t(=,10,0,0),t('''2d6db091d7512345030d0d52d375ea6838b7cb2dd9fc9d5ddf7811038a544b1c''',3,0,0) ]).
+b_line_i(10,1,1,cmd,0,[ t('',107,10,0),t([ t('Jwtoptions',23,10,2),t('addcustomtimevalidationclaim(',1,10,14) ],31,10,14),t([ 89,exp ],44,10,44),t(',',7,0,63),t([ t('Dateutil',23,0,65),t('currentplusseconds(',1,0,75) ],31,10,75),t('300',3,0,95),t(')',4,0,98),t(',',7,0,99),t('"0"',3,10,101),t(')',4,0,104) ]).
+b_line_i(11,1,1,cmd,0,[ t('',107,11,0),t([ t('Jwtoptions',23,11,2),t('addregisteredclaim(',1,11,14) ],31,11,14),t([ 89,jti ],44,11,34),t(',',7,0,53),t('''MinhaChaveJWTSegura123''',3,11,55),t(')',4,0,79) ]).
+b_line_i(12,1,1,cmd,0,[ t('',107,12,0),t([ t('Jwtoptions',23,12,2),t('setsecret(',1,12,14) ],31,12,14),t('Symmetrickey',23,0,25),t(')',4,0,38) ]).
+b_line_i(13,1,1,cmd,0,[]).
+b_line_i(14,1,1,cmd,0,[ t('',107,14,0),t([ t('Privateclaims',23,14,2),t('setclaim(',1,14,17) ],31,14,17),t('''usuario''',3,14,27),t(',',7,0,36),t('Usuario',23,0,38),t(')',4,0,46) ]).
+b_line_i(15,1,1,cmd,0,[]).
+b_line_i(16,1,1,cmd,0,[ t('',107,16,0),t('Token',23,0,0),t(=,10,0,0),t([ t('Jwtcreator',23,0,0),t('docreate(',1,0,0) ],31,0,0),t([ 88,'HS256' ],44,0,0),t(',',7,0,0),t('Privateclaims',23,0,0),t(',',7,0,0),t('Jwtoptions',23,0,0),t(')',4,0,0) ]).
+b_line_i(17,1,1,cmd,0,[]).
+b_line_i(18,1,1,cmd,0,[]).
+b_line_i(19,1,1,cmd,0,[ t('',109,19,0),t([ t('Jwtcreator',23,0,5),t('haserror(',1,0,17) ],31,19,17),t(')',4,0,27) ]).
+b_line_i(20,1,1,cmd,0,[ t('',141,20,0),t('"Error on creation: Code: "',3,20,10),t(+,5,0,38),t([ t('Jwtcreator',23,0,40),t('geterrorcode(',1,0,52) ],31,20,52),t(')',4,0,66),t(+,5,0,68),t('" Description: "',3,20,70),t(+,5,0,87),t([ t('Jwtcreator',23,0,89),t('geterrordescription(',1,0,101) ],31,20,101),t(')',4,0,122),t(',',7,0,123),t('Status',3,0,125),t(')',4,0,131) ]).
+b_line_i(21,1,1,cmd,0,[ t('',110,21,0) ]).
+b_line_i(22,1,1,cmd,0,[ t('',107,22,0),t('Success',23,0,0),t(=,10,0,0),t('TRUE',40,0,0) ]).
+b_line_i(23,1,1,cmd,0,[ t('',141,23,0),t('"Correctly generated"',3,23,10),t(',',7,0,31),t('Status',3,0,33),t(')',4,0,39) ]).
+b_line_i(24,1,1,cmd,0,[]).
+b_line_i(25,1,1,cmd,0,[ t('',111,25,0) ]).
+b_line_i(26,1,1,cmd,0,[ t('',111,26,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',11909,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ 
+ 
+calling_main_i(42,9).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+struct_dt_i([ 14,70,0 ],name,'GeneXusJWT\Deprecated\DateUtil').
+struct_dt_i([ 14,70,0 ],'ObjName','DateUtil').
+struct_dt_i([ 14,70,0 ],'ObjDesc','It retrieves system date and time using seconds to calculate registered time validating claims on the string format yyyy/MM/dd HH:mm:ss specific for the module definition.').
+struct_dt_i([ 14,70,0 ],'ExoType','0').
+struct_dt_i([ 14,70,0 ],'ObjNamespace','').
+struct_dt_i([ 14,70,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,70,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,70,0 ],'AssemblyName','GeneXusJWTImpl.dll').
+struct_dt_i([ 14,70,0 ],'ExoNameNETCORE','GeneXusJWT.GenexusJWTUtils.DateUtil').
+struct_dt_i([ 14,70,0 ],'NetCoreAssemblyName','GeneXusJWTNetCoreImpl.dll').
+struct_dt_i([ 14,70,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,70,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,70,0 ],'ExoNameJAVA','DateUtil').
+struct_dt_i([ 14,70,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,70,0 ],'PackageName','com.genexus.JWT.utils').
+struct_dt_i([ 14,70,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,70,0 ],'ExoNameJS','').
+struct_dt_i([ 14,70,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,70,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,70,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,70,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,70,0 ],'Folder',o(120,'GeneXusJWT\Deprecated')).
+struct_dt_i([ 14,70,0 ],'FullyQualifiedName','GeneXusJWT.Deprecated.DateUtil').
+struct_dt_i([ 14,70,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,70,0 ],isexternal,'True').
+struct_dt_i([ 14,67,0 ],name,'GeneXusJWT\JWTCreator').
+struct_dt_i([ 14,67,0 ],'ObjName','JWTCreator').
+struct_dt_i([ 14,67,0 ],'ObjDesc','Provides functions to create, verify and retrieve useful information from a token.').
+struct_dt_i([ 14,67,0 ],'ExoType','0').
+struct_dt_i([ 14,67,0 ],'ObjNamespace','').
+struct_dt_i([ 14,67,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,67,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,67,0 ],'AssemblyName','GeneXusJWTImpl.dll').
+struct_dt_i([ 14,67,0 ],'ExoNameNETCORE','GeneXusJWT.GenexusJWT.JWTCreator').
+struct_dt_i([ 14,67,0 ],'NetCoreAssemblyName','GeneXusJWTNetCoreImpl.dll').
+struct_dt_i([ 14,67,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,67,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,67,0 ],'ExoNameJAVA','JWTCreator').
+struct_dt_i([ 14,67,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,67,0 ],'PackageName','com.genexus.JWT').
+struct_dt_i([ 14,67,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,67,0 ],'ExoNameJS','').
+struct_dt_i([ 14,67,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,67,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,67,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,67,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,67,0 ],'Folder',o(8,'GeneXusJWT\JWT')).
+struct_dt_i([ 14,67,0 ],'FullyQualifiedName','GeneXusJWT.JWTCreator').
+struct_dt_i([ 14,67,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,67,0 ],isexternal,'True').
+struct_dt_i([ 14,66,0 ],name,'GeneXusJWT\PrivateClaims').
+struct_dt_i([ 14,66,0 ],'ObjName','PrivateClaims').
+struct_dt_i([ 14,66,0 ],'ObjDesc','List of private claims to add or verify on a JWT').
+struct_dt_i([ 14,66,0 ],'ExoType','0').
+struct_dt_i([ 14,66,0 ],'ObjNamespace','').
+struct_dt_i([ 14,66,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,66,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,66,0 ],'AssemblyName','GeneXusJWTImpl.dll').
+struct_dt_i([ 14,66,0 ],'ExoNameNETCORE','GeneXusJWT.GenexusJWTClaims.PrivateClaims').
+struct_dt_i([ 14,66,0 ],'NetCoreAssemblyName','GeneXusJWTNetCoreImpl.dll').
+struct_dt_i([ 14,66,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,66,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,66,0 ],'ExoNameJAVA','PrivateClaims').
+struct_dt_i([ 14,66,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,66,0 ],'PackageName','com.genexus.JWT.claims').
+struct_dt_i([ 14,66,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,66,0 ],'ExoNameJS','').
+struct_dt_i([ 14,66,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,66,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,66,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,66,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,66,0 ],'Folder',o(8,'GeneXusJWT\Utils')).
+struct_dt_i([ 14,66,0 ],'FullyQualifiedName','GeneXusJWT.PrivateClaims').
+struct_dt_i([ 14,66,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,66,0 ],isexternal,'True').
+struct_dt_i([ 14,68,0 ],name,'GeneXusJWT\JWTOptions').
+struct_dt_i([ 14,68,0 ],'ObjName','JWTOptions').
+struct_dt_i([ 14,68,0 ],'ObjDesc','It is used to add optional values for token creation and validation.').
+struct_dt_i([ 14,68,0 ],'ExoType','0').
+struct_dt_i([ 14,68,0 ],'ObjNamespace','').
+struct_dt_i([ 14,68,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,68,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,68,0 ],'AssemblyName','GeneXusJWTImpl.dll').
+struct_dt_i([ 14,68,0 ],'ExoNameNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_i([ 14,68,0 ],'NetCoreAssemblyName','GeneXusJWTNetCoreImpl.dll').
+struct_dt_i([ 14,68,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,68,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,68,0 ],'ExoNameJAVA','JWTOptions').
+struct_dt_i([ 14,68,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,68,0 ],'PackageName','com.genexus.commons').
+struct_dt_i([ 14,68,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,68,0 ],'ExoNameJS','').
+struct_dt_i([ 14,68,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,68,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,68,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,68,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,68,0 ],'Folder',o(8,'GeneXusJWT\JWT')).
+struct_dt_i([ 14,68,0 ],'FullyQualifiedName','GeneXusJWT.JWTOptions').
+struct_dt_i([ 14,68,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,68,0 ],isexternal,'True').
+struct_dt_i([ 14,65,0 ],name,'GeneXusJWT\RevocationList').
+struct_dt_i([ 14,65,0 ],'ObjName','RevocationList').
+struct_dt_i([ 14,65,0 ],'ObjDesc','Defines a revocation list to be used on token verification.').
+struct_dt_i([ 14,65,0 ],'ExoType','0').
+struct_dt_i([ 14,65,0 ],'ObjNamespace','').
+struct_dt_i([ 14,65,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,65,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,65,0 ],'AssemblyName','GeneXusJWTImpl.dll').
+struct_dt_i([ 14,65,0 ],'ExoNameNETCORE','GeneXusJWT.GenexusJWTUtils.RevocationList').
+struct_dt_i([ 14,65,0 ],'NetCoreAssemblyName','GeneXusJWTNetCoreImpl.dll').
+struct_dt_i([ 14,65,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,65,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,65,0 ],'ExoNameJAVA','RevocationList').
+struct_dt_i([ 14,65,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,65,0 ],'PackageName','com.genexus.JWT.utils').
+struct_dt_i([ 14,65,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,65,0 ],'ExoNameJS','').
+struct_dt_i([ 14,65,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,65,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,65,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,65,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,65,0 ],'Folder',o(8,'GeneXusJWT\Utils')).
+struct_dt_i([ 14,65,0 ],'FullyQualifiedName','GeneXusJWT.RevocationList').
+struct_dt_i([ 14,65,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,65,0 ],isexternal,'True').
+struct_dt_i([ 14,60,0 ],name,'SecurityAPICommons\PrivateKey').
+struct_dt_i([ 14,60,0 ],'ObjName','PrivateKey').
+struct_dt_i([ 14,60,0 ],'ObjDesc','Private key object representation').
+struct_dt_i([ 14,60,0 ],'ExoType','0').
+struct_dt_i([ 14,60,0 ],'ObjNamespace','').
+struct_dt_i([ 14,60,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,60,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,60,0 ],'AssemblyName','GeneXusSecurityAPICommonsImpl.dll').
+struct_dt_i([ 14,60,0 ],'ExoNameNETCORE','SecurityAPICommons.Keys.PrivateKeyManager').
+struct_dt_i([ 14,60,0 ],'NetCoreAssemblyName','GeneXusSecurityAPICommonsNetCoreImpl.dll').
+struct_dt_i([ 14,60,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,60,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,60,0 ],'ExoNameJAVA','PrivateKeyManager').
+struct_dt_i([ 14,60,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,60,0 ],'PackageName','com.genexus.securityapicommons.keys').
+struct_dt_i([ 14,60,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,60,0 ],'ExoNameJS','').
+struct_dt_i([ 14,60,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,60,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,60,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,60,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,60,0 ],'Folder',o(8,'SecurityAPICommons\Asymmetric')).
+struct_dt_i([ 14,60,0 ],'FullyQualifiedName','SecurityAPICommons.PrivateKey').
+struct_dt_i([ 14,60,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,60,0 ],isexternal,'True').
+struct_dt_i([ 14,59,0 ],name,'SecurityAPICommons\Certificate').
+struct_dt_i([ 14,59,0 ],'ObjName','Certificate').
+struct_dt_i([ 14,59,0 ],'ObjDesc','Public key certificate').
+struct_dt_i([ 14,59,0 ],'ExoType','0').
+struct_dt_i([ 14,59,0 ],'ObjNamespace','').
+struct_dt_i([ 14,59,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,59,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,59,0 ],'AssemblyName','GeneXusSecurityAPICommonsImpl.dll').
+struct_dt_i([ 14,59,0 ],'ExoNameNETCORE','SecurityAPICommons.Keys.CertificateX509').
+struct_dt_i([ 14,59,0 ],'NetCoreAssemblyName','GeneXusSecurityAPICommonsNetCoreImpl.dll').
+struct_dt_i([ 14,59,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,59,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,59,0 ],'ExoNameJAVA','CertificateX509').
+struct_dt_i([ 14,59,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,59,0 ],'PackageName','com.genexus.securityapicommons.keys').
+struct_dt_i([ 14,59,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,59,0 ],'ExoNameJS','').
+struct_dt_i([ 14,59,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,59,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,59,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,59,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,59,0 ],'Folder',o(8,'SecurityAPICommons\Asymmetric')).
+struct_dt_i([ 14,59,0 ],'FullyQualifiedName','SecurityAPICommons.Certificate').
+struct_dt_i([ 14,59,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,59,0 ],isexternal,'True').
+struct_dt_i([ 14,61,0 ],name,'SecurityAPICommons\SymmetricKeyGenerator').
+struct_dt_i([ 14,61,0 ],'ObjName','SymmetricKeyGenerator').
+struct_dt_i([ 14,61,0 ],'ObjDesc','Key generator for symmetric encryption algorithms').
+struct_dt_i([ 14,61,0 ],'ExoType','0').
+struct_dt_i([ 14,61,0 ],'ObjNamespace','').
+struct_dt_i([ 14,61,0 ],'ExoImporterVersion','').
+struct_dt_i([ 14,61,0 ],'ExoSourceURI','').
+struct_dt_i([ 14,61,0 ],'AssemblyName','GeneXusSecurityAPICommonsImpl.dll').
+struct_dt_i([ 14,61,0 ],'ExoNameNETCORE','SecurityAPICommons.Keys.SymmetricKeyGenerator').
+struct_dt_i([ 14,61,0 ],'NetCoreAssemblyName','GeneXusSecurityAPICommonsNetCoreImpl.dll').
+struct_dt_i([ 14,61,0 ],'NetCorePackageName','').
+struct_dt_i([ 14,61,0 ],'ExoConstructorParametersNETCORE','').
+struct_dt_i([ 14,61,0 ],'ExoNameJAVA','SymmetricKeyGenerator').
+struct_dt_i([ 14,61,0 ],'JavaArtifactId','').
+struct_dt_i([ 14,61,0 ],'PackageName','com.genexus.securityapicommons.keys').
+struct_dt_i([ 14,61,0 ],'ExoConstructorParametersJAVA','').
+struct_dt_i([ 14,61,0 ],'ExoNameJS','').
+struct_dt_i([ 14,61,0 ],'ExoReferencedFilesJS','').
+struct_dt_i([ 14,61,0 ],'ExoJsModuleName','').
+struct_dt_i([ 14,61,0 ],'ExoJsModulePath','').
+struct_dt_i([ 14,61,0 ],'ExoJsModuleReference','').
+struct_dt_i([ 14,61,0 ],'Folder',o(8,'SecurityAPICommons\Symmetric')).
+struct_dt_i([ 14,61,0 ],'FullyQualifiedName','SecurityAPICommons.SymmetricKeyGenerator').
+struct_dt_i([ 14,61,0 ],'ObjectVisibility','Public').
+struct_dt_i([ 14,61,0 ],isexternal,'True').
+struct_dt_i([ 14,70,0 ],fullname,'GeneXusJWT\Deprecated\DateUtil').
+struct_dt_i([ 14,67,0 ],fullname,'GeneXusJWT\JWTCreator').
+struct_dt_i([ 14,66,0 ],fullname,'GeneXusJWT\PrivateClaims').
+struct_dt_i([ 14,68,0 ],fullname,'GeneXusJWT\JWTOptions').
+struct_dt_i([ 14,65,0 ],fullname,'GeneXusJWT\RevocationList').
+struct_dt_i([ 14,60,0 ],fullname,'SecurityAPICommons\PrivateKey').
+struct_dt_i([ 14,59,0 ],fullname,'SecurityAPICommons\Certificate').
+struct_dt_i([ 14,61,0 ],fullname,'SecurityAPICommons\SymmetricKeyGenerator').
+ 
+struct_dt_elem_i([ 14,59,0 ],1,name,'Issuer').
+struct_dt_elem_i([ 14,59,0 ],1,camelname,'Issuer').
+struct_dt_elem_i([ 14,59,0 ],1,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],1,length,100).
+struct_dt_elem_i([ 14,59,0 ],1,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],1,type,[ 5,100,0 ]).
+struct_dt_elem_i([ 14,59,0 ],1,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],1,'IntName','Issuer').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoItemDesc','Certificate issuer').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoItemType','Character').
+struct_dt_elem_i([ 14,59,0 ],1,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],1,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],1,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],1,'EditAutocomplete','0').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoNameNETCORE','Issuer').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoNameJAVA',issuer).
+struct_dt_elem_i([ 14,59,0 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],1,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],2,name,'Subject').
+struct_dt_elem_i([ 14,59,0 ],2,camelname,'Subject').
+struct_dt_elem_i([ 14,59,0 ],2,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],2,length,100).
+struct_dt_elem_i([ 14,59,0 ],2,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],2,type,[ 5,100,0 ]).
+struct_dt_elem_i([ 14,59,0 ],2,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],2,'IntName','Subject').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoItemDesc','Certificate subject').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoItemType','Character').
+struct_dt_elem_i([ 14,59,0 ],2,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],2,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],2,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],2,'EditAutocomplete','0').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoNameNETCORE','Subject').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoNameJAVA',subject).
+struct_dt_elem_i([ 14,59,0 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],2,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],3,name,'Serialnumber').
+struct_dt_elem_i([ 14,59,0 ],3,camelname,'SerialNumber').
+struct_dt_elem_i([ 14,59,0 ],3,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],3,length,100).
+struct_dt_elem_i([ 14,59,0 ],3,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],3,type,[ 5,100,0 ]).
+struct_dt_elem_i([ 14,59,0 ],3,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],3,'IntName','SerialNumber').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoItemDesc','Certificate serial number').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoItemType','Character').
+struct_dt_elem_i([ 14,59,0 ],3,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],3,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],3,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],3,'EditAutocomplete','0').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoNameNETCORE','SerialNumber').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoNameJAVA',serialNumber).
+struct_dt_elem_i([ 14,59,0 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],3,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],4,name,'Thumbprint').
+struct_dt_elem_i([ 14,59,0 ],4,camelname,'Thumbprint').
+struct_dt_elem_i([ 14,59,0 ],4,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],4,length,100).
+struct_dt_elem_i([ 14,59,0 ],4,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],4,type,[ 5,100,0 ]).
+struct_dt_elem_i([ 14,59,0 ],4,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],4,'IntName','Thumbprint').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoItemDesc','Certificate thumbprint').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoItemType','Character').
+struct_dt_elem_i([ 14,59,0 ],4,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],4,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],4,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],4,'EditAutocomplete','0').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoNameNETCORE','Thumbprint').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoItemExtTypeNETCORE','String').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoNameJAVA',thumbprint).
+struct_dt_elem_i([ 14,59,0 ],4,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],4,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],5,name,'Notafter').
+struct_dt_elem_i([ 14,59,0 ],5,camelname,'NotAfter').
+struct_dt_elem_i([ 14,59,0 ],5,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],5,length,8).
+struct_dt_elem_i([ 14,59,0 ],5,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],5,type,[ 12,8,0 ]).
+struct_dt_elem_i([ 14,59,0 ],5,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],5,'IntName','NotAfter').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoItemDesc','Certificate not after property').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoItemType','DateTime').
+struct_dt_elem_i([ 14,59,0 ],5,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],5,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],5,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoNameNETCORE','NotAfter').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoItemExtTypeNETCORE','DateTime').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoNameJAVA',notAfter).
+struct_dt_elem_i([ 14,59,0 ],5,'ExoItemExtTypeJAVA','java.util.Date').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],5,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],6,name,'Notbefore').
+struct_dt_elem_i([ 14,59,0 ],6,camelname,'NotBefore').
+struct_dt_elem_i([ 14,59,0 ],6,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],6,length,8).
+struct_dt_elem_i([ 14,59,0 ],6,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],6,type,[ 12,8,0 ]).
+struct_dt_elem_i([ 14,59,0 ],6,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],6,'IntName','NotBefore').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoItemDesc','Certificate not before property').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoItemType','DateTime').
+struct_dt_elem_i([ 14,59,0 ],6,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],6,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],6,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoNameNETCORE','NotBefore').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoItemExtTypeNETCORE','DateTime').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoNameJAVA',notBefore).
+struct_dt_elem_i([ 14,59,0 ],6,'ExoItemExtTypeJAVA','java.util.Date').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],6,'ExoExtNameJSModule','').
+struct_dt_elem_i([ 14,59,0 ],7,name,'Version').
+struct_dt_elem_i([ 14,59,0 ],7,camelname,'Version').
+struct_dt_elem_i([ 14,59,0 ],7,externalType,'').
+struct_dt_elem_i([ 14,59,0 ],7,length,9).
+struct_dt_elem_i([ 14,59,0 ],7,decimals,0).
+struct_dt_elem_i([ 14,59,0 ],7,sign,0).
+struct_dt_elem_i([ 14,59,0 ],7,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 14,59,0 ],7,'ExoPropAccessType',idMember).
+struct_dt_elem_i([ 14,59,0 ],7,'IntName','Version').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoItemDesc','Certificate version').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoItemType','Numeric').
+struct_dt_elem_i([ 14,59,0 ],7,basedon,'').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoMethodIsStatic','0').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_elem_i([ 14,59,0 ],7,'ControlType','2').
+struct_dt_elem_i([ 14,59,0 ],7,'InputType','0').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoNameNETCORE','Version').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoItemExtTypeNETCORE',int).
+struct_dt_elem_i([ 14,59,0 ],7,'ExoNameJAVA',version).
+struct_dt_elem_i([ 14,59,0 ],7,'ExoItemExtTypeJAVA',int).
+struct_dt_elem_i([ 14,59,0 ],7,'ExoNameJS','').
+struct_dt_elem_i([ 14,59,0 ],7,'ExoExtNameJSModule','').
+ 
+struct_dt_method_i([ 14,70,0 ],1,name,currentminusseconds).
+struct_dt_method_i([ 14,70,0 ],1,camelname,'CurrentMinusSeconds').
+struct_dt_method_i([ 14,70,0 ],1,externalType,'').
+struct_dt_method_i([ 14,70,0 ],1,length,100).
+struct_dt_method_i([ 14,70,0 ],1,decimals,0).
+struct_dt_method_i([ 14,70,0 ],1,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,70,0 ],1,'IntName','CurrentMinusSeconds').
+struct_dt_method_i([ 14,70,0 ],1,'ExoItemDesc','Gets the system current date and substracts the specified seconds returning a string with the specific format for the module definition.').
+struct_dt_method_i([ 14,70,0 ],1,'ExoItemType','Character').
+struct_dt_method_i([ 14,70,0 ],1,basedon,'').
+struct_dt_method_i([ 14,70,0 ],1,'XmlName',currentMinusSeconds).
+struct_dt_method_i([ 14,70,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],1,'ExoNameNETCORE','CurrentMinusSeconds').
+struct_dt_method_i([ 14,70,0 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,70,0 ],1,'ExoNameJAVA',currentMinusSeconds).
+struct_dt_method_i([ 14,70,0 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,70,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,70,0 ],2,name,currentplusseconds).
+struct_dt_method_i([ 14,70,0 ],2,camelname,'CurrentPlusSeconds').
+struct_dt_method_i([ 14,70,0 ],2,externalType,'').
+struct_dt_method_i([ 14,70,0 ],2,length,100).
+struct_dt_method_i([ 14,70,0 ],2,decimals,0).
+struct_dt_method_i([ 14,70,0 ],2,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,70,0 ],2,'IntName','CurrentPlusSeconds').
+struct_dt_method_i([ 14,70,0 ],2,'ExoItemDesc','Gets the system current date and adds the specified seconds returning a string with the specific format for the module definition.').
+struct_dt_method_i([ 14,70,0 ],2,'ExoItemType','Character').
+struct_dt_method_i([ 14,70,0 ],2,basedon,'').
+struct_dt_method_i([ 14,70,0 ],2,'XmlName',currentPlusSeconds).
+struct_dt_method_i([ 14,70,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],2,'ExoNameNETCORE','CurrentPlusSeconds').
+struct_dt_method_i([ 14,70,0 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,70,0 ],2,'ExoNameJAVA',currentPlusSeconds).
+struct_dt_method_i([ 14,70,0 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,70,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,70,0 ],3,name,getcurrentdate).
+struct_dt_method_i([ 14,70,0 ],3,camelname,'GetCurrentDate').
+struct_dt_method_i([ 14,70,0 ],3,externalType,'').
+struct_dt_method_i([ 14,70,0 ],3,length,100).
+struct_dt_method_i([ 14,70,0 ],3,decimals,0).
+struct_dt_method_i([ 14,70,0 ],3,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,70,0 ],3,'IntName','GetCurrentDate').
+struct_dt_method_i([ 14,70,0 ],3,'ExoItemDesc','Gets the current system date.').
+struct_dt_method_i([ 14,70,0 ],3,'ExoItemType','Character').
+struct_dt_method_i([ 14,70,0 ],3,basedon,'').
+struct_dt_method_i([ 14,70,0 ],3,'XmlName',getCurrentDate).
+struct_dt_method_i([ 14,70,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],3,'ExoNameNETCORE','GetCurrentDate').
+struct_dt_method_i([ 14,70,0 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,70,0 ],3,'ExoNameJAVA',getCurrentDate).
+struct_dt_method_i([ 14,70,0 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,70,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,70,0 ],4,name,haserror).
+struct_dt_method_i([ 14,70,0 ],4,camelname,'HasError').
+struct_dt_method_i([ 14,70,0 ],4,externalType,'').
+struct_dt_method_i([ 14,70,0 ],4,length,4).
+struct_dt_method_i([ 14,70,0 ],4,decimals,0).
+struct_dt_method_i([ 14,70,0 ],4,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,70,0 ],4,'IntName','HasError').
+struct_dt_method_i([ 14,70,0 ],4,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,70,0 ],4,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,70,0 ],4,basedon,'').
+struct_dt_method_i([ 14,70,0 ],4,'XmlName','').
+struct_dt_method_i([ 14,70,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],4,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,70,0 ],4,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,70,0 ],4,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,70,0 ],4,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,70,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,70,0 ],5,name,geterrorcode).
+struct_dt_method_i([ 14,70,0 ],5,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,70,0 ],5,externalType,'').
+struct_dt_method_i([ 14,70,0 ],5,length,100).
+struct_dt_method_i([ 14,70,0 ],5,decimals,0).
+struct_dt_method_i([ 14,70,0 ],5,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,70,0 ],5,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,70,0 ],5,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,70,0 ],5,'ExoItemType','Character').
+struct_dt_method_i([ 14,70,0 ],5,basedon,'').
+struct_dt_method_i([ 14,70,0 ],5,'XmlName','').
+struct_dt_method_i([ 14,70,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],5,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,70,0 ],5,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,70,0 ],5,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,70,0 ],5,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,70,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,70,0 ],6,name,geterrordescription).
+struct_dt_method_i([ 14,70,0 ],6,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,70,0 ],6,externalType,'').
+struct_dt_method_i([ 14,70,0 ],6,length,100).
+struct_dt_method_i([ 14,70,0 ],6,decimals,0).
+struct_dt_method_i([ 14,70,0 ],6,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,70,0 ],6,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,70,0 ],6,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,70,0 ],6,'ExoItemType','Character').
+struct_dt_method_i([ 14,70,0 ],6,basedon,'').
+struct_dt_method_i([ 14,70,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,70,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,70,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,70,0 ],6,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,70,0 ],6,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,70,0 ],6,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,70,0 ],6,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,70,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,70,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,70,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,70,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,70,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],1,name,doverify).
+struct_dt_method_i([ 14,67,0 ],1,camelname,'DoVerify').
+struct_dt_method_i([ 14,67,0 ],1,externalType,'').
+struct_dt_method_i([ 14,67,0 ],1,length,8).
+struct_dt_method_i([ 14,67,0 ],1,decimals,0).
+struct_dt_method_i([ 14,67,0 ],1,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,67,0 ],1,'IntName','DoVerify').
+struct_dt_method_i([ 14,67,0 ],1,'ExoItemDesc','Verifies JWT tokens.').
+struct_dt_method_i([ 14,67,0 ],1,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,67,0 ],1,basedon,'').
+struct_dt_method_i([ 14,67,0 ],1,'XmlName',doVerify).
+struct_dt_method_i([ 14,67,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],1,'ExoNameNETCORE','DoVerify').
+struct_dt_method_i([ 14,67,0 ],1,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,67,0 ],1,'ExoNameJAVA',doVerify).
+struct_dt_method_i([ 14,67,0 ],1,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,67,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],2,name,docreate).
+struct_dt_method_i([ 14,67,0 ],2,camelname,'DoCreate').
+struct_dt_method_i([ 14,67,0 ],2,externalType,'').
+struct_dt_method_i([ 14,67,0 ],2,length,100).
+struct_dt_method_i([ 14,67,0 ],2,decimals,0).
+struct_dt_method_i([ 14,67,0 ],2,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,67,0 ],2,'IntName','DoCreate').
+struct_dt_method_i([ 14,67,0 ],2,'ExoItemDesc','Creates JWT tokens.').
+struct_dt_method_i([ 14,67,0 ],2,'ExoItemType','Character').
+struct_dt_method_i([ 14,67,0 ],2,basedon,'').
+struct_dt_method_i([ 14,67,0 ],2,'XmlName',doCreate).
+struct_dt_method_i([ 14,67,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],2,'ExoNameNETCORE','DoCreate').
+struct_dt_method_i([ 14,67,0 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],2,'ExoNameJAVA',doCreate).
+struct_dt_method_i([ 14,67,0 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],3,name,getheader).
+struct_dt_method_i([ 14,67,0 ],3,camelname,'GetHeader').
+struct_dt_method_i([ 14,67,0 ],3,externalType,'').
+struct_dt_method_i([ 14,67,0 ],3,length,9999).
+struct_dt_method_i([ 14,67,0 ],3,decimals,0).
+struct_dt_method_i([ 14,67,0 ],3,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,67,0 ],3,'IntName','GetHeader').
+struct_dt_method_i([ 14,67,0 ],3,'ExoItemDesc','Returns the header content in a JSON formatted string').
+struct_dt_method_i([ 14,67,0 ],3,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,67,0 ],3,basedon,'').
+struct_dt_method_i([ 14,67,0 ],3,'XmlName',getHeader).
+struct_dt_method_i([ 14,67,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],3,'ExoNameNETCORE','GetHeader').
+struct_dt_method_i([ 14,67,0 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],3,'ExoNameJAVA',getHeader).
+struct_dt_method_i([ 14,67,0 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],4,name,gettokenid).
+struct_dt_method_i([ 14,67,0 ],4,camelname,'GetTokenID').
+struct_dt_method_i([ 14,67,0 ],4,externalType,'').
+struct_dt_method_i([ 14,67,0 ],4,length,100).
+struct_dt_method_i([ 14,67,0 ],4,decimals,0).
+struct_dt_method_i([ 14,67,0 ],4,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,67,0 ],4,'IntName','GetTokenID').
+struct_dt_method_i([ 14,67,0 ],4,'ExoItemDesc','Returns the GUID alphanumeric token identification from the jti registered claim.').
+struct_dt_method_i([ 14,67,0 ],4,'ExoItemType','Character').
+struct_dt_method_i([ 14,67,0 ],4,basedon,'').
+struct_dt_method_i([ 14,67,0 ],4,'XmlName',getTokenID).
+struct_dt_method_i([ 14,67,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],4,'ExoNameNETCORE','GetTokenID').
+struct_dt_method_i([ 14,67,0 ],4,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],4,'ExoNameJAVA',getTokenID).
+struct_dt_method_i([ 14,67,0 ],4,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],5,name,getpayload).
+struct_dt_method_i([ 14,67,0 ],5,camelname,'GetPayload').
+struct_dt_method_i([ 14,67,0 ],5,externalType,'').
+struct_dt_method_i([ 14,67,0 ],5,length,9999).
+struct_dt_method_i([ 14,67,0 ],5,decimals,0).
+struct_dt_method_i([ 14,67,0 ],5,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,67,0 ],5,'IntName','GetPayload').
+struct_dt_method_i([ 14,67,0 ],5,'ExoItemDesc','Returns the payload content in a JSON formatted string').
+struct_dt_method_i([ 14,67,0 ],5,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,67,0 ],5,basedon,'').
+struct_dt_method_i([ 14,67,0 ],5,'XmlName',getPayload).
+struct_dt_method_i([ 14,67,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],5,'ExoNameNETCORE','GetPayload').
+struct_dt_method_i([ 14,67,0 ],5,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],5,'ExoNameJAVA',getPayload).
+struct_dt_method_i([ 14,67,0 ],5,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],6,name,haserror).
+struct_dt_method_i([ 14,67,0 ],6,camelname,'HasError').
+struct_dt_method_i([ 14,67,0 ],6,externalType,'').
+struct_dt_method_i([ 14,67,0 ],6,length,4).
+struct_dt_method_i([ 14,67,0 ],6,decimals,0).
+struct_dt_method_i([ 14,67,0 ],6,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,67,0 ],6,'IntName','HasError').
+struct_dt_method_i([ 14,67,0 ],6,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,67,0 ],6,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,67,0 ],6,basedon,'').
+struct_dt_method_i([ 14,67,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],6,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,67,0 ],6,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,67,0 ],6,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,67,0 ],6,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,67,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],7,name,geterrorcode).
+struct_dt_method_i([ 14,67,0 ],7,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,67,0 ],7,externalType,'').
+struct_dt_method_i([ 14,67,0 ],7,length,100).
+struct_dt_method_i([ 14,67,0 ],7,decimals,0).
+struct_dt_method_i([ 14,67,0 ],7,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,67,0 ],7,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,67,0 ],7,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,67,0 ],7,'ExoItemType','Character').
+struct_dt_method_i([ 14,67,0 ],7,basedon,'').
+struct_dt_method_i([ 14,67,0 ],7,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],7,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],7,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],7,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,67,0 ],7,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],7,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,67,0 ],7,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],7,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],7,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],7,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],7,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],7,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],8,name,geterrordescription).
+struct_dt_method_i([ 14,67,0 ],8,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,67,0 ],8,externalType,'').
+struct_dt_method_i([ 14,67,0 ],8,length,100).
+struct_dt_method_i([ 14,67,0 ],8,decimals,0).
+struct_dt_method_i([ 14,67,0 ],8,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,67,0 ],8,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,67,0 ],8,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,67,0 ],8,'ExoItemType','Character').
+struct_dt_method_i([ 14,67,0 ],8,basedon,'').
+struct_dt_method_i([ 14,67,0 ],8,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],8,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],8,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],8,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,67,0 ],8,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,67,0 ],8,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,67,0 ],8,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],8,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],8,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],8,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],8,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],8,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],9,name,doverifysignature).
+struct_dt_method_i([ 14,67,0 ],9,camelname,'DoVerifySignature').
+struct_dt_method_i([ 14,67,0 ],9,externalType,'').
+struct_dt_method_i([ 14,67,0 ],9,length,4).
+struct_dt_method_i([ 14,67,0 ],9,decimals,0).
+struct_dt_method_i([ 14,67,0 ],9,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,67,0 ],9,'IntName','DoVerifySignature').
+struct_dt_method_i([ 14,67,0 ],9,'ExoItemDesc','Verifies JWT signature using just Registered Claims verification').
+struct_dt_method_i([ 14,67,0 ],9,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,67,0 ],9,basedon,'').
+struct_dt_method_i([ 14,67,0 ],9,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],9,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],9,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],9,'ExoNameNETCORE','DoVerifySignature').
+struct_dt_method_i([ 14,67,0 ],9,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,67,0 ],9,'ExoNameJAVA',doVerifySignature).
+struct_dt_method_i([ 14,67,0 ],9,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,67,0 ],9,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],9,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],9,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],9,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],9,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],10,name,doverifyjustsignature).
+struct_dt_method_i([ 14,67,0 ],10,camelname,'DoVerifyJustSignature').
+struct_dt_method_i([ 14,67,0 ],10,externalType,'').
+struct_dt_method_i([ 14,67,0 ],10,length,4).
+struct_dt_method_i([ 14,67,0 ],10,decimals,0).
+struct_dt_method_i([ 14,67,0 ],10,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,67,0 ],10,'IntName','DoVerifyJustSignature').
+struct_dt_method_i([ 14,67,0 ],10,'ExoItemDesc','Verifies just the JWT signature without any claims').
+struct_dt_method_i([ 14,67,0 ],10,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,67,0 ],10,basedon,'').
+struct_dt_method_i([ 14,67,0 ],10,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],10,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],10,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],10,'ExoNameNETCORE','DoVerifyJustSignature').
+struct_dt_method_i([ 14,67,0 ],10,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,67,0 ],10,'ExoNameJAVA',doVerifyJustSignature).
+struct_dt_method_i([ 14,67,0 ],10,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,67,0 ],10,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],10,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],10,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],10,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],10,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,67,0 ],11,name,docreatefromjson).
+struct_dt_method_i([ 14,67,0 ],11,camelname,'DoCreateFromJSON').
+struct_dt_method_i([ 14,67,0 ],11,externalType,'').
+struct_dt_method_i([ 14,67,0 ],11,length,9999).
+struct_dt_method_i([ 14,67,0 ],11,decimals,0).
+struct_dt_method_i([ 14,67,0 ],11,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,67,0 ],11,'IntName','DoCreateFromJSON').
+struct_dt_method_i([ 14,67,0 ],11,'ExoItemDesc','Creates a JWT using a JSON payload').
+struct_dt_method_i([ 14,67,0 ],11,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,67,0 ],11,basedon,'').
+struct_dt_method_i([ 14,67,0 ],11,'XmlName','').
+struct_dt_method_i([ 14,67,0 ],11,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,67,0 ],11,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,67,0 ],11,'ExoNameNETCORE','DoCreateFromJSON').
+struct_dt_method_i([ 14,67,0 ],11,'ExoItemExtTypeNETCORE',string).
+struct_dt_method_i([ 14,67,0 ],11,'ExoNameJAVA',doCreateFromJSON).
+struct_dt_method_i([ 14,67,0 ],11,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,67,0 ],11,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,67,0 ],11,'ExoNameJS','').
+struct_dt_method_i([ 14,67,0 ],11,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,67,0 ],11,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,67,0 ],11,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],1,name,setclaim).
+struct_dt_method_i([ 14,66,0 ],1,camelname,'SetClaim').
+struct_dt_method_i([ 14,66,0 ],1,externalType,'').
+struct_dt_method_i([ 14,66,0 ],1,length,8).
+struct_dt_method_i([ 14,66,0 ],1,decimals,0).
+struct_dt_method_i([ 14,66,0 ],1,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,66,0 ],1,'IntName','SetClaim').
+struct_dt_method_i([ 14,66,0 ],1,'ExoItemDesc','Adds a String private claim.').
+struct_dt_method_i([ 14,66,0 ],1,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],1,basedon,'').
+struct_dt_method_i([ 14,66,0 ],1,'XmlName',setClaim).
+struct_dt_method_i([ 14,66,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],1,'ExoNameNETCORE',setClaim).
+struct_dt_method_i([ 14,66,0 ],1,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],1,'ExoNameJAVA',setClaim).
+struct_dt_method_i([ 14,66,0 ],1,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],2,name,setnestedclaim).
+struct_dt_method_i([ 14,66,0 ],2,camelname,'SetNestedClaim').
+struct_dt_method_i([ 14,66,0 ],2,externalType,'').
+struct_dt_method_i([ 14,66,0 ],2,length,4).
+struct_dt_method_i([ 14,66,0 ],2,decimals,0).
+struct_dt_method_i([ 14,66,0 ],2,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,66,0 ],2,'IntName','SetNestedClaim').
+struct_dt_method_i([ 14,66,0 ],2,'ExoItemDesc','Adds a nested private claim').
+struct_dt_method_i([ 14,66,0 ],2,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],2,basedon,'').
+struct_dt_method_i([ 14,66,0 ],2,'XmlName','').
+struct_dt_method_i([ 14,66,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],2,'ExoNameNETCORE',setClaim).
+struct_dt_method_i([ 14,66,0 ],2,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],2,'ExoNameJAVA',setClaim).
+struct_dt_method_i([ 14,66,0 ],2,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],3,name,setnumericclaim).
+struct_dt_method_i([ 14,66,0 ],3,camelname,'SetNumericClaim').
+struct_dt_method_i([ 14,66,0 ],3,externalType,'').
+struct_dt_method_i([ 14,66,0 ],3,length,4).
+struct_dt_method_i([ 14,66,0 ],3,decimals,0).
+struct_dt_method_i([ 14,66,0 ],3,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,66,0 ],3,'IntName','SetNumericClaim').
+struct_dt_method_i([ 14,66,0 ],3,'ExoItemDesc','Adds a Numeric private claim').
+struct_dt_method_i([ 14,66,0 ],3,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],3,basedon,'').
+struct_dt_method_i([ 14,66,0 ],3,'XmlName','').
+struct_dt_method_i([ 14,66,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],3,'ExoNameNETCORE',setNumericClaim).
+struct_dt_method_i([ 14,66,0 ],3,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],3,'ExoNameJAVA',setNumericClaim).
+struct_dt_method_i([ 14,66,0 ],3,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],4,name,setdateclaim).
+struct_dt_method_i([ 14,66,0 ],4,camelname,'SetDateClaim').
+struct_dt_method_i([ 14,66,0 ],4,externalType,'').
+struct_dt_method_i([ 14,66,0 ],4,length,4).
+struct_dt_method_i([ 14,66,0 ],4,decimals,0).
+struct_dt_method_i([ 14,66,0 ],4,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,66,0 ],4,'IntName','SetDateClaim').
+struct_dt_method_i([ 14,66,0 ],4,'ExoItemDesc','Adds a Date numeric private claim').
+struct_dt_method_i([ 14,66,0 ],4,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],4,basedon,'').
+struct_dt_method_i([ 14,66,0 ],4,'XmlName','').
+struct_dt_method_i([ 14,66,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],4,'ExoNameNETCORE',setDateClaim).
+struct_dt_method_i([ 14,66,0 ],4,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],4,'ExoNameJAVA',setDateClaim).
+struct_dt_method_i([ 14,66,0 ],4,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],5,name,setbooleanclaim).
+struct_dt_method_i([ 14,66,0 ],5,camelname,'SetBooleanClaim').
+struct_dt_method_i([ 14,66,0 ],5,externalType,'').
+struct_dt_method_i([ 14,66,0 ],5,length,4).
+struct_dt_method_i([ 14,66,0 ],5,decimals,0).
+struct_dt_method_i([ 14,66,0 ],5,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,66,0 ],5,'IntName','SetBooleanClaim').
+struct_dt_method_i([ 14,66,0 ],5,'ExoItemDesc','Adds a Boolean private claim').
+struct_dt_method_i([ 14,66,0 ],5,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],5,basedon,'').
+struct_dt_method_i([ 14,66,0 ],5,'XmlName','').
+struct_dt_method_i([ 14,66,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],5,'ExoNameNETCORE',setBooleanClaim).
+struct_dt_method_i([ 14,66,0 ],5,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],5,'ExoNameJAVA',setBooleanClaim).
+struct_dt_method_i([ 14,66,0 ],5,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,66,0 ],6,name,setdoubleclaim).
+struct_dt_method_i([ 14,66,0 ],6,camelname,'SetDoubleClaim').
+struct_dt_method_i([ 14,66,0 ],6,externalType,'').
+struct_dt_method_i([ 14,66,0 ],6,length,4).
+struct_dt_method_i([ 14,66,0 ],6,decimals,0).
+struct_dt_method_i([ 14,66,0 ],6,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,66,0 ],6,'IntName','SetDoubleClaim').
+struct_dt_method_i([ 14,66,0 ],6,'ExoItemDesc','Adds a Double private claim').
+struct_dt_method_i([ 14,66,0 ],6,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,66,0 ],6,basedon,'').
+struct_dt_method_i([ 14,66,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,66,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,66,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,66,0 ],6,'ExoNameNETCORE',setDoubleClaim).
+struct_dt_method_i([ 14,66,0 ],6,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,66,0 ],6,'ExoNameJAVA',setDoubleClaim).
+struct_dt_method_i([ 14,66,0 ],6,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,66,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,66,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,66,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,66,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,66,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],1,name,addrevocationlist).
+struct_dt_method_i([ 14,68,0 ],1,camelname,'AddRevocationList').
+struct_dt_method_i([ 14,68,0 ],1,externalType,'').
+struct_dt_method_i([ 14,68,0 ],1,length,8).
+struct_dt_method_i([ 14,68,0 ],1,decimals,0).
+struct_dt_method_i([ 14,68,0 ],1,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],1,'IntName','AddRevocationList').
+struct_dt_method_i([ 14,68,0 ],1,'ExoItemDesc','Adds a revocation list to be verified on token verification.').
+struct_dt_method_i([ 14,68,0 ],1,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],1,basedon,'').
+struct_dt_method_i([ 14,68,0 ],1,'XmlName',addRevocationList).
+struct_dt_method_i([ 14,68,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],1,'ExoNameNETCORE','AddRevocationList').
+struct_dt_method_i([ 14,68,0 ],1,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],1,'ExoNameJAVA',addRevocationList).
+struct_dt_method_i([ 14,68,0 ],1,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],2,name,detelerevocationlist).
+struct_dt_method_i([ 14,68,0 ],2,camelname,'DeteleRevocationList').
+struct_dt_method_i([ 14,68,0 ],2,externalType,'').
+struct_dt_method_i([ 14,68,0 ],2,length,8).
+struct_dt_method_i([ 14,68,0 ],2,decimals,0).
+struct_dt_method_i([ 14,68,0 ],2,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],2,'IntName','DeteleRevocationList').
+struct_dt_method_i([ 14,68,0 ],2,'ExoItemDesc','Deletes the revocation list contained in this instance of the JWTOptions').
+struct_dt_method_i([ 14,68,0 ],2,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],2,basedon,'').
+struct_dt_method_i([ 14,68,0 ],2,'XmlName',deteleRevocationList).
+struct_dt_method_i([ 14,68,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],2,'ExoNameNETCORE','DeteleRevocationList').
+struct_dt_method_i([ 14,68,0 ],2,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],2,'ExoNameJAVA',deteleRevocationList).
+struct_dt_method_i([ 14,68,0 ],2,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],3,name,addcustomtimevalidationclaim).
+struct_dt_method_i([ 14,68,0 ],3,camelname,'AddCustomTimeValidationClaim').
+struct_dt_method_i([ 14,68,0 ],3,externalType,'').
+struct_dt_method_i([ 14,68,0 ],3,length,8).
+struct_dt_method_i([ 14,68,0 ],3,decimals,0).
+struct_dt_method_i([ 14,68,0 ],3,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],3,'IntName','AddCustomTimeValidationClaim').
+struct_dt_method_i([ 14,68,0 ],3,'ExoItemDesc','Adds a Registered Claim for time validation with tolerance in seconds. ').
+struct_dt_method_i([ 14,68,0 ],3,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,68,0 ],3,basedon,'').
+struct_dt_method_i([ 14,68,0 ],3,'XmlName',addCustomTimeValidationClaim).
+struct_dt_method_i([ 14,68,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],3,'ExoNameNETCORE','AddCustomTimeValidationClaim').
+struct_dt_method_i([ 14,68,0 ],3,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,68,0 ],3,'ExoNameJAVA',addCustomTimeValidationClaim).
+struct_dt_method_i([ 14,68,0 ],3,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,68,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],4,name,addregisteredclaim).
+struct_dt_method_i([ 14,68,0 ],4,camelname,'AddRegisteredClaim').
+struct_dt_method_i([ 14,68,0 ],4,externalType,'').
+struct_dt_method_i([ 14,68,0 ],4,length,8).
+struct_dt_method_i([ 14,68,0 ],4,decimals,0).
+struct_dt_method_i([ 14,68,0 ],4,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],4,'IntName','AddRegisteredClaim').
+struct_dt_method_i([ 14,68,0 ],4,'ExoItemDesc','Adds a standard registered claim value to the JWTOptions.').
+struct_dt_method_i([ 14,68,0 ],4,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,68,0 ],4,basedon,'').
+struct_dt_method_i([ 14,68,0 ],4,'XmlName',addRegisteredClaim).
+struct_dt_method_i([ 14,68,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],4,'ExoNameNETCORE','AddRegisteredClaim').
+struct_dt_method_i([ 14,68,0 ],4,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,68,0 ],4,'ExoNameJAVA',addRegisteredClaim).
+struct_dt_method_i([ 14,68,0 ],4,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,68,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],5,name,addpublicclaim).
+struct_dt_method_i([ 14,68,0 ],5,camelname,'AddPublicClaim').
+struct_dt_method_i([ 14,68,0 ],5,externalType,'').
+struct_dt_method_i([ 14,68,0 ],5,length,8).
+struct_dt_method_i([ 14,68,0 ],5,decimals,0).
+struct_dt_method_i([ 14,68,0 ],5,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],5,'IntName','AddPublicClaim').
+struct_dt_method_i([ 14,68,0 ],5,'ExoItemDesc','Add a standard public claim value to the JWTOptions').
+struct_dt_method_i([ 14,68,0 ],5,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,68,0 ],5,basedon,'').
+struct_dt_method_i([ 14,68,0 ],5,'XmlName',addPublicClaim).
+struct_dt_method_i([ 14,68,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],5,'ExoNameNETCORE','AddPublicClaim').
+struct_dt_method_i([ 14,68,0 ],5,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,68,0 ],5,'ExoNameJAVA',addPublicClaim).
+struct_dt_method_i([ 14,68,0 ],5,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,68,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],6,name,setprivatekey).
+struct_dt_method_i([ 14,68,0 ],6,camelname,'SetPrivateKey').
+struct_dt_method_i([ 14,68,0 ],6,externalType,'').
+struct_dt_method_i([ 14,68,0 ],6,length,8).
+struct_dt_method_i([ 14,68,0 ],6,decimals,0).
+struct_dt_method_i([ 14,68,0 ],6,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],6,'IntName','SetPrivateKey').
+struct_dt_method_i([ 14,68,0 ],6,'ExoItemDesc','Adds a private key to be used on the signature of the token using an asymmetric algorithm,').
+struct_dt_method_i([ 14,68,0 ],6,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],6,basedon,'').
+struct_dt_method_i([ 14,68,0 ],6,'XmlName',setPrivateKey).
+struct_dt_method_i([ 14,68,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],6,'ExoNameNETCORE','SetPrivateKey').
+struct_dt_method_i([ 14,68,0 ],6,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],6,'ExoNameJAVA',setPrivateKey).
+struct_dt_method_i([ 14,68,0 ],6,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],7,name,setcertificate).
+struct_dt_method_i([ 14,68,0 ],7,camelname,'SetCertificate').
+struct_dt_method_i([ 14,68,0 ],7,externalType,'').
+struct_dt_method_i([ 14,68,0 ],7,length,8).
+struct_dt_method_i([ 14,68,0 ],7,decimals,0).
+struct_dt_method_i([ 14,68,0 ],7,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],7,'IntName','SetCertificate').
+struct_dt_method_i([ 14,68,0 ],7,'ExoItemDesc','Adds a certificate to be used on the verification of the token using an asymmetric algorithm,').
+struct_dt_method_i([ 14,68,0 ],7,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],7,basedon,'').
+struct_dt_method_i([ 14,68,0 ],7,'XmlName',setCertificate).
+struct_dt_method_i([ 14,68,0 ],7,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],7,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],7,'ExoNameNETCORE','SetCertificate').
+struct_dt_method_i([ 14,68,0 ],7,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],7,'ExoNameJAVA',setCertificate).
+struct_dt_method_i([ 14,68,0 ],7,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],7,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],7,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],7,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],7,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],7,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],8,name,setsecret).
+struct_dt_method_i([ 14,68,0 ],8,camelname,'SetSecret').
+struct_dt_method_i([ 14,68,0 ],8,externalType,'').
+struct_dt_method_i([ 14,68,0 ],8,length,8).
+struct_dt_method_i([ 14,68,0 ],8,decimals,0).
+struct_dt_method_i([ 14,68,0 ],8,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],8,'IntName','SetSecret').
+struct_dt_method_i([ 14,68,0 ],8,'ExoItemDesc','Adds a secret to be used to sign or verify the token with a symmetric algorithm').
+struct_dt_method_i([ 14,68,0 ],8,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],8,basedon,'').
+struct_dt_method_i([ 14,68,0 ],8,'XmlName',setSecret).
+struct_dt_method_i([ 14,68,0 ],8,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],8,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],8,'ExoNameNETCORE','SetSecret').
+struct_dt_method_i([ 14,68,0 ],8,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],8,'ExoNameJAVA',setSecret).
+struct_dt_method_i([ 14,68,0 ],8,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],8,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],8,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],8,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],8,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],8,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],9,name,haserror).
+struct_dt_method_i([ 14,68,0 ],9,camelname,'HasError').
+struct_dt_method_i([ 14,68,0 ],9,externalType,'').
+struct_dt_method_i([ 14,68,0 ],9,length,4).
+struct_dt_method_i([ 14,68,0 ],9,decimals,0).
+struct_dt_method_i([ 14,68,0 ],9,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,68,0 ],9,'IntName','HasError').
+struct_dt_method_i([ 14,68,0 ],9,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,68,0 ],9,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,68,0 ],9,basedon,'').
+struct_dt_method_i([ 14,68,0 ],9,'XmlName','').
+struct_dt_method_i([ 14,68,0 ],9,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],9,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],9,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,68,0 ],9,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,68,0 ],9,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,68,0 ],9,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,68,0 ],9,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],9,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],9,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],9,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],9,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],10,name,geterrorcode).
+struct_dt_method_i([ 14,68,0 ],10,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,68,0 ],10,externalType,'').
+struct_dt_method_i([ 14,68,0 ],10,length,100).
+struct_dt_method_i([ 14,68,0 ],10,decimals,0).
+struct_dt_method_i([ 14,68,0 ],10,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,68,0 ],10,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,68,0 ],10,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,68,0 ],10,'ExoItemType','Character').
+struct_dt_method_i([ 14,68,0 ],10,basedon,'').
+struct_dt_method_i([ 14,68,0 ],10,'XmlName','').
+struct_dt_method_i([ 14,68,0 ],10,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],10,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],10,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,68,0 ],10,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,68,0 ],10,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,68,0 ],10,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,68,0 ],10,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],10,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],10,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],10,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],10,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],11,name,geterrordescription).
+struct_dt_method_i([ 14,68,0 ],11,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,68,0 ],11,externalType,'').
+struct_dt_method_i([ 14,68,0 ],11,length,100).
+struct_dt_method_i([ 14,68,0 ],11,decimals,0).
+struct_dt_method_i([ 14,68,0 ],11,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,68,0 ],11,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,68,0 ],11,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,68,0 ],11,'ExoItemType','Character').
+struct_dt_method_i([ 14,68,0 ],11,basedon,'').
+struct_dt_method_i([ 14,68,0 ],11,'XmlName','').
+struct_dt_method_i([ 14,68,0 ],11,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],11,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],11,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,68,0 ],11,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,68,0 ],11,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,68,0 ],11,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,68,0 ],11,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],11,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],11,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],11,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],11,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],12,name,addheaderparameter).
+struct_dt_method_i([ 14,68,0 ],12,camelname,'AddHeaderParameter').
+struct_dt_method_i([ 14,68,0 ],12,externalType,'').
+struct_dt_method_i([ 14,68,0 ],12,length,8).
+struct_dt_method_i([ 14,68,0 ],12,decimals,0).
+struct_dt_method_i([ 14,68,0 ],12,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],12,'IntName','AddHeaderParameter').
+struct_dt_method_i([ 14,68,0 ],12,'ExoItemDesc','Adds a generic header parameter').
+struct_dt_method_i([ 14,68,0 ],12,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],12,basedon,'').
+struct_dt_method_i([ 14,68,0 ],12,'XmlName','').
+struct_dt_method_i([ 14,68,0 ],12,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],12,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],12,'ExoNameNETCORE','AddHeaderParameter').
+struct_dt_method_i([ 14,68,0 ],12,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],12,'ExoNameJAVA',addHeaderParameter).
+struct_dt_method_i([ 14,68,0 ],12,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],12,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],12,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],12,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],12,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],12,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,68,0 ],13,name,setpublickey).
+struct_dt_method_i([ 14,68,0 ],13,camelname,'SetPublicKey').
+struct_dt_method_i([ 14,68,0 ],13,externalType,'').
+struct_dt_method_i([ 14,68,0 ],13,length,8).
+struct_dt_method_i([ 14,68,0 ],13,decimals,0).
+struct_dt_method_i([ 14,68,0 ],13,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,68,0 ],13,'IntName','SetPublicKey').
+struct_dt_method_i([ 14,68,0 ],13,'ExoItemDesc','Adds a public key to be used on the verification of the token using an asymmetric algorithm,').
+struct_dt_method_i([ 14,68,0 ],13,'ExoItemType','None').
+struct_dt_method_i([ 14,68,0 ],13,basedon,'').
+struct_dt_method_i([ 14,68,0 ],13,'XmlName','').
+struct_dt_method_i([ 14,68,0 ],13,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,68,0 ],13,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,68,0 ],13,'ExoNameNETCORE','SetPublicKey').
+struct_dt_method_i([ 14,68,0 ],13,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,68,0 ],13,'ExoNameJAVA',setPublicKey).
+struct_dt_method_i([ 14,68,0 ],13,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,68,0 ],13,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,68,0 ],13,'ExoNameJS','').
+struct_dt_method_i([ 14,68,0 ],13,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,68,0 ],13,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,68,0 ],13,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,65,0 ],1,name,isinrevocationlist).
+struct_dt_method_i([ 14,65,0 ],1,camelname,'IsInRevocationList').
+struct_dt_method_i([ 14,65,0 ],1,externalType,'').
+struct_dt_method_i([ 14,65,0 ],1,length,8).
+struct_dt_method_i([ 14,65,0 ],1,decimals,0).
+struct_dt_method_i([ 14,65,0 ],1,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,65,0 ],1,'IntName','IsInRevocationList').
+struct_dt_method_i([ 14,65,0 ],1,'ExoItemDesc','Verifies if a given id is included on the revocation list').
+struct_dt_method_i([ 14,65,0 ],1,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,65,0 ],1,basedon,'').
+struct_dt_method_i([ 14,65,0 ],1,'XmlName',isInRevocationList).
+struct_dt_method_i([ 14,65,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,65,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,65,0 ],1,'ExoNameNETCORE',isInRevocationList).
+struct_dt_method_i([ 14,65,0 ],1,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,65,0 ],1,'ExoNameJAVA',isInRevocationList).
+struct_dt_method_i([ 14,65,0 ],1,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,65,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,65,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,65,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,65,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,65,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,65,0 ],2,name,addidtorevocationlist).
+struct_dt_method_i([ 14,65,0 ],2,camelname,'AddIDToRevocationList').
+struct_dt_method_i([ 14,65,0 ],2,externalType,'').
+struct_dt_method_i([ 14,65,0 ],2,length,8).
+struct_dt_method_i([ 14,65,0 ],2,decimals,0).
+struct_dt_method_i([ 14,65,0 ],2,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,65,0 ],2,'IntName','AddIDToRevocationList').
+struct_dt_method_i([ 14,65,0 ],2,'ExoItemDesc','Adds a token ID to the revocation list').
+struct_dt_method_i([ 14,65,0 ],2,'ExoItemType','None').
+struct_dt_method_i([ 14,65,0 ],2,basedon,'').
+struct_dt_method_i([ 14,65,0 ],2,'XmlName',addIDToRevocationList).
+struct_dt_method_i([ 14,65,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,65,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,65,0 ],2,'ExoNameNETCORE',addIDToRevocationList).
+struct_dt_method_i([ 14,65,0 ],2,'ExoItemExtTypeNETCORE',void).
+struct_dt_method_i([ 14,65,0 ],2,'ExoNameJAVA',addIDToRevocationList).
+struct_dt_method_i([ 14,65,0 ],2,'ExoItemExtTypeJAVA',void).
+struct_dt_method_i([ 14,65,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,65,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,65,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,65,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,65,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,65,0 ],3,name,deletefromrevocationlist).
+struct_dt_method_i([ 14,65,0 ],3,camelname,'DeleteFromRevocationList').
+struct_dt_method_i([ 14,65,0 ],3,externalType,'').
+struct_dt_method_i([ 14,65,0 ],3,length,8).
+struct_dt_method_i([ 14,65,0 ],3,decimals,0).
+struct_dt_method_i([ 14,65,0 ],3,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,65,0 ],3,'IntName','DeleteFromRevocationList').
+struct_dt_method_i([ 14,65,0 ],3,'ExoItemDesc','Deletes a token ID from the revocation list.').
+struct_dt_method_i([ 14,65,0 ],3,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,65,0 ],3,basedon,'').
+struct_dt_method_i([ 14,65,0 ],3,'XmlName',deleteFromRevocationList).
+struct_dt_method_i([ 14,65,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,65,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,65,0 ],3,'ExoNameNETCORE',deleteFromRevocationList).
+struct_dt_method_i([ 14,65,0 ],3,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,65,0 ],3,'ExoNameJAVA',deleteFromRevocationList).
+struct_dt_method_i([ 14,65,0 ],3,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,65,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,65,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,65,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,65,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,65,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],1,name,load).
+struct_dt_method_i([ 14,60,0 ],1,camelname,'Load').
+struct_dt_method_i([ 14,60,0 ],1,externalType,'').
+struct_dt_method_i([ 14,60,0 ],1,length,8).
+struct_dt_method_i([ 14,60,0 ],1,decimals,0).
+struct_dt_method_i([ 14,60,0 ],1,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,60,0 ],1,'IntName','Load').
+struct_dt_method_i([ 14,60,0 ],1,'ExoItemDesc','Loads a private key from the filesystem').
+struct_dt_method_i([ 14,60,0 ],1,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,60,0 ],1,basedon,'').
+struct_dt_method_i([ 14,60,0 ],1,'XmlName',load).
+struct_dt_method_i([ 14,60,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],1,'ExoNameNETCORE','Load').
+struct_dt_method_i([ 14,60,0 ],1,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,60,0 ],1,'ExoNameJAVA',load).
+struct_dt_method_i([ 14,60,0 ],1,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,60,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],2,name,loadpkcs12).
+struct_dt_method_i([ 14,60,0 ],2,camelname,'LoadPKCS12').
+struct_dt_method_i([ 14,60,0 ],2,externalType,'').
+struct_dt_method_i([ 14,60,0 ],2,length,8).
+struct_dt_method_i([ 14,60,0 ],2,decimals,0).
+struct_dt_method_i([ 14,60,0 ],2,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,60,0 ],2,'IntName','LoadPKCS12').
+struct_dt_method_i([ 14,60,0 ],2,'ExoItemDesc','Loads aprivate key from a pkcs12 file').
+struct_dt_method_i([ 14,60,0 ],2,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,60,0 ],2,basedon,'').
+struct_dt_method_i([ 14,60,0 ],2,'XmlName',loadPKCS12).
+struct_dt_method_i([ 14,60,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],2,'ExoNameNETCORE','LoadPKCS12').
+struct_dt_method_i([ 14,60,0 ],2,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,60,0 ],2,'ExoNameJAVA',loadPKCS12).
+struct_dt_method_i([ 14,60,0 ],2,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,60,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],3,name,haserror).
+struct_dt_method_i([ 14,60,0 ],3,camelname,'HasError').
+struct_dt_method_i([ 14,60,0 ],3,externalType,'').
+struct_dt_method_i([ 14,60,0 ],3,length,4).
+struct_dt_method_i([ 14,60,0 ],3,decimals,0).
+struct_dt_method_i([ 14,60,0 ],3,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,60,0 ],3,'IntName','HasError').
+struct_dt_method_i([ 14,60,0 ],3,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,60,0 ],3,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,60,0 ],3,basedon,'').
+struct_dt_method_i([ 14,60,0 ],3,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],3,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,60,0 ],3,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,60,0 ],3,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,60,0 ],3,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,60,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],4,name,geterrorcode).
+struct_dt_method_i([ 14,60,0 ],4,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,60,0 ],4,externalType,'').
+struct_dt_method_i([ 14,60,0 ],4,length,100).
+struct_dt_method_i([ 14,60,0 ],4,decimals,0).
+struct_dt_method_i([ 14,60,0 ],4,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,60,0 ],4,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,60,0 ],4,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,60,0 ],4,'ExoItemType','Character').
+struct_dt_method_i([ 14,60,0 ],4,basedon,'').
+struct_dt_method_i([ 14,60,0 ],4,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],4,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,60,0 ],4,'ExoItemExtTypeNETCORE',string).
+struct_dt_method_i([ 14,60,0 ],4,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,60,0 ],4,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_method_i([ 14,60,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],5,name,geterrordescription).
+struct_dt_method_i([ 14,60,0 ],5,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,60,0 ],5,externalType,'').
+struct_dt_method_i([ 14,60,0 ],5,length,100).
+struct_dt_method_i([ 14,60,0 ],5,decimals,0).
+struct_dt_method_i([ 14,60,0 ],5,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,60,0 ],5,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,60,0 ],5,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,60,0 ],5,'ExoItemType','Character').
+struct_dt_method_i([ 14,60,0 ],5,basedon,'').
+struct_dt_method_i([ 14,60,0 ],5,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],5,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,60,0 ],5,'ExoItemExtTypeNETCORE',string).
+struct_dt_method_i([ 14,60,0 ],5,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,60,0 ],5,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_method_i([ 14,60,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],6,name,frombase64).
+struct_dt_method_i([ 14,60,0 ],6,camelname,'FromBase64').
+struct_dt_method_i([ 14,60,0 ],6,externalType,'').
+struct_dt_method_i([ 14,60,0 ],6,length,4).
+struct_dt_method_i([ 14,60,0 ],6,decimals,0).
+struct_dt_method_i([ 14,60,0 ],6,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,60,0 ],6,'IntName','FromBase64').
+struct_dt_method_i([ 14,60,0 ],6,'ExoItemDesc','Loads a private key from a base 4 string').
+struct_dt_method_i([ 14,60,0 ],6,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,60,0 ],6,basedon,'').
+struct_dt_method_i([ 14,60,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],6,'ExoNameNETCORE','FromBase64').
+struct_dt_method_i([ 14,60,0 ],6,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,60,0 ],6,'ExoNameJAVA',fromBase64).
+struct_dt_method_i([ 14,60,0 ],6,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,60,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],7,name,tobase64).
+struct_dt_method_i([ 14,60,0 ],7,camelname,'ToBase64').
+struct_dt_method_i([ 14,60,0 ],7,externalType,'').
+struct_dt_method_i([ 14,60,0 ],7,length,9999).
+struct_dt_method_i([ 14,60,0 ],7,decimals,0).
+struct_dt_method_i([ 14,60,0 ],7,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,60,0 ],7,'IntName','ToBase64').
+struct_dt_method_i([ 14,60,0 ],7,'ExoItemDesc','Returns teh private key base64 encoded').
+struct_dt_method_i([ 14,60,0 ],7,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,60,0 ],7,basedon,'').
+struct_dt_method_i([ 14,60,0 ],7,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],7,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],7,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],7,'ExoNameNETCORE','ToBase64').
+struct_dt_method_i([ 14,60,0 ],7,'ExoItemExtTypeNETCORE',string).
+struct_dt_method_i([ 14,60,0 ],7,'ExoNameJAVA',toBase64).
+struct_dt_method_i([ 14,60,0 ],7,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_method_i([ 14,60,0 ],7,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],7,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],7,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],7,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],7,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,60,0 ],8,name,loadencrypted).
+struct_dt_method_i([ 14,60,0 ],8,camelname,'LoadEncrypted').
+struct_dt_method_i([ 14,60,0 ],8,externalType,'').
+struct_dt_method_i([ 14,60,0 ],8,length,4).
+struct_dt_method_i([ 14,60,0 ],8,decimals,0).
+struct_dt_method_i([ 14,60,0 ],8,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,60,0 ],8,'IntName','LoadEncrypted').
+struct_dt_method_i([ 14,60,0 ],8,'ExoItemDesc','Loads an encrypted private key from a PKCS8 file').
+struct_dt_method_i([ 14,60,0 ],8,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,60,0 ],8,basedon,'').
+struct_dt_method_i([ 14,60,0 ],8,'XmlName','').
+struct_dt_method_i([ 14,60,0 ],8,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,60,0 ],8,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,60,0 ],8,'ExoNameNETCORE','LoadEncrypted').
+struct_dt_method_i([ 14,60,0 ],8,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,60,0 ],8,'ExoNameJAVA',loadEncrypted).
+struct_dt_method_i([ 14,60,0 ],8,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,60,0 ],8,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,60,0 ],8,'ExoNameJS','').
+struct_dt_method_i([ 14,60,0 ],8,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,60,0 ],8,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,60,0 ],8,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],1,name,load).
+struct_dt_method_i([ 14,59,0 ],1,camelname,'Load').
+struct_dt_method_i([ 14,59,0 ],1,externalType,'').
+struct_dt_method_i([ 14,59,0 ],1,length,8).
+struct_dt_method_i([ 14,59,0 ],1,decimals,0).
+struct_dt_method_i([ 14,59,0 ],1,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,59,0 ],1,'IntName','Load').
+struct_dt_method_i([ 14,59,0 ],1,'ExoItemDesc','Load certificate from filesystem').
+struct_dt_method_i([ 14,59,0 ],1,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,59,0 ],1,basedon,'').
+struct_dt_method_i([ 14,59,0 ],1,'XmlName',load).
+struct_dt_method_i([ 14,59,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],1,'ExoNameNETCORE','Load').
+struct_dt_method_i([ 14,59,0 ],1,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,59,0 ],1,'ExoNameJAVA',load).
+struct_dt_method_i([ 14,59,0 ],1,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,59,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],2,name,tobase64).
+struct_dt_method_i([ 14,59,0 ],2,camelname,'ToBase64').
+struct_dt_method_i([ 14,59,0 ],2,externalType,'').
+struct_dt_method_i([ 14,59,0 ],2,length,9999).
+struct_dt_method_i([ 14,59,0 ],2,decimals,0).
+struct_dt_method_i([ 14,59,0 ],2,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,59,0 ],2,'IntName','ToBase64').
+struct_dt_method_i([ 14,59,0 ],2,'ExoItemDesc','Returns the loaded x509 certificate encoded on Base64').
+struct_dt_method_i([ 14,59,0 ],2,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,59,0 ],2,basedon,'').
+struct_dt_method_i([ 14,59,0 ],2,'XmlName',toBase64).
+struct_dt_method_i([ 14,59,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],2,'ExoNameNETCORE','ToBase64').
+struct_dt_method_i([ 14,59,0 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,59,0 ],2,'ExoNameJAVA',toBase64).
+struct_dt_method_i([ 14,59,0 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,59,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],3,name,frombase64).
+struct_dt_method_i([ 14,59,0 ],3,camelname,'FromBase64').
+struct_dt_method_i([ 14,59,0 ],3,externalType,'').
+struct_dt_method_i([ 14,59,0 ],3,length,8).
+struct_dt_method_i([ 14,59,0 ],3,decimals,0).
+struct_dt_method_i([ 14,59,0 ],3,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,59,0 ],3,'IntName','FromBase64').
+struct_dt_method_i([ 14,59,0 ],3,'ExoItemDesc','Loads a certificate X509 from its Base64 representation').
+struct_dt_method_i([ 14,59,0 ],3,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,59,0 ],3,basedon,'').
+struct_dt_method_i([ 14,59,0 ],3,'XmlName',fromBase64).
+struct_dt_method_i([ 14,59,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],3,'ExoNameNETCORE','FromBase64').
+struct_dt_method_i([ 14,59,0 ],3,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,59,0 ],3,'ExoNameJAVA',fromBase64).
+struct_dt_method_i([ 14,59,0 ],3,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,59,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],4,name,loadpkcs12).
+struct_dt_method_i([ 14,59,0 ],4,camelname,'LoadPKCS12').
+struct_dt_method_i([ 14,59,0 ],4,externalType,'').
+struct_dt_method_i([ 14,59,0 ],4,length,8).
+struct_dt_method_i([ 14,59,0 ],4,decimals,0).
+struct_dt_method_i([ 14,59,0 ],4,type,[ 15,8,0 ]).
+struct_dt_method_i([ 14,59,0 ],4,'IntName','LoadPKCS12').
+struct_dt_method_i([ 14,59,0 ],4,'ExoItemDesc','Loads a certificate froma PKCS12 file').
+struct_dt_method_i([ 14,59,0 ],4,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,59,0 ],4,basedon,'').
+struct_dt_method_i([ 14,59,0 ],4,'XmlName',loadPKCS12).
+struct_dt_method_i([ 14,59,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],4,'ExoNameNETCORE','LoadPKCS12').
+struct_dt_method_i([ 14,59,0 ],4,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,59,0 ],4,'ExoNameJAVA',loadPKCS12).
+struct_dt_method_i([ 14,59,0 ],4,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,59,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],5,name,haserror).
+struct_dt_method_i([ 14,59,0 ],5,camelname,'HasError').
+struct_dt_method_i([ 14,59,0 ],5,externalType,'').
+struct_dt_method_i([ 14,59,0 ],5,length,4).
+struct_dt_method_i([ 14,59,0 ],5,decimals,0).
+struct_dt_method_i([ 14,59,0 ],5,type,[ 15,4,0 ]).
+struct_dt_method_i([ 14,59,0 ],5,'IntName','HasError').
+struct_dt_method_i([ 14,59,0 ],5,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,59,0 ],5,'ExoItemType','Boolean').
+struct_dt_method_i([ 14,59,0 ],5,basedon,'').
+struct_dt_method_i([ 14,59,0 ],5,'XmlName','').
+struct_dt_method_i([ 14,59,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],5,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,59,0 ],5,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,59,0 ],5,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,59,0 ],5,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,59,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],6,name,geterrorcode).
+struct_dt_method_i([ 14,59,0 ],6,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,59,0 ],6,externalType,'').
+struct_dt_method_i([ 14,59,0 ],6,length,100).
+struct_dt_method_i([ 14,59,0 ],6,decimals,0).
+struct_dt_method_i([ 14,59,0 ],6,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,59,0 ],6,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,59,0 ],6,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,59,0 ],6,'ExoItemType','Character').
+struct_dt_method_i([ 14,59,0 ],6,basedon,'').
+struct_dt_method_i([ 14,59,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,59,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],6,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,59,0 ],6,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,59,0 ],6,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,59,0 ],6,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,59,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],6,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,59,0 ],7,name,geterrordescription).
+struct_dt_method_i([ 14,59,0 ],7,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,59,0 ],7,externalType,'').
+struct_dt_method_i([ 14,59,0 ],7,length,100).
+struct_dt_method_i([ 14,59,0 ],7,decimals,0).
+struct_dt_method_i([ 14,59,0 ],7,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,59,0 ],7,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,59,0 ],7,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,59,0 ],7,'ExoItemType','Character').
+struct_dt_method_i([ 14,59,0 ],7,basedon,'').
+struct_dt_method_i([ 14,59,0 ],7,'XmlName','').
+struct_dt_method_i([ 14,59,0 ],7,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,59,0 ],7,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,59,0 ],7,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,59,0 ],7,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,59,0 ],7,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,59,0 ],7,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,59,0 ],7,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,59,0 ],7,'ExoNameJS','').
+struct_dt_method_i([ 14,59,0 ],7,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,59,0 ],7,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,59,0 ],7,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],1,name,dogenerateiv).
+struct_dt_method_i([ 14,61,0 ],1,camelname,'DoGenerateIV').
+struct_dt_method_i([ 14,61,0 ],1,externalType,'').
+struct_dt_method_i([ 14,61,0 ],1,length,9999).
+struct_dt_method_i([ 14,61,0 ],1,decimals,0).
+struct_dt_method_i([ 14,61,0 ],1,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,61,0 ],1,'IntName','DoGenerateIV').
+struct_dt_method_i([ 14,61,0 ],1,'ExoItemDesc','String Hexa IV for the algorithm fixed length blockSize generated with secure random').
+struct_dt_method_i([ 14,61,0 ],1,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,61,0 ],1,basedon,'').
+struct_dt_method_i([ 14,61,0 ],1,'XmlName',doGenerateIV).
+struct_dt_method_i([ 14,61,0 ],1,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],1,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],1,'ExoNameNETCORE',doGenerateIV).
+struct_dt_method_i([ 14,61,0 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,61,0 ],1,'ExoNameJAVA',doGenerateIV).
+struct_dt_method_i([ 14,61,0 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,61,0 ],1,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],1,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],1,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],1,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],1,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],2,name,dogeneratenonce).
+struct_dt_method_i([ 14,61,0 ],2,camelname,'DoGenerateNonce').
+struct_dt_method_i([ 14,61,0 ],2,externalType,'').
+struct_dt_method_i([ 14,61,0 ],2,length,9999).
+struct_dt_method_i([ 14,61,0 ],2,decimals,0).
+struct_dt_method_i([ 14,61,0 ],2,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,61,0 ],2,'IntName','DoGenerateNonce').
+struct_dt_method_i([ 14,61,0 ],2,'ExoItemDesc','String Hexa fixed length secure random generated nonce').
+struct_dt_method_i([ 14,61,0 ],2,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,61,0 ],2,basedon,'').
+struct_dt_method_i([ 14,61,0 ],2,'XmlName',doGenerateNonce).
+struct_dt_method_i([ 14,61,0 ],2,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],2,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],2,'ExoNameNETCORE',doGenerateNonce).
+struct_dt_method_i([ 14,61,0 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,61,0 ],2,'ExoNameJAVA',doGenerateNonce).
+struct_dt_method_i([ 14,61,0 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,61,0 ],2,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],2,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],2,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],2,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],2,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],3,name,dogeneratekey).
+struct_dt_method_i([ 14,61,0 ],3,camelname,'DoGenerateKey').
+struct_dt_method_i([ 14,61,0 ],3,externalType,'').
+struct_dt_method_i([ 14,61,0 ],3,length,9999).
+struct_dt_method_i([ 14,61,0 ],3,decimals,0).
+struct_dt_method_i([ 14,61,0 ],3,type,[ 13,9999,0 ]).
+struct_dt_method_i([ 14,61,0 ],3,'IntName','DoGenerateKey').
+struct_dt_method_i([ 14,61,0 ],3,'ExoItemDesc','String Hexa fixed length secure random generated key').
+struct_dt_method_i([ 14,61,0 ],3,'ExoItemType','VarChar').
+struct_dt_method_i([ 14,61,0 ],3,basedon,'').
+struct_dt_method_i([ 14,61,0 ],3,'XmlName',doGenerateKey).
+struct_dt_method_i([ 14,61,0 ],3,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],3,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],3,'ExoNameNETCORE',doGenerateKey).
+struct_dt_method_i([ 14,61,0 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,61,0 ],3,'ExoNameJAVA',doGenerateKey).
+struct_dt_method_i([ 14,61,0 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,61,0 ],3,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],3,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],3,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],3,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],3,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],4,name,haserror).
+struct_dt_method_i([ 14,61,0 ],4,camelname,'HasError').
+struct_dt_method_i([ 14,61,0 ],4,externalType,'').
+struct_dt_method_i([ 14,61,0 ],4,length,8).
+struct_dt_method_i([ 14,61,0 ],4,decimals,0).
+struct_dt_method_i([ 14,61,0 ],4,type,[ 257,8,0 ]).
+struct_dt_method_i([ 14,61,0 ],4,'IntName','HasError').
+struct_dt_method_i([ 14,61,0 ],4,'ExoItemDesc','True if the object has an error, false if it does not').
+struct_dt_method_i([ 14,61,0 ],4,'ExoItemType','None').
+struct_dt_method_i([ 14,61,0 ],4,basedon,'').
+struct_dt_method_i([ 14,61,0 ],4,'XmlName','').
+struct_dt_method_i([ 14,61,0 ],4,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],4,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],4,'ExoNameNETCORE','HasError').
+struct_dt_method_i([ 14,61,0 ],4,'ExoItemExtTypeNETCORE',bool).
+struct_dt_method_i([ 14,61,0 ],4,'ExoNameJAVA',hasError).
+struct_dt_method_i([ 14,61,0 ],4,'ExoItemExtTypeJAVA',boolean).
+struct_dt_method_i([ 14,61,0 ],4,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],4,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],4,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],4,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],4,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],5,name,geterrorcode).
+struct_dt_method_i([ 14,61,0 ],5,camelname,'GetErrorCode').
+struct_dt_method_i([ 14,61,0 ],5,externalType,'').
+struct_dt_method_i([ 14,61,0 ],5,length,100).
+struct_dt_method_i([ 14,61,0 ],5,decimals,0).
+struct_dt_method_i([ 14,61,0 ],5,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,61,0 ],5,'IntName','GetErrorCode').
+struct_dt_method_i([ 14,61,0 ],5,'ExoItemDesc','If an error exists returns the code').
+struct_dt_method_i([ 14,61,0 ],5,'ExoItemType','Character').
+struct_dt_method_i([ 14,61,0 ],5,basedon,'').
+struct_dt_method_i([ 14,61,0 ],5,'XmlName','').
+struct_dt_method_i([ 14,61,0 ],5,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],5,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],5,'ExoNameNETCORE','GetErrorCode').
+struct_dt_method_i([ 14,61,0 ],5,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,61,0 ],5,'ExoNameJAVA',getErrorCode).
+struct_dt_method_i([ 14,61,0 ],5,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,61,0 ],5,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],5,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],5,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],5,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],5,'ExoAsyncJSModule','0').
+struct_dt_method_i([ 14,61,0 ],6,name,geterrordescription).
+struct_dt_method_i([ 14,61,0 ],6,camelname,'GetErrorDescription').
+struct_dt_method_i([ 14,61,0 ],6,externalType,'').
+struct_dt_method_i([ 14,61,0 ],6,length,100).
+struct_dt_method_i([ 14,61,0 ],6,decimals,0).
+struct_dt_method_i([ 14,61,0 ],6,type,[ 5,100,0 ]).
+struct_dt_method_i([ 14,61,0 ],6,'IntName','GetErrorDescription').
+struct_dt_method_i([ 14,61,0 ],6,'ExoItemDesc','If an error exists returns the description message').
+struct_dt_method_i([ 14,61,0 ],6,'ExoItemType','Character').
+struct_dt_method_i([ 14,61,0 ],6,basedon,'').
+struct_dt_method_i([ 14,61,0 ],6,'XmlName','').
+struct_dt_method_i([ 14,61,0 ],6,'ExoMethodIsStatic','0').
+struct_dt_method_i([ 14,61,0 ],6,'ExoExternalMember',idExoExternalMemberDefault).
+struct_dt_method_i([ 14,61,0 ],6,'ExoNameNETCORE','GetErrorDescription').
+struct_dt_method_i([ 14,61,0 ],6,'ExoItemExtTypeNETCORE','String').
+struct_dt_method_i([ 14,61,0 ],6,'ExoNameJAVA',getErrorDescription).
+struct_dt_method_i([ 14,61,0 ],6,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_method_i([ 14,61,0 ],6,'ExoMethodThrows','NO').
+struct_dt_method_i([ 14,61,0 ],6,'ExoNameJS','').
+struct_dt_method_i([ 14,61,0 ],6,'ExoExtNameJSModule','').
+struct_dt_method_i([ 14,61,0 ],6,'ExoMemberJsModulePath','').
+struct_dt_method_i([ 14,61,0 ],6,'ExoAsyncJSModule','0').
+ 
+struct_dt_param_i([ 14,70,1 ],1,name,seconds).
+struct_dt_param_i([ 14,70,1 ],1,camelname,seconds).
+struct_dt_param_i([ 14,70,1 ],1,externalType,'').
+struct_dt_param_i([ 14,70,1 ],1,length,12).
+struct_dt_param_i([ 14,70,1 ],1,decimals,0).
+struct_dt_param_i([ 14,70,1 ],1,sign,0).
+struct_dt_param_i([ 14,70,1 ],1,type,[ 4,12,0 ]).
+struct_dt_param_i([ 14,70,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,70,1 ],1,'IntName',seconds).
+struct_dt_param_i([ 14,70,1 ],1,'ExoItemDesc','Seconds to substract').
+struct_dt_param_i([ 14,70,1 ],1,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,70,1 ],1,basedon,'').
+struct_dt_param_i([ 14,70,1 ],1,'ExoItemExtTypeNETCORE',long).
+struct_dt_param_i([ 14,70,1 ],1,'ExoItemExtTypeJAVA',long).
+struct_dt_param_i([ 14,70,2 ],1,name,seconds).
+struct_dt_param_i([ 14,70,2 ],1,camelname,seconds).
+struct_dt_param_i([ 14,70,2 ],1,externalType,'').
+struct_dt_param_i([ 14,70,2 ],1,length,12).
+struct_dt_param_i([ 14,70,2 ],1,decimals,0).
+struct_dt_param_i([ 14,70,2 ],1,sign,0).
+struct_dt_param_i([ 14,70,2 ],1,type,[ 4,12,0 ]).
+struct_dt_param_i([ 14,70,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,70,2 ],1,'IntName',seconds).
+struct_dt_param_i([ 14,70,2 ],1,'ExoItemDesc','Seconds to add').
+struct_dt_param_i([ 14,70,2 ],1,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,70,2 ],1,basedon,'').
+struct_dt_param_i([ 14,70,2 ],1,'ExoItemExtTypeNETCORE',long).
+struct_dt_param_i([ 14,70,2 ],1,'ExoItemExtTypeJAVA',long).
+struct_dt_param_i([ 14,67,1 ],1,name,token).
+struct_dt_param_i([ 14,67,1 ],1,camelname,token).
+struct_dt_param_i([ 14,67,1 ],1,externalType,'').
+struct_dt_param_i([ 14,67,1 ],1,length,9999).
+struct_dt_param_i([ 14,67,1 ],1,decimals,0).
+struct_dt_param_i([ 14,67,1 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,1 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,1 ],1,'ExoItemDesc','string token').
+struct_dt_param_i([ 14,67,1 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,1 ],1,basedon,'').
+struct_dt_param_i([ 14,67,1 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,67,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,1 ],2,name,expectedalgorithm).
+struct_dt_param_i([ 14,67,1 ],2,camelname,expectedAlgorithm).
+struct_dt_param_i([ 14,67,1 ],2,externalType,'').
+struct_dt_param_i([ 14,67,1 ],2,length,20).
+struct_dt_param_i([ 14,67,1 ],2,decimals,0).
+struct_dt_param_i([ 14,67,1 ],2,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,67,1 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,1 ],2,'IntName',expectedAlgorithm).
+struct_dt_param_i([ 14,67,1 ],2,'ExoItemDesc','Expected token algorithm').
+struct_dt_param_i([ 14,67,1 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,67,1 ],2,basedon,88).
+struct_dt_param_i([ 14,67,1 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,1 ],2,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,67,1 ],3,name,privateclaims).
+struct_dt_param_i([ 14,67,1 ],3,camelname,privateClaims).
+struct_dt_param_i([ 14,67,1 ],3,externalType,'').
+struct_dt_param_i([ 14,67,1 ],3,length,0).
+struct_dt_param_i([ 14,67,1 ],3,decimals,0).
+struct_dt_param_i([ 14,67,1 ],3,type,[ [ 14,66,0 ],0,0 ]).
+struct_dt_param_i([ 14,67,1 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,1 ],3,'IntName',privateClaims).
+struct_dt_param_i([ 14,67,1 ],3,'ExoItemDesc','PrivateClaims object').
+struct_dt_param_i([ 14,67,1 ],3,'ExoItemType','PrivateClaims, GeneXusJWT').
+struct_dt_param_i([ 14,67,1 ],3,basedon,'').
+struct_dt_param_i([ 14,67,1 ],3,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusJWTClaims.PrivateClaims').
+struct_dt_param_i([ 14,67,1 ],3,'ExoItemExtTypeJAVA','com.genexus.JWT.claims.PrivateClaims').
+struct_dt_param_i([ 14,67,1 ],4,name,options).
+struct_dt_param_i([ 14,67,1 ],4,camelname,options).
+struct_dt_param_i([ 14,67,1 ],4,externalType,'').
+struct_dt_param_i([ 14,67,1 ],4,length,8).
+struct_dt_param_i([ 14,67,1 ],4,decimals,0).
+struct_dt_param_i([ 14,67,1 ],4,type,[ [ 14,68,0 ],8,0 ]).
+struct_dt_param_i([ 14,67,1 ],4,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,1 ],4,'IntName',options).
+struct_dt_param_i([ 14,67,1 ],4,'ExoItemDesc','JWTOptions object').
+struct_dt_param_i([ 14,67,1 ],4,'ExoItemType','JWTOptions, GeneXusJWT').
+struct_dt_param_i([ 14,67,1 ],4,basedon,'').
+struct_dt_param_i([ 14,67,1 ],4,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_param_i([ 14,67,1 ],4,'ExoItemExtTypeJAVA','com.genexus.commons.JWTOptions').
+struct_dt_param_i([ 14,67,2 ],1,name,algorithm).
+struct_dt_param_i([ 14,67,2 ],1,camelname,algorithm).
+struct_dt_param_i([ 14,67,2 ],1,externalType,'').
+struct_dt_param_i([ 14,67,2 ],1,length,20).
+struct_dt_param_i([ 14,67,2 ],1,decimals,0).
+struct_dt_param_i([ 14,67,2 ],1,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,67,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,2 ],1,'IntName',algorithm).
+struct_dt_param_i([ 14,67,2 ],1,'ExoItemDesc','JWTAlgorithm domain value').
+struct_dt_param_i([ 14,67,2 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,67,2 ],1,basedon,88).
+struct_dt_param_i([ 14,67,2 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,2 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,2 ],2,name,privateclaims).
+struct_dt_param_i([ 14,67,2 ],2,camelname,privateClaims).
+struct_dt_param_i([ 14,67,2 ],2,externalType,'').
+struct_dt_param_i([ 14,67,2 ],2,length,8).
+struct_dt_param_i([ 14,67,2 ],2,decimals,0).
+struct_dt_param_i([ 14,67,2 ],2,type,[ [ 14,66,0 ],8,0 ]).
+struct_dt_param_i([ 14,67,2 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,2 ],2,'IntName',privateClaims).
+struct_dt_param_i([ 14,67,2 ],2,'ExoItemDesc','PrivateClaims object').
+struct_dt_param_i([ 14,67,2 ],2,'ExoItemType','PrivateClaims, GeneXusJWT').
+struct_dt_param_i([ 14,67,2 ],2,basedon,'').
+struct_dt_param_i([ 14,67,2 ],2,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusJWTClaims.PrivateClaims').
+struct_dt_param_i([ 14,67,2 ],2,'ExoItemExtTypeJAVA','com.genexus.JWT.claims.PrivateClaims').
+struct_dt_param_i([ 14,67,2 ],3,name,options).
+struct_dt_param_i([ 14,67,2 ],3,camelname,options).
+struct_dt_param_i([ 14,67,2 ],3,externalType,'').
+struct_dt_param_i([ 14,67,2 ],3,length,8).
+struct_dt_param_i([ 14,67,2 ],3,decimals,0).
+struct_dt_param_i([ 14,67,2 ],3,type,[ [ 14,68,0 ],8,0 ]).
+struct_dt_param_i([ 14,67,2 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,2 ],3,'IntName',options).
+struct_dt_param_i([ 14,67,2 ],3,'ExoItemDesc','JWTOptions object').
+struct_dt_param_i([ 14,67,2 ],3,'ExoItemType','JWTOptions, GeneXusJWT').
+struct_dt_param_i([ 14,67,2 ],3,basedon,'').
+struct_dt_param_i([ 14,67,2 ],3,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_param_i([ 14,67,2 ],3,'ExoItemExtTypeJAVA','com.genexus.commons.JWTOptions').
+struct_dt_param_i([ 14,67,3 ],1,name,token).
+struct_dt_param_i([ 14,67,3 ],1,camelname,token).
+struct_dt_param_i([ 14,67,3 ],1,externalType,'').
+struct_dt_param_i([ 14,67,3 ],1,length,9999).
+struct_dt_param_i([ 14,67,3 ],1,decimals,0).
+struct_dt_param_i([ 14,67,3 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,3 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,3 ],1,'ExoItemDesc','string token').
+struct_dt_param_i([ 14,67,3 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,3 ],1,basedon,'').
+struct_dt_param_i([ 14,67,3 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,67,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,4 ],1,name,token).
+struct_dt_param_i([ 14,67,4 ],1,camelname,token).
+struct_dt_param_i([ 14,67,4 ],1,externalType,'').
+struct_dt_param_i([ 14,67,4 ],1,length,9999).
+struct_dt_param_i([ 14,67,4 ],1,decimals,0).
+struct_dt_param_i([ 14,67,4 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,4 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,4 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,4 ],1,'ExoItemDesc','string token').
+struct_dt_param_i([ 14,67,4 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,4 ],1,basedon,'').
+struct_dt_param_i([ 14,67,4 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,67,4 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,5 ],1,name,token).
+struct_dt_param_i([ 14,67,5 ],1,camelname,token).
+struct_dt_param_i([ 14,67,5 ],1,externalType,'').
+struct_dt_param_i([ 14,67,5 ],1,length,9999).
+struct_dt_param_i([ 14,67,5 ],1,decimals,0).
+struct_dt_param_i([ 14,67,5 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,5 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,5 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,5 ],1,'ExoItemDesc','string token').
+struct_dt_param_i([ 14,67,5 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,5 ],1,basedon,'').
+struct_dt_param_i([ 14,67,5 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,67,5 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,9 ],1,name,token).
+struct_dt_param_i([ 14,67,9 ],1,camelname,token).
+struct_dt_param_i([ 14,67,9 ],1,externalType,'').
+struct_dt_param_i([ 14,67,9 ],1,length,9999).
+struct_dt_param_i([ 14,67,9 ],1,decimals,0).
+struct_dt_param_i([ 14,67,9 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,9 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,9 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,9 ],1,'ExoItemDesc','String token to verify').
+struct_dt_param_i([ 14,67,9 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,9 ],1,basedon,'').
+struct_dt_param_i([ 14,67,9 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,67,9 ],1,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,67,9 ],2,name,expectedalgorithm).
+struct_dt_param_i([ 14,67,9 ],2,camelname,expectedAlgorithm).
+struct_dt_param_i([ 14,67,9 ],2,externalType,'').
+struct_dt_param_i([ 14,67,9 ],2,length,20).
+struct_dt_param_i([ 14,67,9 ],2,decimals,0).
+struct_dt_param_i([ 14,67,9 ],2,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,67,9 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,9 ],2,'IntName',expectedAlgorithm).
+struct_dt_param_i([ 14,67,9 ],2,'ExoItemDesc','Expected token algorithm').
+struct_dt_param_i([ 14,67,9 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,67,9 ],2,basedon,88).
+struct_dt_param_i([ 14,67,9 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,9 ],2,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,67,9 ],3,name,options).
+struct_dt_param_i([ 14,67,9 ],3,camelname,options).
+struct_dt_param_i([ 14,67,9 ],3,externalType,'').
+struct_dt_param_i([ 14,67,9 ],3,length,0).
+struct_dt_param_i([ 14,67,9 ],3,decimals,0).
+struct_dt_param_i([ 14,67,9 ],3,type,[ [ 14,68,0 ],0,0 ]).
+struct_dt_param_i([ 14,67,9 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,9 ],3,'IntName',options).
+struct_dt_param_i([ 14,67,9 ],3,'ExoItemDesc','JWTOptions object').
+struct_dt_param_i([ 14,67,9 ],3,'ExoItemType','JWTOptions, GeneXusJWT').
+struct_dt_param_i([ 14,67,9 ],3,basedon,'').
+struct_dt_param_i([ 14,67,9 ],3,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_param_i([ 14,67,9 ],3,'ExoItemExtTypeJAVA','com.genexus.commons.JWTOptions').
+struct_dt_param_i([ 14,67,10 ],1,name,token).
+struct_dt_param_i([ 14,67,10 ],1,camelname,token).
+struct_dt_param_i([ 14,67,10 ],1,externalType,'').
+struct_dt_param_i([ 14,67,10 ],1,length,9999).
+struct_dt_param_i([ 14,67,10 ],1,decimals,0).
+struct_dt_param_i([ 14,67,10 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,10 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,10 ],1,'IntName',token).
+struct_dt_param_i([ 14,67,10 ],1,'ExoItemDesc','String token to verify').
+struct_dt_param_i([ 14,67,10 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,10 ],1,basedon,'').
+struct_dt_param_i([ 14,67,10 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,10 ],1,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,67,10 ],2,name,expectedalgorithm).
+struct_dt_param_i([ 14,67,10 ],2,camelname,expectedAlgorithm).
+struct_dt_param_i([ 14,67,10 ],2,externalType,'').
+struct_dt_param_i([ 14,67,10 ],2,length,20).
+struct_dt_param_i([ 14,67,10 ],2,decimals,0).
+struct_dt_param_i([ 14,67,10 ],2,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,67,10 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,10 ],2,'IntName',expectedAlgorithm).
+struct_dt_param_i([ 14,67,10 ],2,'ExoItemDesc','Expected token algorithm').
+struct_dt_param_i([ 14,67,10 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,67,10 ],2,basedon,88).
+struct_dt_param_i([ 14,67,10 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,10 ],2,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,67,10 ],3,name,options).
+struct_dt_param_i([ 14,67,10 ],3,camelname,options).
+struct_dt_param_i([ 14,67,10 ],3,externalType,'').
+struct_dt_param_i([ 14,67,10 ],3,length,0).
+struct_dt_param_i([ 14,67,10 ],3,decimals,0).
+struct_dt_param_i([ 14,67,10 ],3,type,[ [ 14,68,0 ],0,0 ]).
+struct_dt_param_i([ 14,67,10 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,10 ],3,'IntName',options).
+struct_dt_param_i([ 14,67,10 ],3,'ExoItemDesc','JWTOptions object').
+struct_dt_param_i([ 14,67,10 ],3,'ExoItemType','JWTOptions, GeneXusJWT').
+struct_dt_param_i([ 14,67,10 ],3,basedon,'').
+struct_dt_param_i([ 14,67,10 ],3,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_param_i([ 14,67,10 ],3,'ExoItemExtTypeJAVA','com.genexus.commons.JWTOptions').
+struct_dt_param_i([ 14,67,11 ],1,name,algorithm).
+struct_dt_param_i([ 14,67,11 ],1,camelname,algorithm).
+struct_dt_param_i([ 14,67,11 ],1,externalType,'').
+struct_dt_param_i([ 14,67,11 ],1,length,20).
+struct_dt_param_i([ 14,67,11 ],1,decimals,0).
+struct_dt_param_i([ 14,67,11 ],1,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,67,11 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,11 ],1,'IntName',algorithm).
+struct_dt_param_i([ 14,67,11 ],1,'ExoItemDesc','JWTAlgorithm domain value').
+struct_dt_param_i([ 14,67,11 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,67,11 ],1,basedon,88).
+struct_dt_param_i([ 14,67,11 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,11 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,11 ],2,name,json).
+struct_dt_param_i([ 14,67,11 ],2,camelname,json).
+struct_dt_param_i([ 14,67,11 ],2,externalType,'').
+struct_dt_param_i([ 14,67,11 ],2,length,9999).
+struct_dt_param_i([ 14,67,11 ],2,decimals,0).
+struct_dt_param_i([ 14,67,11 ],2,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,67,11 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,11 ],2,'IntName',json).
+struct_dt_param_i([ 14,67,11 ],2,'ExoItemDesc','JSON').
+struct_dt_param_i([ 14,67,11 ],2,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,67,11 ],2,basedon,'').
+struct_dt_param_i([ 14,67,11 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,67,11 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,67,11 ],3,name,options).
+struct_dt_param_i([ 14,67,11 ],3,camelname,options).
+struct_dt_param_i([ 14,67,11 ],3,externalType,'').
+struct_dt_param_i([ 14,67,11 ],3,length,0).
+struct_dt_param_i([ 14,67,11 ],3,decimals,0).
+struct_dt_param_i([ 14,67,11 ],3,type,[ [ 14,68,0 ],0,0 ]).
+struct_dt_param_i([ 14,67,11 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,67,11 ],3,'IntName',options).
+struct_dt_param_i([ 14,67,11 ],3,'ExoItemDesc','JWTOptions object').
+struct_dt_param_i([ 14,67,11 ],3,'ExoItemType','JWTOptions, GeneXusJWT').
+struct_dt_param_i([ 14,67,11 ],3,basedon,'').
+struct_dt_param_i([ 14,67,11 ],3,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusComons.JWTOptions').
+struct_dt_param_i([ 14,67,11 ],3,'ExoItemExtTypeJAVA','com.genexus.commons.JWTOptions').
+struct_dt_param_i([ 14,66,1 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,1 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,1 ],1,externalType,'').
+struct_dt_param_i([ 14,66,1 ],1,length,100).
+struct_dt_param_i([ 14,66,1 ],1,decimals,0).
+struct_dt_param_i([ 14,66,1 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,1 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,1 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,1 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,1 ],1,basedon,'').
+struct_dt_param_i([ 14,66,1 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,66,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,1 ],2,name,privateclaimvalue).
+struct_dt_param_i([ 14,66,1 ],2,camelname,privateClaimValue).
+struct_dt_param_i([ 14,66,1 ],2,externalType,'').
+struct_dt_param_i([ 14,66,1 ],2,length,256).
+struct_dt_param_i([ 14,66,1 ],2,decimals,0).
+struct_dt_param_i([ 14,66,1 ],2,type,[ 13,256,0 ]).
+struct_dt_param_i([ 14,66,1 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,1 ],2,'IntName',privateClaimValue).
+struct_dt_param_i([ 14,66,1 ],2,'ExoItemDesc','string claim value').
+struct_dt_param_i([ 14,66,1 ],2,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,66,1 ],2,basedon,'').
+struct_dt_param_i([ 14,66,1 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,1 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,2 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,2 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,2 ],1,externalType,'').
+struct_dt_param_i([ 14,66,2 ],1,length,100).
+struct_dt_param_i([ 14,66,2 ],1,decimals,0).
+struct_dt_param_i([ 14,66,2 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,2 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,2 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,2 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,2 ],1,basedon,'').
+struct_dt_param_i([ 14,66,2 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,2 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,2 ],2,name,nestedprivateclaims).
+struct_dt_param_i([ 14,66,2 ],2,camelname,nestedPrivateClaims).
+struct_dt_param_i([ 14,66,2 ],2,externalType,'').
+struct_dt_param_i([ 14,66,2 ],2,length,0).
+struct_dt_param_i([ 14,66,2 ],2,decimals,0).
+struct_dt_param_i([ 14,66,2 ],2,type,[ [ 14,66,0 ],0,0 ]).
+struct_dt_param_i([ 14,66,2 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,2 ],2,'IntName',nestedPrivateClaims).
+struct_dt_param_i([ 14,66,2 ],2,'ExoItemDesc','nested private claims').
+struct_dt_param_i([ 14,66,2 ],2,'ExoItemType','PrivateClaims, GeneXusJWT').
+struct_dt_param_i([ 14,66,2 ],2,basedon,'').
+struct_dt_param_i([ 14,66,2 ],2,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusJWTClaims.PrivateClaims').
+struct_dt_param_i([ 14,66,2 ],2,'ExoItemExtTypeJAVA','com.genexus.JWT.claims.PrivateClaims').
+struct_dt_param_i([ 14,66,3 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,3 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,3 ],1,externalType,'').
+struct_dt_param_i([ 14,66,3 ],1,length,100).
+struct_dt_param_i([ 14,66,3 ],1,decimals,0).
+struct_dt_param_i([ 14,66,3 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,3 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,3 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,3 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,3 ],1,basedon,'').
+struct_dt_param_i([ 14,66,3 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,3 ],2,name,privateclaimvalue).
+struct_dt_param_i([ 14,66,3 ],2,camelname,privateClaimValue).
+struct_dt_param_i([ 14,66,3 ],2,externalType,'').
+struct_dt_param_i([ 14,66,3 ],2,length,8).
+struct_dt_param_i([ 14,66,3 ],2,decimals,0).
+struct_dt_param_i([ 14,66,3 ],2,sign,0).
+struct_dt_param_i([ 14,66,3 ],2,type,[ 4,8,0 ]).
+struct_dt_param_i([ 14,66,3 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,3 ],2,'IntName',privateClaimValue).
+struct_dt_param_i([ 14,66,3 ],2,'ExoItemDesc','numeric claim value').
+struct_dt_param_i([ 14,66,3 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,66,3 ],2,basedon,'').
+struct_dt_param_i([ 14,66,3 ],2,'ExoItemExtTypeNETCORE',int).
+struct_dt_param_i([ 14,66,3 ],2,'ExoItemExtTypeJAVA',int).
+struct_dt_param_i([ 14,66,4 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,4 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,4 ],1,externalType,'').
+struct_dt_param_i([ 14,66,4 ],1,length,100).
+struct_dt_param_i([ 14,66,4 ],1,decimals,0).
+struct_dt_param_i([ 14,66,4 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,4 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,4 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,4 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,4 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,4 ],1,basedon,'').
+struct_dt_param_i([ 14,66,4 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,4 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,4 ],2,name,privateclaimvalue).
+struct_dt_param_i([ 14,66,4 ],2,camelname,privateClaimValue).
+struct_dt_param_i([ 14,66,4 ],2,externalType,'').
+struct_dt_param_i([ 14,66,4 ],2,length,11).
+struct_dt_param_i([ 14,66,4 ],2,decimals,0).
+struct_dt_param_i([ 14,66,4 ],2,sign,0).
+struct_dt_param_i([ 14,66,4 ],2,type,[ 4,11,0 ]).
+struct_dt_param_i([ 14,66,4 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,4 ],2,'IntName',privateClaimValue).
+struct_dt_param_i([ 14,66,4 ],2,'ExoItemDesc','date numeric claim value').
+struct_dt_param_i([ 14,66,4 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,66,4 ],2,basedon,'').
+struct_dt_param_i([ 14,66,4 ],2,'ExoItemExtTypeNETCORE',long).
+struct_dt_param_i([ 14,66,4 ],2,'ExoItemExtTypeJAVA',long).
+struct_dt_param_i([ 14,66,5 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,5 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,5 ],1,externalType,'').
+struct_dt_param_i([ 14,66,5 ],1,length,100).
+struct_dt_param_i([ 14,66,5 ],1,decimals,0).
+struct_dt_param_i([ 14,66,5 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,5 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,5 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,5 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,5 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,5 ],1,basedon,'').
+struct_dt_param_i([ 14,66,5 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,5 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,5 ],2,name,privateclaimvalue).
+struct_dt_param_i([ 14,66,5 ],2,camelname,privateClaimValue).
+struct_dt_param_i([ 14,66,5 ],2,externalType,'').
+struct_dt_param_i([ 14,66,5 ],2,length,4).
+struct_dt_param_i([ 14,66,5 ],2,decimals,0).
+struct_dt_param_i([ 14,66,5 ],2,type,[ 15,4,0 ]).
+struct_dt_param_i([ 14,66,5 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,5 ],2,'IntName',privateClaimValue).
+struct_dt_param_i([ 14,66,5 ],2,'ExoItemDesc','boolean claim value').
+struct_dt_param_i([ 14,66,5 ],2,'ExoItemType','Boolean').
+struct_dt_param_i([ 14,66,5 ],2,basedon,'').
+struct_dt_param_i([ 14,66,5 ],2,'ExoItemExtTypeNETCORE',bool).
+struct_dt_param_i([ 14,66,5 ],2,'ExoItemExtTypeJAVA',boolean).
+struct_dt_param_i([ 14,66,6 ],1,name,privateclaimkey).
+struct_dt_param_i([ 14,66,6 ],1,camelname,privateClaimKey).
+struct_dt_param_i([ 14,66,6 ],1,externalType,'').
+struct_dt_param_i([ 14,66,6 ],1,length,100).
+struct_dt_param_i([ 14,66,6 ],1,decimals,0).
+struct_dt_param_i([ 14,66,6 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,66,6 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,6 ],1,'IntName',privateClaimKey).
+struct_dt_param_i([ 14,66,6 ],1,'ExoItemDesc','claim key').
+struct_dt_param_i([ 14,66,6 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,66,6 ],1,basedon,'').
+struct_dt_param_i([ 14,66,6 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,66,6 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,66,6 ],2,name,privateclaimvalue).
+struct_dt_param_i([ 14,66,6 ],2,camelname,privateClaimValue).
+struct_dt_param_i([ 14,66,6 ],2,externalType,'').
+struct_dt_param_i([ 14,66,6 ],2,length,11).
+struct_dt_param_i([ 14,66,6 ],2,decimals,10).
+struct_dt_param_i([ 14,66,6 ],2,sign,0).
+struct_dt_param_i([ 14,66,6 ],2,type,[ 4,11,10 ]).
+struct_dt_param_i([ 14,66,6 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,66,6 ],2,'IntName',privateClaimValue).
+struct_dt_param_i([ 14,66,6 ],2,'ExoItemDesc','double claim value').
+struct_dt_param_i([ 14,66,6 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,66,6 ],2,basedon,'').
+struct_dt_param_i([ 14,66,6 ],2,'ExoItemExtTypeNETCORE',double).
+struct_dt_param_i([ 14,66,6 ],2,'ExoItemExtTypeJAVA',double).
+struct_dt_param_i([ 14,68,1 ],1,name,revocationlist).
+struct_dt_param_i([ 14,68,1 ],1,camelname,revocationList).
+struct_dt_param_i([ 14,68,1 ],1,externalType,'').
+struct_dt_param_i([ 14,68,1 ],1,length,8).
+struct_dt_param_i([ 14,68,1 ],1,decimals,0).
+struct_dt_param_i([ 14,68,1 ],1,type,[ [ 14,65,0 ],8,0 ]).
+struct_dt_param_i([ 14,68,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,1 ],1,'IntName',revocationList).
+struct_dt_param_i([ 14,68,1 ],1,'ExoItemDesc','Revocation List ').
+struct_dt_param_i([ 14,68,1 ],1,'ExoItemType','RevocationList, GeneXusJWT').
+struct_dt_param_i([ 14,68,1 ],1,basedon,'').
+struct_dt_param_i([ 14,68,1 ],1,'ExoItemExtTypeNETCORE','GeneXusJWT.GenexusJWTUtils.RevocationList').
+struct_dt_param_i([ 14,68,1 ],1,'ExoItemExtTypeJAVA','com.genexus.JWT.utils.RevocationList').
+struct_dt_param_i([ 14,68,3 ],1,name,registeredclaimkey).
+struct_dt_param_i([ 14,68,3 ],1,camelname,registeredClaimKey).
+struct_dt_param_i([ 14,68,3 ],1,externalType,'').
+struct_dt_param_i([ 14,68,3 ],1,length,3).
+struct_dt_param_i([ 14,68,3 ],1,decimals,0).
+struct_dt_param_i([ 14,68,3 ],1,type,[ 5,3,0 ]).
+struct_dt_param_i([ 14,68,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,3 ],1,'IntName',registeredClaimKey).
+struct_dt_param_i([ 14,68,3 ],1,'ExoItemDesc','RegisteredClaim domain value of time validation type (exp, nbf or iat)').
+struct_dt_param_i([ 14,68,3 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,3 ],1,basedon,89).
+struct_dt_param_i([ 14,68,3 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,3 ],2,name,registeredclaimvalue).
+struct_dt_param_i([ 14,68,3 ],2,camelname,registeredClaimValue).
+struct_dt_param_i([ 14,68,3 ],2,externalType,'').
+struct_dt_param_i([ 14,68,3 ],2,length,100).
+struct_dt_param_i([ 14,68,3 ],2,decimals,0).
+struct_dt_param_i([ 14,68,3 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,3 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,3 ],2,'IntName',registeredClaimValue).
+struct_dt_param_i([ 14,68,3 ],2,'ExoItemDesc',' Date with the specific format yyyy/MM/dd HH:mm:ss').
+struct_dt_param_i([ 14,68,3 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,3 ],2,basedon,'').
+struct_dt_param_i([ 14,68,3 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,3 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,3 ],3,name,customtime).
+struct_dt_param_i([ 14,68,3 ],3,camelname,customTime).
+struct_dt_param_i([ 14,68,3 ],3,externalType,'').
+struct_dt_param_i([ 14,68,3 ],3,length,100).
+struct_dt_param_i([ 14,68,3 ],3,decimals,0).
+struct_dt_param_i([ 14,68,3 ],3,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,3 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,3 ],3,'IntName',customTime).
+struct_dt_param_i([ 14,68,3 ],3,'ExoItemDesc','time in seconds to define tollerance for the claim validation.').
+struct_dt_param_i([ 14,68,3 ],3,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,3 ],3,basedon,'').
+struct_dt_param_i([ 14,68,3 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,3 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,4 ],1,name,registeredclaimkey).
+struct_dt_param_i([ 14,68,4 ],1,camelname,registeredClaimKey).
+struct_dt_param_i([ 14,68,4 ],1,externalType,'').
+struct_dt_param_i([ 14,68,4 ],1,length,3).
+struct_dt_param_i([ 14,68,4 ],1,decimals,0).
+struct_dt_param_i([ 14,68,4 ],1,type,[ 5,3,0 ]).
+struct_dt_param_i([ 14,68,4 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,4 ],1,'IntName',registeredClaimKey).
+struct_dt_param_i([ 14,68,4 ],1,'ExoItemDesc','RegisteredClaim domain value').
+struct_dt_param_i([ 14,68,4 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,4 ],1,basedon,89).
+struct_dt_param_i([ 14,68,4 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,4 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,4 ],2,name,registeredclaimvalue).
+struct_dt_param_i([ 14,68,4 ],2,camelname,registeredClaimValue).
+struct_dt_param_i([ 14,68,4 ],2,externalType,'').
+struct_dt_param_i([ 14,68,4 ],2,length,100).
+struct_dt_param_i([ 14,68,4 ],2,decimals,0).
+struct_dt_param_i([ 14,68,4 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,4 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,4 ],2,'IntName',registeredClaimValue).
+struct_dt_param_i([ 14,68,4 ],2,'ExoItemDesc','Registered claim value').
+struct_dt_param_i([ 14,68,4 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,4 ],2,basedon,'').
+struct_dt_param_i([ 14,68,4 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,4 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,5 ],1,name,publicclaimkey).
+struct_dt_param_i([ 14,68,5 ],1,camelname,publicClaimKey).
+struct_dt_param_i([ 14,68,5 ],1,externalType,'').
+struct_dt_param_i([ 14,68,5 ],1,length,100).
+struct_dt_param_i([ 14,68,5 ],1,decimals,0).
+struct_dt_param_i([ 14,68,5 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,5 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,5 ],1,'IntName',publicClaimKey).
+struct_dt_param_i([ 14,68,5 ],1,'ExoItemDesc','Public claim key').
+struct_dt_param_i([ 14,68,5 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,5 ],1,basedon,'').
+struct_dt_param_i([ 14,68,5 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,5 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,5 ],2,name,publicclaimvalue).
+struct_dt_param_i([ 14,68,5 ],2,camelname,publicClaimValue).
+struct_dt_param_i([ 14,68,5 ],2,externalType,'').
+struct_dt_param_i([ 14,68,5 ],2,length,100).
+struct_dt_param_i([ 14,68,5 ],2,decimals,0).
+struct_dt_param_i([ 14,68,5 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,5 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,5 ],2,'IntName',publicClaimValue).
+struct_dt_param_i([ 14,68,5 ],2,'ExoItemDesc','Public claim value').
+struct_dt_param_i([ 14,68,5 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,5 ],2,basedon,'').
+struct_dt_param_i([ 14,68,5 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,5 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,6 ],1,name,privatekey).
+struct_dt_param_i([ 14,68,6 ],1,camelname,privateKey).
+struct_dt_param_i([ 14,68,6 ],1,externalType,'').
+struct_dt_param_i([ 14,68,6 ],1,length,0).
+struct_dt_param_i([ 14,68,6 ],1,decimals,0).
+struct_dt_param_i([ 14,68,6 ],1,type,[ [ 14,60,0 ],0,0 ]).
+struct_dt_param_i([ 14,68,6 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,6 ],1,'IntName',privateKey).
+struct_dt_param_i([ 14,68,6 ],1,'ExoItemDesc','PrivateKey object').
+struct_dt_param_i([ 14,68,6 ],1,'ExoItemType','PrivateKey, SecurityAPICommons').
+struct_dt_param_i([ 14,68,6 ],1,basedon,'').
+struct_dt_param_i([ 14,68,6 ],1,'ExoItemExtTypeNETCORE','SecurityAPICommons.Keys.PrivateKeyManager').
+struct_dt_param_i([ 14,68,6 ],1,'ExoItemExtTypeJAVA','com.genexus.securityapicommons.keys.PrivateKeyManager').
+struct_dt_param_i([ 14,68,7 ],1,name,certificate).
+struct_dt_param_i([ 14,68,7 ],1,camelname,certificate).
+struct_dt_param_i([ 14,68,7 ],1,externalType,'').
+struct_dt_param_i([ 14,68,7 ],1,length,0).
+struct_dt_param_i([ 14,68,7 ],1,decimals,0).
+struct_dt_param_i([ 14,68,7 ],1,type,[ [ 14,59,0 ],0,0 ]).
+struct_dt_param_i([ 14,68,7 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,7 ],1,'IntName',certificate).
+struct_dt_param_i([ 14,68,7 ],1,'ExoItemDesc','Certificate object').
+struct_dt_param_i([ 14,68,7 ],1,'ExoItemType','Certificate, SecurityAPICommons').
+struct_dt_param_i([ 14,68,7 ],1,basedon,'').
+struct_dt_param_i([ 14,68,7 ],1,'ExoItemExtTypeNETCORE','SecurityAPICommons.Keys.CertificateX509').
+struct_dt_param_i([ 14,68,7 ],1,'ExoItemExtTypeJAVA','com.genexus.securityapicommons.keys.CertificateX509').
+struct_dt_param_i([ 14,68,8 ],1,name,secret).
+struct_dt_param_i([ 14,68,8 ],1,camelname,secret).
+struct_dt_param_i([ 14,68,8 ],1,externalType,'').
+struct_dt_param_i([ 14,68,8 ],1,length,9999).
+struct_dt_param_i([ 14,68,8 ],1,decimals,0).
+struct_dt_param_i([ 14,68,8 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,68,8 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,8 ],1,'IntName',secret).
+struct_dt_param_i([ 14,68,8 ],1,'ExoItemDesc','Hexadecimal UTF-8 encoded secret for symmetric algorithm').
+struct_dt_param_i([ 14,68,8 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,68,8 ],1,basedon,'').
+struct_dt_param_i([ 14,68,8 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,68,8 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,12 ],1,name,name).
+struct_dt_param_i([ 14,68,12 ],1,camelname,name).
+struct_dt_param_i([ 14,68,12 ],1,externalType,'').
+struct_dt_param_i([ 14,68,12 ],1,length,100).
+struct_dt_param_i([ 14,68,12 ],1,decimals,0).
+struct_dt_param_i([ 14,68,12 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,12 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,12 ],1,'IntName',name).
+struct_dt_param_i([ 14,68,12 ],1,'ExoItemDesc','Name of the header parameter').
+struct_dt_param_i([ 14,68,12 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,12 ],1,basedon,'').
+struct_dt_param_i([ 14,68,12 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,68,12 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,12 ],2,name,value).
+struct_dt_param_i([ 14,68,12 ],2,camelname,value).
+struct_dt_param_i([ 14,68,12 ],2,externalType,'').
+struct_dt_param_i([ 14,68,12 ],2,length,100).
+struct_dt_param_i([ 14,68,12 ],2,decimals,0).
+struct_dt_param_i([ 14,68,12 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,68,12 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,12 ],2,'IntName',value).
+struct_dt_param_i([ 14,68,12 ],2,'ExoItemDesc','Value of the header parameter').
+struct_dt_param_i([ 14,68,12 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,68,12 ],2,basedon,'').
+struct_dt_param_i([ 14,68,12 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,68,12 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,68,13 ],1,name,publickey).
+struct_dt_param_i([ 14,68,13 ],1,camelname,publicKey).
+struct_dt_param_i([ 14,68,13 ],1,externalType,'').
+struct_dt_param_i([ 14,68,13 ],1,length,0).
+struct_dt_param_i([ 14,68,13 ],1,decimals,0).
+struct_dt_param_i([ 14,68,13 ],1,sign,0).
+struct_dt_param_i([ 14,68,13 ],1,type,[ 4,0,0 ]).
+struct_dt_param_i([ 14,68,13 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,68,13 ],1,'IntName',publicKey).
+struct_dt_param_i([ 14,68,13 ],1,'ExoItemDesc','PublicKey object').
+struct_dt_param_i([ 14,68,13 ],1,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,68,13 ],1,basedon,'').
+struct_dt_param_i([ 14,68,13 ],1,'ExoItemExtTypeNETCORE','SecurityAPICommons.Commons.PublicKey').
+struct_dt_param_i([ 14,68,13 ],1,'ExoItemExtTypeJAVA','com.genexus.securityapicommons.commons.PublicKey').
+struct_dt_param_i([ 14,65,1 ],1,name,id).
+struct_dt_param_i([ 14,65,1 ],1,camelname,id).
+struct_dt_param_i([ 14,65,1 ],1,externalType,'').
+struct_dt_param_i([ 14,65,1 ],1,length,100).
+struct_dt_param_i([ 14,65,1 ],1,decimals,0).
+struct_dt_param_i([ 14,65,1 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,65,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,65,1 ],1,'IntName',id).
+struct_dt_param_i([ 14,65,1 ],1,'ExoItemDesc','token id').
+struct_dt_param_i([ 14,65,1 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,65,1 ],1,basedon,'').
+struct_dt_param_i([ 14,65,1 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,65,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,65,2 ],1,name,id).
+struct_dt_param_i([ 14,65,2 ],1,camelname,id).
+struct_dt_param_i([ 14,65,2 ],1,externalType,'').
+struct_dt_param_i([ 14,65,2 ],1,length,100).
+struct_dt_param_i([ 14,65,2 ],1,decimals,0).
+struct_dt_param_i([ 14,65,2 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,65,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,65,2 ],1,'IntName',id).
+struct_dt_param_i([ 14,65,2 ],1,'ExoItemDesc','token id').
+struct_dt_param_i([ 14,65,2 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,65,2 ],1,basedon,'').
+struct_dt_param_i([ 14,65,2 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,65,2 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,65,3 ],1,name,id).
+struct_dt_param_i([ 14,65,3 ],1,camelname,id).
+struct_dt_param_i([ 14,65,3 ],1,externalType,'').
+struct_dt_param_i([ 14,65,3 ],1,length,100).
+struct_dt_param_i([ 14,65,3 ],1,decimals,0).
+struct_dt_param_i([ 14,65,3 ],1,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,65,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,65,3 ],1,'IntName',id).
+struct_dt_param_i([ 14,65,3 ],1,'ExoItemDesc','token id').
+struct_dt_param_i([ 14,65,3 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,65,3 ],1,basedon,'').
+struct_dt_param_i([ 14,65,3 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,65,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,1 ],1,name,keypath).
+struct_dt_param_i([ 14,60,1 ],1,camelname,keyPath).
+struct_dt_param_i([ 14,60,1 ],1,externalType,'').
+struct_dt_param_i([ 14,60,1 ],1,length,9999).
+struct_dt_param_i([ 14,60,1 ],1,decimals,0).
+struct_dt_param_i([ 14,60,1 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,60,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,1 ],1,'IntName',keyPath).
+struct_dt_param_i([ 14,60,1 ],1,'ExoItemDesc','FileSystem path to the private key').
+struct_dt_param_i([ 14,60,1 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,60,1 ],1,basedon,'').
+struct_dt_param_i([ 14,60,1 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,60,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,2 ],1,name,keypath).
+struct_dt_param_i([ 14,60,2 ],1,camelname,keyPath).
+struct_dt_param_i([ 14,60,2 ],1,externalType,'').
+struct_dt_param_i([ 14,60,2 ],1,length,9999).
+struct_dt_param_i([ 14,60,2 ],1,decimals,0).
+struct_dt_param_i([ 14,60,2 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,60,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,2 ],1,'IntName',keyPath).
+struct_dt_param_i([ 14,60,2 ],1,'ExoItemDesc','FileSystem path to the pkcs12 file').
+struct_dt_param_i([ 14,60,2 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,60,2 ],1,basedon,'').
+struct_dt_param_i([ 14,60,2 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,60,2 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,2 ],2,name,alias).
+struct_dt_param_i([ 14,60,2 ],2,camelname,alias).
+struct_dt_param_i([ 14,60,2 ],2,externalType,'').
+struct_dt_param_i([ 14,60,2 ],2,length,100).
+struct_dt_param_i([ 14,60,2 ],2,decimals,0).
+struct_dt_param_i([ 14,60,2 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,60,2 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,2 ],2,'IntName',alias).
+struct_dt_param_i([ 14,60,2 ],2,'ExoItemDesc','Certificate alias').
+struct_dt_param_i([ 14,60,2 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,60,2 ],2,basedon,'').
+struct_dt_param_i([ 14,60,2 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,60,2 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,2 ],3,name,password).
+struct_dt_param_i([ 14,60,2 ],3,camelname,password).
+struct_dt_param_i([ 14,60,2 ],3,externalType,'').
+struct_dt_param_i([ 14,60,2 ],3,length,100).
+struct_dt_param_i([ 14,60,2 ],3,decimals,0).
+struct_dt_param_i([ 14,60,2 ],3,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,60,2 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,2 ],3,'IntName',password).
+struct_dt_param_i([ 14,60,2 ],3,'ExoItemDesc','PKCS12 file password').
+struct_dt_param_i([ 14,60,2 ],3,'ExoItemType','Character').
+struct_dt_param_i([ 14,60,2 ],3,basedon,'').
+struct_dt_param_i([ 14,60,2 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,60,2 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,6 ],1,name,base64).
+struct_dt_param_i([ 14,60,6 ],1,camelname,base64).
+struct_dt_param_i([ 14,60,6 ],1,externalType,'').
+struct_dt_param_i([ 14,60,6 ],1,length,9999).
+struct_dt_param_i([ 14,60,6 ],1,decimals,0).
+struct_dt_param_i([ 14,60,6 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,60,6 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,6 ],1,'IntName',base64).
+struct_dt_param_i([ 14,60,6 ],1,'ExoItemDesc','Base64 private key string').
+struct_dt_param_i([ 14,60,6 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,60,6 ],1,basedon,'').
+struct_dt_param_i([ 14,60,6 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,60,6 ],1,'ExoItemExtTypeJAVA','java.lang.string').
+struct_dt_param_i([ 14,60,8 ],1,name,keypath).
+struct_dt_param_i([ 14,60,8 ],1,camelname,keyPath).
+struct_dt_param_i([ 14,60,8 ],1,externalType,'').
+struct_dt_param_i([ 14,60,8 ],1,length,9999).
+struct_dt_param_i([ 14,60,8 ],1,decimals,0).
+struct_dt_param_i([ 14,60,8 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,60,8 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,8 ],1,'IntName',keyPath).
+struct_dt_param_i([ 14,60,8 ],1,'ExoItemDesc','FileSystem path to the private key').
+struct_dt_param_i([ 14,60,8 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,60,8 ],1,basedon,'').
+struct_dt_param_i([ 14,60,8 ],1,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,60,8 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,60,8 ],2,name,encryptionpassword).
+struct_dt_param_i([ 14,60,8 ],2,camelname,encryptionPassword).
+struct_dt_param_i([ 14,60,8 ],2,externalType,'').
+struct_dt_param_i([ 14,60,8 ],2,length,100).
+struct_dt_param_i([ 14,60,8 ],2,decimals,0).
+struct_dt_param_i([ 14,60,8 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,60,8 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,60,8 ],2,'IntName',encryptionPassword).
+struct_dt_param_i([ 14,60,8 ],2,'ExoItemDesc','Encryption password of the PKCS8 file').
+struct_dt_param_i([ 14,60,8 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,60,8 ],2,basedon,'').
+struct_dt_param_i([ 14,60,8 ],2,'ExoItemExtTypeNETCORE',string).
+struct_dt_param_i([ 14,60,8 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,59,1 ],1,name,filepath).
+struct_dt_param_i([ 14,59,1 ],1,camelname,filePath).
+struct_dt_param_i([ 14,59,1 ],1,externalType,'').
+struct_dt_param_i([ 14,59,1 ],1,length,9999).
+struct_dt_param_i([ 14,59,1 ],1,decimals,0).
+struct_dt_param_i([ 14,59,1 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,59,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,59,1 ],1,'IntName',filePath).
+struct_dt_param_i([ 14,59,1 ],1,'ExoItemDesc','Filepath to certificate').
+struct_dt_param_i([ 14,59,1 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,59,1 ],1,basedon,'').
+struct_dt_param_i([ 14,59,1 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,59,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,59,3 ],1,name,stringbase64).
+struct_dt_param_i([ 14,59,3 ],1,camelname,stringBase64).
+struct_dt_param_i([ 14,59,3 ],1,externalType,'').
+struct_dt_param_i([ 14,59,3 ],1,length,9999).
+struct_dt_param_i([ 14,59,3 ],1,decimals,0).
+struct_dt_param_i([ 14,59,3 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,59,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,59,3 ],1,'IntName',stringBase64).
+struct_dt_param_i([ 14,59,3 ],1,'ExoItemDesc','String base64 encoded').
+struct_dt_param_i([ 14,59,3 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,59,3 ],1,basedon,'').
+struct_dt_param_i([ 14,59,3 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,59,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,59,4 ],1,name,filepath).
+struct_dt_param_i([ 14,59,4 ],1,camelname,filePath).
+struct_dt_param_i([ 14,59,4 ],1,externalType,'').
+struct_dt_param_i([ 14,59,4 ],1,length,9999).
+struct_dt_param_i([ 14,59,4 ],1,decimals,0).
+struct_dt_param_i([ 14,59,4 ],1,type,[ 13,9999,0 ]).
+struct_dt_param_i([ 14,59,4 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,59,4 ],1,'IntName',filePath).
+struct_dt_param_i([ 14,59,4 ],1,'ExoItemDesc','Filepath to certificate').
+struct_dt_param_i([ 14,59,4 ],1,'ExoItemType','VarChar').
+struct_dt_param_i([ 14,59,4 ],1,basedon,'').
+struct_dt_param_i([ 14,59,4 ],1,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,59,4 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,59,4 ],2,name,alias).
+struct_dt_param_i([ 14,59,4 ],2,camelname,alias).
+struct_dt_param_i([ 14,59,4 ],2,externalType,'').
+struct_dt_param_i([ 14,59,4 ],2,length,100).
+struct_dt_param_i([ 14,59,4 ],2,decimals,0).
+struct_dt_param_i([ 14,59,4 ],2,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,59,4 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,59,4 ],2,'IntName',alias).
+struct_dt_param_i([ 14,59,4 ],2,'ExoItemDesc','Certificate alias').
+struct_dt_param_i([ 14,59,4 ],2,'ExoItemType','Character').
+struct_dt_param_i([ 14,59,4 ],2,basedon,'').
+struct_dt_param_i([ 14,59,4 ],2,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,59,4 ],2,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,59,4 ],3,name,password).
+struct_dt_param_i([ 14,59,4 ],3,camelname,password).
+struct_dt_param_i([ 14,59,4 ],3,externalType,'').
+struct_dt_param_i([ 14,59,4 ],3,length,100).
+struct_dt_param_i([ 14,59,4 ],3,decimals,0).
+struct_dt_param_i([ 14,59,4 ],3,type,[ 5,100,0 ]).
+struct_dt_param_i([ 14,59,4 ],3,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,59,4 ],3,'IntName',password).
+struct_dt_param_i([ 14,59,4 ],3,'ExoItemDesc','PKCS12 file password').
+struct_dt_param_i([ 14,59,4 ],3,'ExoItemType','Character').
+struct_dt_param_i([ 14,59,4 ],3,basedon,'').
+struct_dt_param_i([ 14,59,4 ],3,'ExoItemExtTypeNETCORE','String').
+struct_dt_param_i([ 14,59,4 ],3,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,61,1 ],1,name,symmetrickeytype).
+struct_dt_param_i([ 14,61,1 ],1,camelname,symmetricKeyType).
+struct_dt_param_i([ 14,61,1 ],1,externalType,'').
+struct_dt_param_i([ 14,61,1 ],1,length,20).
+struct_dt_param_i([ 14,61,1 ],1,decimals,0).
+struct_dt_param_i([ 14,61,1 ],1,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,61,1 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,1 ],1,'IntName',symmetricKeyType).
+struct_dt_param_i([ 14,61,1 ],1,'ExoItemDesc','SymmetricKeyType Domain value').
+struct_dt_param_i([ 14,61,1 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,61,1 ],1,basedon,87).
+struct_dt_param_i([ 14,61,1 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,1 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,61,1 ],2,name,'length ').
+struct_dt_param_i([ 14,61,1 ],2,camelname,'length ').
+struct_dt_param_i([ 14,61,1 ],2,externalType,'').
+struct_dt_param_i([ 14,61,1 ],2,length,9).
+struct_dt_param_i([ 14,61,1 ],2,decimals,0).
+struct_dt_param_i([ 14,61,1 ],2,sign,0).
+struct_dt_param_i([ 14,61,1 ],2,type,[ 4,9,0 ]).
+struct_dt_param_i([ 14,61,1 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,1 ],2,'IntName','length ').
+struct_dt_param_i([ 14,61,1 ],2,'ExoItemDesc','result IV length').
+struct_dt_param_i([ 14,61,1 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,61,1 ],2,basedon,'').
+struct_dt_param_i([ 14,61,1 ],2,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,1 ],2,'ExoItemExtTypeJAVA',int).
+struct_dt_param_i([ 14,61,2 ],1,name,symmetrickeytype).
+struct_dt_param_i([ 14,61,2 ],1,camelname,symmetricKeyType).
+struct_dt_param_i([ 14,61,2 ],1,externalType,'').
+struct_dt_param_i([ 14,61,2 ],1,length,20).
+struct_dt_param_i([ 14,61,2 ],1,decimals,0).
+struct_dt_param_i([ 14,61,2 ],1,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,61,2 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,2 ],1,'IntName',symmetricKeyType).
+struct_dt_param_i([ 14,61,2 ],1,'ExoItemDesc','SymmetricKeyType Domain value').
+struct_dt_param_i([ 14,61,2 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,61,2 ],1,basedon,87).
+struct_dt_param_i([ 14,61,2 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,2 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,61,2 ],2,name,'length ').
+struct_dt_param_i([ 14,61,2 ],2,camelname,'length ').
+struct_dt_param_i([ 14,61,2 ],2,externalType,'').
+struct_dt_param_i([ 14,61,2 ],2,length,9).
+struct_dt_param_i([ 14,61,2 ],2,decimals,0).
+struct_dt_param_i([ 14,61,2 ],2,sign,0).
+struct_dt_param_i([ 14,61,2 ],2,type,[ 4,9,0 ]).
+struct_dt_param_i([ 14,61,2 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,2 ],2,'IntName','length ').
+struct_dt_param_i([ 14,61,2 ],2,'ExoItemDesc','result nonce length').
+struct_dt_param_i([ 14,61,2 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,61,2 ],2,basedon,'').
+struct_dt_param_i([ 14,61,2 ],2,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,2 ],2,'ExoItemExtTypeJAVA',int).
+struct_dt_param_i([ 14,61,3 ],1,name,symmetrickeytype).
+struct_dt_param_i([ 14,61,3 ],1,camelname,symmetricKeyType).
+struct_dt_param_i([ 14,61,3 ],1,externalType,'').
+struct_dt_param_i([ 14,61,3 ],1,length,20).
+struct_dt_param_i([ 14,61,3 ],1,decimals,0).
+struct_dt_param_i([ 14,61,3 ],1,type,[ 5,20,0 ]).
+struct_dt_param_i([ 14,61,3 ],1,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,3 ],1,'IntName',symmetricKeyType).
+struct_dt_param_i([ 14,61,3 ],1,'ExoItemDesc','SymmetricKeyType Domain value').
+struct_dt_param_i([ 14,61,3 ],1,'ExoItemType','Character').
+struct_dt_param_i([ 14,61,3 ],1,basedon,87).
+struct_dt_param_i([ 14,61,3 ],1,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,3 ],1,'ExoItemExtTypeJAVA','java.lang.String').
+struct_dt_param_i([ 14,61,3 ],2,name,'length ').
+struct_dt_param_i([ 14,61,3 ],2,camelname,'length ').
+struct_dt_param_i([ 14,61,3 ],2,externalType,'').
+struct_dt_param_i([ 14,61,3 ],2,length,9).
+struct_dt_param_i([ 14,61,3 ],2,decimals,0).
+struct_dt_param_i([ 14,61,3 ],2,sign,0).
+struct_dt_param_i([ 14,61,3 ],2,type,[ 4,9,0 ]).
+struct_dt_param_i([ 14,61,3 ],2,'ExoParamAccessType',in).
+struct_dt_param_i([ 14,61,3 ],2,'IntName','length ').
+struct_dt_param_i([ 14,61,3 ],2,'ExoItemDesc','result key length').
+struct_dt_param_i([ 14,61,3 ],2,'ExoItemType','Numeric').
+struct_dt_param_i([ 14,61,3 ],2,basedon,'').
+struct_dt_param_i([ 14,61,3 ],2,'ExoItemExtTypeNETCORE','').
+struct_dt_param_i([ 14,61,3 ],2,'ExoItemExtTypeJAVA',int).
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,39,'PGERARTOKEN','INTERNAL','Unsecure').
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXusJWT\Deprecated','PACKAGE','com.securityapi').
+module_info_i('GeneXusJWT\Deprecated','PackageName','GeneXusJWT.jar').
+module_info_i('GeneXusJWT','PACKAGE','com.securityapi').
+module_info_i('GeneXusJWT','PackageName','GeneXusJWT.jar').
+module_info_i('SecurityAPICommons','PACKAGE','com.securityapi').
+module_info_i('SecurityAPICommons','PackageName','SecurityAPICommons.jar').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

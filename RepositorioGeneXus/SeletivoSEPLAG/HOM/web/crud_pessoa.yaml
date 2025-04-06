@@ -1,0 +1,300 @@
+openapi: 3.0.0
+info:
+  title: "crud_pessoa"
+  description: "crud_pessoa"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/pessoa
+paths:
+  /Create:
+    post:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Create"
+      summary: "Create"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateOutput"
+        404:
+          description: "Not found"
+
+  /Read_GetList:
+    get:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Read_GetList"
+      summary: "Read_GetList"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaPessoas_sdtListaPessoasItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codgpessoa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update:
+    put:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Update"
+      summary: "Update"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Delete:
+    delete:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Delete"
+      summary: "Delete"
+      parameters:
+        - name: "Codgpessoa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+  /Delete_Endereco:
+    delete:
+      tags:
+        - crud_pessoa  
+      operationId: "crud_pessoa.Delete_Endereco"
+      summary: "Delete_Endereco"
+      parameters:
+        - name: "Codgpessoa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Codendereco"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    CreateOutput:
+      properties:
+        RetornoPK:
+          type: "integer"
+          format: "int32"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+    Read_GetByKeyOutput:
+      properties:
+        ListaPessoa:
+          description: "sdt Lista Pessoa"
+          $ref: "#/components/schemas/sdtListaPessoa"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+
+
+    CreateInput:  
+      properties:
+        DadosPessoa:
+          description: "sdt Pessoa"
+          $ref: "#/components/schemas/sdtPessoa"
+
+
+
+    UpdateInput:  
+      properties:
+        ListaPessoa:
+          description: "sdt Lista Pessoa"
+          $ref: "#/components/schemas/sdtListaPessoa"
+
+
+  
+    sdtPessoa:
+      properties:
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaPessoas_sdtListaPessoasItem:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+
+
+
+    sdtListaPessoa:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+
+
+
+ 

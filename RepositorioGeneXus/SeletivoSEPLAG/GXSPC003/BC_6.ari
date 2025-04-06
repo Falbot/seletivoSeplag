@@ -1,0 +1,13 @@
+bc_dt_elem_i([ 0,6,0 ],'Lot_id',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Pes_id',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Pes_nome',readonly,yes).
+bc_dt_elem_i([ 0,6,0 ],'Pes_nome',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Unid_id',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Unid_nome',readonly,yes).
+bc_dt_elem_i([ 0,6,0 ],'Unid_nome',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Unid_sigla',readonly,yes).
+bc_dt_elem_i([ 0,6,0 ],'Unid_sigla',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Lot_data_lotacao',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Lot_data_remocao',allownulls,no).
+bc_dt_elem_i([ 0,6,0 ],'Lot_portaria',allownulls,no).
+ 

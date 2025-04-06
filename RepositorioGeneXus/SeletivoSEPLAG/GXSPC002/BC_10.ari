@@ -1,0 +1,4 @@
+bc_dt_elem_i([ 0,10,0 ],'Pes_id',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'St_data_admissao',allownulls,no).
+bc_dt_elem_i([ 0,10,0 ],'St_data_demissao',allownulls,no).
+ 

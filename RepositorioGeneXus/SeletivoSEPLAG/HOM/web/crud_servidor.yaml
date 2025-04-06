@@ -1,0 +1,524 @@
+openapi: 3.0.0
+info:
+  title: "crud_servidor"
+  description: "crud_servidor"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/servidor
+paths:
+  /Create_ServidorEfetivo:
+    post:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Create_ServidorEfetivo"
+      summary: "Create_ServidorEfetivo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Create_ServidorEfetivoInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Create_ServidorTemporario:
+    post:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Create_ServidorTemporario"
+      summary: "Create_ServidorTemporario"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Create_ServidorTemporarioInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetList_Servidor:
+    get:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Read_GetList_Servidor"
+      summary: "Read_GetList_Servidor"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaServidores_sdtListaServidoresItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey_ServidorEfetivoPorUnidade:
+    get:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Read_GetByKey_ServidorEfetivoPorUnidade"
+      summary: "Read_GetByKey_ServidorEfetivoPorUnidade"
+      parameters:
+        - name: "Codgunidade"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtEfetivoPorUnidade_sdtEfetivoPorUnidadeItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByName_EnderecoFuncional:
+    get:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Read_GetByName_EnderecoFuncional"
+      summary: "Read_GetByName_EnderecoFuncional"
+      parameters:
+        - name: "Nomepessoa"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+            
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtEnderecoLotacaoEfetivo_sdtEnderecoLotacaoEfetivoItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codgpessoa"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update_DemissaoServidorTemporario:
+    put:
+      tags:
+        - crud_servidor  
+      operationId: "crud_servidor.Update_DemissaoServidorTemporario"
+      summary: "Update_DemissaoServidorTemporario"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Update_DemissaoServidorTemporarioInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+components:
+  schemas:
+    Read_GetByKeyOutput:
+      properties:
+        ListaServidor:
+          description: "sdt Lista Servidor"
+          $ref: "#/components/schemas/sdtListaServidor"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+    Create_ServidorEfetivoInput:  
+      properties:
+        DadosServidor:
+          description: "sdt Servidor"
+          $ref: "#/components/schemas/sdtServidor"
+        NumeroMatricula:
+          type: "string"
+
+    Create_ServidorTemporarioInput:  
+      properties:
+        DadosServidor:
+          description: "sdt Servidor"
+          $ref: "#/components/schemas/sdtServidor"
+        DataAdmissao:
+          type: "string"
+        DataDemissao:
+          type: "string"
+
+
+
+
+
+    Update_DemissaoServidorTemporarioInput:  
+      properties:
+        CodgPessoa:
+          type: "integer"
+          format: "int32"
+        DataAdmissao:
+          type: "string"
+        DataDemissao:
+          type: "string"
+  
+    sdtServidor:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        DadosPessoa:
+          description: "sdt Pessoa"
+          $ref: "#/components/schemas/sdtPessoa"
+        DadosEndereco:
+          description: "sdt Endereco"
+          $ref: "#/components/schemas/sdtEndereco"
+        DadosLotacao:
+          description: "sdt Lotacao"
+          $ref: "#/components/schemas/sdtLotacao"
+        foto:
+          description: "sdt Foto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtFoto"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaServidores_sdtListaServidoresItem:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+          format: "date"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+        TipoServidor:
+          description: "Tipo Servidor"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+
+
+
+    sdtEfetivoPorUnidade_sdtEfetivoPorUnidadeItem:
+      properties:
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_idade:
+          description: "pes_idade"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+
+
+
+    sdtEnderecoLotacaoEfetivo_sdtEnderecoLotacaoEfetivoItem:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+
+
+
+    sdtListaServidor:
+      properties:
+        TipoServidor:
+          description: "Tipo Servidor"
+          type: "string"
+        DadosPessoa:
+          description: "sdt Pessoa"
+          $ref: "#/components/schemas/sdtPessoa"
+        DadosEndereco:
+          description: "sdt Endereco"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtEndereco"
+        DadosLotacao:
+          description: "sdt Lotacao V3"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtLotacaoV3"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+
+
+
+    sdtEndereco:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+
+
+
+    sdtFoto:
+      properties:
+        arquivoBase64:
+          description: "arquivo Base64"
+          type: "string"
+
+
+
+    sdtLotacao:
+      properties:
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+    sdtLotacaoV3:
+      properties:
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+    sdtPessoa:
+      properties:
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+
+
+
+    sdtURLFoto:
+      properties:
+        LinkExp5Minutos:
+          description: "Link Exp5 Minutos"
+          type: "string"
+        fp_id:
+          description: "fp_id"
+          type: "integer"
+          format: "int32"
+
+
+
+ 

@@ -1,0 +1,27 @@
+
+<ObjectSpec>
+<SpecVersion>18_0_8-180599</SpecVersion>
+<Object>
+<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
+<ObjCls>1</ObjCls>
+<ObjId>30</ObjId>
+<ObjName>pPropriedadesStorageS3</ObjName>
+<ObjDesc>Propriedades Storage S3</ObjDesc>
+<ObjPgmName>pPropriedadesStorageS3</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>12</GenId>
+<GenName>Default (Java)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Properties</VarId>
+<VarName>&amp;Properties</VarName></Variable></Parameter></Parameters>
+<Levels></Levels></ObjectSpec>

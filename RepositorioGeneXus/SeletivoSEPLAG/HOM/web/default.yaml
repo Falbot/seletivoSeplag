@@ -1,0 +1,543 @@
+openapi: 3.0.0
+info:
+  title: "Seletivo SEPLAG"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/rest
+paths:
+components:
+  schemas:
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+    sdtAtualizarFotoPessoa:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        foto:
+          type: array
+          items:
+            description: Item
+            $ref: "#/components/schemas/sdtAtualizarFotoPessoa.foto_Item"
+    sdtAtualizarFotoPessoa.foto_Item:
+      properties:
+        fp_id:
+          description: "ID da foto para atualizar"
+          type: "integer"
+          format: "int32"
+        arquivoBase64NovaFoto:
+          description: "arquivo Base64 Nova Foto"
+          type: "string"
+      x-gx-level: "sdtAtualizarFotoPessoa"
+    sdtCidade:
+      properties:
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+    sdtEfetivoPorUnidade_sdtEfetivoPorUnidadeItem:
+      properties:
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_idade:
+          description: "pes_idade"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+    sdtEndereco:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+    sdtEnderecoLotacaoEfetivo_sdtEnderecoLotacaoEfetivoItem:
+      properties:
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+    sdtFoto:
+      properties:
+        arquivoBase64:
+          description: "arquivo Base64"
+          type: "string"
+    sdtFotoPessoa:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        foto:
+          description: "sdt Foto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtFoto"
+    sdtListaCidade:
+      properties:
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+    sdtListaCidades_sdtListaCidadesItem:
+      properties:
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+    sdtListaEndereco:
+      properties:
+        end_id:
+          description: "end_id"
+          type: "integer"
+          format: "int32"
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+    sdtListaEnderecos_sdtListaEnderecosItem:
+      properties:
+        end_id:
+          description: "end_id"
+          type: "integer"
+          format: "int32"
+        end_tipo_logradouro:
+          description: "end_tipo_logradouro"
+          type: "string"
+        end_logradouro:
+          description: "end_logradouro"
+          type: "string"
+        end_numero:
+          description: "end_numero"
+          type: "integer"
+          format: "int64"
+        end_bairro:
+          description: "end_bairro"
+          type: "string"
+        cid_id:
+          description: "cid_id"
+          type: "integer"
+          format: "int32"
+        cid_nome:
+          description: "cid_nome"
+          type: "string"
+        cid_uf:
+          description: "cid_uf"
+          type: "string"
+    sdtListaFotoPessoa:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+    sdtListaFotoPessoas_sdtListaFotoPessoasItem:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+    sdtListaLotacao:
+      properties:
+        lot_id:
+          description: "lot_id"
+          type: "integer"
+          format: "int32"
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+    sdtListaLotacoes_sdtListaLotacoesItem:
+      properties:
+        lot_id:
+          description: "lot_id"
+          type: "integer"
+          format: "int32"
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+    sdtListaPessoa:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+    sdtListaPessoas_sdtListaPessoasItem:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+    sdtListaServidor:
+      properties:
+        TipoServidor:
+          description: "Tipo Servidor"
+          type: "string"
+        DadosPessoa:
+          description: "sdt Pessoa"
+          $ref: "#/components/schemas/sdtPessoa"
+        DadosEndereco:
+          description: "sdt Endereco"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtEndereco"
+        DadosLotacao:
+          description: "sdt Lotacao V3"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtLotacaoV3"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+    sdtListaServidores_sdtListaServidoresItem:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+          format: "date"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+        TipoServidor:
+          description: "Tipo Servidor"
+          type: "string"
+        Foto:
+          description: "sdt URLFoto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtURLFoto"
+    sdtListaUnidade:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+    sdtListaUnidades_sdtListaUnidadesItem:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+    sdtLotacao:
+      properties:
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+    sdtLotacaoV2:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+    sdtLotacaoV3:
+      properties:
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+    sdtPessoa:
+      properties:
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        pes_data_nascimento:
+          description: "pes_data_nascimento"
+          type: "string"
+        pes_sexo:
+          description: "pes_sexo"
+          type: "string"
+        pes_mae:
+          description: "pes_mae"
+          type: "string"
+        pes_pai:
+          description: "pes_pai"
+          type: "string"
+    sdtServidor:
+      properties:
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        DadosPessoa:
+          description: "sdt Pessoa"
+          $ref: "#/components/schemas/sdtPessoa"
+        DadosEndereco:
+          description: "sdt Endereco"
+          $ref: "#/components/schemas/sdtEndereco"
+        DadosLotacao:
+          description: "sdt Lotacao"
+          $ref: "#/components/schemas/sdtLotacao"
+        foto:
+          description: "sdt Foto"
+          type: array
+          items:
+            $ref: "#/components/schemas/sdtFoto"
+    sdtUnidade:
+      properties:
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        DadosEndereco:
+          description: "sdt Endereco"
+          $ref: "#/components/schemas/sdtEndereco"
+    sdtURLFoto:
+      properties:
+        LinkExp5Minutos:
+          description: "Link Exp5 Minutos"
+          type: "string"
+        fp_id:
+          description: "fp_id"
+          type: "integer"
+          format: "int32"

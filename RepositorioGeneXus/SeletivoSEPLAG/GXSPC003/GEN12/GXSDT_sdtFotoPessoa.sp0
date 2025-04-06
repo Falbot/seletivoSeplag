@@ -1,0 +1,71 @@
+ 
+spec_i([ sdt,[ 26,68,0 ],sdtFotoPessoa,sdtFotoPessoa,0,por,'18_0_8-180599' ]).
+ 
+struct_dt_i([ 26,68,0 ],name,sdtFotoPessoa).
+struct_dt_i([ 26,68,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 26,68,0 ],'ObjName',sdtFotoPessoa).
+struct_dt_i([ 26,68,0 ],'ObjDesc','sdt Foto Pessoa').
+struct_dt_i([ 26,68,0 ],'ExternalName',sdtFotoPessoa).
+struct_dt_i([ 26,68,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 26,68,0 ],'JsonInputFormat','JsonInputWrapped').
+struct_dt_i([ 26,68,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,68,0 ],fullname,sdtFotoPessoa).
+struct_dt_i([ 26,68,0 ],modified,yes).
+ 
+struct_dt_elem_i([ 26,68,0 ],1,name,'Pes_id').
+struct_dt_elem_i([ 26,68,0 ],1,camelname,pes_id).
+struct_dt_elem_i([ 26,68,0 ],1,length,4).
+struct_dt_elem_i([ 26,68,0 ],1,decimals,0).
+struct_dt_elem_i([ 26,68,0 ],1,sign,0).
+struct_dt_elem_i([ 26,68,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,68,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,68,0 ],1,collection,'False').
+struct_dt_elem_i([ 26,68,0 ],1,'ExternalName',pes_id).
+struct_dt_elem_i([ 26,68,0 ],1,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,68,0 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,68,0 ],1,'XmlName','').
+struct_dt_elem_i([ 26,68,0 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,68,0 ],1,soaptype,'').
+struct_dt_elem_i([ 26,68,0 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,68,0 ],1,'JsonName','').
+struct_dt_elem_i([ 26,68,0 ],1,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,68,0 ],2,name,'Foto').
+struct_dt_elem_i([ 26,68,0 ],2,camelname,foto).
+struct_dt_elem_i([ 26,68,0 ],2,length,4).
+struct_dt_elem_i([ 26,68,0 ],2,decimals,0).
+struct_dt_elem_i([ 26,68,0 ],2,type,[ [ 26,71,0 ],4,0 ]).
+struct_dt_elem_i([ 26,68,0 ],2,pic,'').
+struct_dt_elem_i([ 26,68,0 ],2,collection,'True').
+struct_dt_elem_i([ 26,68,0 ],2,'ExternalName',foto).
+struct_dt_elem_i([ 26,68,0 ],2,'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_elem_i([ 26,68,0 ],2,'CollectionItemName','Item').
+struct_dt_elem_i([ 26,68,0 ],2,'XmlName','').
+struct_dt_elem_i([ 26,68,0 ],2,'XmlCollectionItemName','').
+struct_dt_elem_i([ 26,68,0 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,68,0 ],2,soaptype,'').
+struct_dt_elem_i([ 26,68,0 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,68,0 ],2,'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_elem_i([ 26,68,0 ],2,'JsonName','').
+struct_dt_elem_i([ 26,68,0 ],2,'JsonInclude',idJsonNoProperty).
+struct_dt_elem_i([ 26,68,0 ],2,'JsonCollectionSerialization',idXmlCollectionWrapped).
+ 
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','PACKAGE','com.genexuscore').
+module_info_i('GeneXus\Common','PackageName','GeneXus.jar').
+module_info_i('GeneXus','PACKAGE','com.genexuscore').
+module_info_i('GeneXus','PackageName','GeneXus.jar').
+ 
+struct_dt_i([ 26,71,0 ],name,sdtFoto).
+struct_dt_i([ 26,71,0 ],namespace,'SeletivoSEPLAG').
+struct_dt_i([ 26,71,0 ],'ObjName',sdtFoto).
+struct_dt_i([ 26,71,0 ],'ObjDesc','sdt Foto').
+struct_dt_i([ 26,71,0 ],'ExternalName',sdtFoto).
+struct_dt_i([ 26,71,0 ],'ExternalNamespace','SeletivoSEPLAG').
+struct_dt_i([ 26,71,0 ],'JsonInputFormat','JsonInputWrapped').
+struct_dt_i([ 26,71,0 ],'JsonInclude',idJsonNoProperty).
+struct_dt_i([ 26,71,0 ],fullname,sdtFoto).
+struct_dt_i([ 26,71,0 ],modified,yes).

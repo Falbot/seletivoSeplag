@@ -1,0 +1,302 @@
+openapi: 3.0.0
+info:
+  title: "crud_lotacao"
+  description: "crud_lotacao"
+  version: "20250406032136"
+servers:
+  - url: http://localhost:8080/SeletivoSEPLAGHOM/lotacao
+paths:
+  /Create:
+    post:
+      tags:
+        - crud_lotacao  
+      operationId: "crud_lotacao.Create"
+      summary: "Create"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetList:
+    get:
+      tags:
+        - crud_lotacao  
+      operationId: "crud_lotacao.Read_GetList"
+      summary: "Read_GetList"
+      parameters:
+        - name: "Pagenumber"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+        - name: "Pagesize"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/sdtListaLotacoes_sdtListaLotacoesItem"  
+
+        404:
+          description: "Not found"
+
+  /Read_GetByKey:
+    get:
+      tags:
+        - crud_lotacao  
+      operationId: "crud_lotacao.Read_GetByKey"
+      summary: "Read_GetByKey"
+      parameters:
+        - name: "Codglotacao"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Read_GetByKeyOutput"
+        404:
+          description: "Not found"
+
+  /Update:
+    put:
+      tags:
+        - crud_lotacao  
+      operationId: "crud_lotacao.Update"
+      summary: "Update"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /Delete:
+    delete:
+      tags:
+        - crud_lotacao  
+      operationId: "crud_lotacao.Delete"
+      summary: "Delete"
+      parameters:
+        - name: "Codglotacao"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int32"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    Read_GetByKeyOutput:
+      properties:
+        ListaLotacao:
+          description: "sdt Lista Lotacao"
+          $ref: "#/components/schemas/sdtListaLotacao"
+        Messages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+
+
+
+    CreateInput:  
+      properties:
+        DadosLotacao:
+          description: "sdt Lotacao V2"
+          $ref: "#/components/schemas/sdtLotacaoV2"
+
+
+
+    UpdateInput:  
+      properties:
+        codgLotacao:
+          type: "integer"
+          format: "int32"
+        InfoLotacao:
+          description: "sdt Lotacao"
+          $ref: "#/components/schemas/sdtLotacao"
+
+  
+    sdtLotacaoV2:
+      properties:
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    sdtListaLotacoes_sdtListaLotacoesItem:
+      properties:
+        lot_id:
+          description: "lot_id"
+          type: "integer"
+          format: "int32"
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+    sdtListaLotacao:
+      properties:
+        lot_id:
+          description: "lot_id"
+          type: "integer"
+          format: "int32"
+        pes_id:
+          description: "pes_id"
+          type: "integer"
+          format: "int32"
+        pes_nome:
+          description: "pes_nome"
+          type: "string"
+        unid_id:
+          description: "unid_id"
+          type: "integer"
+          format: "int32"
+        unid_nome:
+          description: "unid_nome"
+          type: "string"
+        unid_sigla:
+          description: "unid_sigla"
+          type: "string"
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+          format: "date"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+          format: "date"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+    sdtLotacao:
+      properties:
+        lot_data_lotacao:
+          description: "lot_data_lotacao"
+          type: "string"
+        lot_data_remocao:
+          description: "lot_data_remocao"
+          type: "string"
+        lot_portaria:
+          description: "lot_portaria"
+          type: "string"
+
+
+
+ 

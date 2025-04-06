@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CreatePackage">
+
+	<!-- Model Properties -->
+	<PropertyGroup>
+		<ModelId>3</ModelId>
+		<Generator>Java</Generator>
+		<CacheExpiration>36</CacheExpiration>
+		<OpenAPI>true</OpenAPI>
+		<StaticDir>static</StaticDir>
+		<NationalLanguageSupport>true</NationalLanguageSupport>
+		<StorageProvider>AmazonS3</StorageProvider>
+		<WebNotifProvider>GeneXus</WebNotifProvider>
+		<CloudServices>true</CloudServices>
+		<OfflineSupport>false</OfflineSupport>
+		<Https>false</Https>
+		<JavaPath>C:\Java_64\jdk18.0.1.1\bin</JavaPath>
+		<PackageName></PackageName>
+		<UseNativeSoap>false</UseNativeSoap>
+		<Searchable>false</Searchable>
+		<JDBCDrivers>org.postgresql.Driver</JDBCDrivers>
+		<PostgreSQL>true</PostgreSQL>
+		<GAMDBMSType>15</GAMDBMSType>
+	</PropertyGroup>
+
+	<!-- Deploy Properties -->
+	<PropertyGroup>
+		<ApplicationKey>BED8033D6152291DBC0813367AC0B8D0C54F7BBEC61740BB704B9EEC26E23773</ApplicationKey>
+		<ApplicationServer>Tomcat 10.x</ApplicationServer>
+		<ApplicationServerMSBuild>D:\GX\GX17u9\ApplicationServers\Templates\JavaWeb\msbuild\TomcatContextSettings.msbuild</ApplicationServerMSBuild>
+		<ApplicationServerTemplate>D:\GX\GX17u9\ApplicationServers\Templates\JavaWeb\Generic_Servlet_v5_0.stg</ApplicationServerTemplate>
+		<AppName>GenexusWebApp</AppName>
+		<AppUpdate>NONE</AppUpdate>
+		<DeploymentUnit>DeploymentUnit1</DeploymentUnit>
+		<DeployTarget>DOCKER</DeployTarget>
+		<DeployTargetTask>D:\GX\GX17u9\DeploymentTargets\Docker\docker.targets</DeployTargetTask>
+		<EnableKBN>False</EnableKBN>
+		<ImagesInvolved>true</ImagesInvolved>
+		<IncludeGAMBackend>False</IncludeGAMBackend>
+		<IsCMD>false</IsCMD>
+		<KBPath>D:\Des\GX17u9\SeletivoSEPLAG</KBPath>
+		<PackageFormat>Automatic</PackageFormat>
+		<ProjectName>DeploymentUnit1_20250401011734</ProjectName>
+		<RestSpecFolder>D:\Des\GX17u9\SeletivoSEPLAG\GXRESTSPC\SeletivoSEPLAG</RestSpecFolder>
+		<SourcePath>D:\Des\GX17u9\SeletivoSEPLAG\HOM</SourcePath>
+		<TargetJRE>9</TargetJRE>
+		<TimeStamp>20250401011734</TimeStamp>
+	</PropertyGroup>
+
+	<!-- General Properties -->
+	<PropertyGroup>
+		<GX_PROGRAM_DIR Condition=" '$(GX_PROGRAM_DIR)' == '' ">D:\GX\GX17u9</GX_PROGRAM_DIR>
+		<AdditionalItems Condition=" '$(AdditionalItems)' == ''">$(DeploymentUnit)_user.gxdproj</AdditionalItems>
+	</PropertyGroup>
+
+	<!-- Destination paths -->
+	<PropertyGroup>
+		<DeployFileFullPath>$(SourcePath)\Deploy\$(DeployTarget)</DeployFileFullPath>
+		<DeployFullPath>$(DeployFileFullPath)\$(DeploymentUnit)\$(TimeStamp)</DeployFullPath>
+	</PropertyGroup>
+
+	<!-- Languages -->
+	<ItemGroup> 
+		<Language Include="Portuguese">
+			<QualifiedName>Portuguese</QualifiedName>
+			<Description>Portuguese</Description>
+			<Code>pt</Code>
+			<MessageCode>por</MessageCode>
+		</Language>
+	</ItemGroup>
+
+	<!-- Files -->
+	<ItemGroup> 
+		<ExternalFile Include="modules\SecurityAPICommons.jar"/>
+		<ExternalFile Include="modules\GeneXusJWT.jar"/>
+		<ExternalFile Include="drivers\java-jwt-3.10.3.jar"/>
+		<ExternalFile Include="GeneXus.services"/>
+		<ExternalFile Include="modules\GeneXus.jar"/>
+	</ItemGroup>
+
+	<!-- Objects -->
+	<ItemGroup> 
+		<Object Include="autenticacao">
+			<Type>API</Type>
+			<QualifiedName>autenticacao</QualifiedName>
+			<Description>autenticacao</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_cidade">
+			<Type>API</Type>
+			<QualifiedName>crud_cidade</QualifiedName>
+			<Description>crud_cidade</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_endereco">
+			<Type>API</Type>
+			<QualifiedName>crud_endereco</QualifiedName>
+			<Description>crud_endereco</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_foto_pessoa">
+			<Type>API</Type>
+			<QualifiedName>crud_foto_pessoa</QualifiedName>
+			<Description>crud_foto_pessoa</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_lotacao">
+			<Type>API</Type>
+			<QualifiedName>crud_lotacao</QualifiedName>
+			<Description>crud_lotacao</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_pessoa">
+			<Type>API</Type>
+			<QualifiedName>crud_pessoa</QualifiedName>
+			<Description>crud_pessoa</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_servidor">
+			<Type>API</Type>
+			<QualifiedName>crud_servidor</QualifiedName>
+			<Description>crud_servidor</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="crud_unidade">
+			<Type>API</Type>
+			<QualifiedName>crud_unidade</QualifiedName>
+			<Description>crud_unidade</Description>
+			<Main>true</Main>
+			<Generate>true</Generate>
+			<GenOpenAPI>true</GenOpenAPI>
+			<IsRest>true</IsRest>
+			<IsGrpc>false</IsGrpc>
+			<Selected>true</Selected>
+		</Object>
+		<Object Include="dpListarCidades">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarCidades</QualifiedName>
+			<Description>dp Listar Cidades</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarEnderecos">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarEnderecos</QualifiedName>
+			<Description>dp Listar Enderecos</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarFotoPessoas">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarFotoPessoas</QualifiedName>
+			<Description>dp Listar Foto Pessoas</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarLotacoes">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarLotacoes</QualifiedName>
+			<Description>dp Listar Lotacoes</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarPessoas">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarPessoas</QualifiedName>
+			<Description>dp Listar Pessoas</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarServidores">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarServidores</QualifiedName>
+			<Description>dp Listar Servidores</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarServidoresEfetivosPorUnidade">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarServidoresEfetivosPorUnidade</QualifiedName>
+			<Description>dp Listar Servidores Efetivos Por Unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="dpListarUnidades">
+			<Type>DataProvider</Type>
+			<QualifiedName>dpListarUnidades</QualifiedName>
+			<Description>dp Listar Unidades</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<Online>true</Online>
+		</Object>
+		<Object Include="RwdMasterPage">
+			<Type>MasterPage</Type>
+			<QualifiedName>RwdMasterPage</QualifiedName>
+			<Description>Responsive Master Page</Description>
+			<Generate>true</Generate>
+			<WebApplication>idDefault</WebApplication>
+		</Object>
+		<Object Include="pAtualizarCidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pAtualizarCidade</QualifiedName>
+			<Description>p Atualizar Cidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pAtualizarEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pAtualizarEndereco</QualifiedName>
+			<Description>p Atualizar Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pAtualizarLotacao">
+			<Type>Procedure</Type>
+			<QualifiedName>pAtualizarLotacao</QualifiedName>
+			<Description>p Atualizar Lotacao</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pAtualizarPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pAtualizarPessoa</QualifiedName>
+			<Description>Atualizar Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pAtualizarUnidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pAtualizarUnidade</QualifiedName>
+			<Description>Atualizar Unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pBuscarFotoPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pBuscarFotoPessoa</QualifiedName>
+			<Description>p Buscar Foto Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pBuscarTipoServidor">
+			<Type>Procedure</Type>
+			<QualifiedName>pBuscarTipoServidor</QualifiedName>
+			<Description>Buscar Tipo Servidor</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarCidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarCidade</QualifiedName>
+			<Description>p Criar Cidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarEndereco</QualifiedName>
+			<Description>p Criar Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarFotoPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarFotoPessoa</QualifiedName>
+			<Description>p Criar Foto Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarLotacao">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarLotacao</QualifiedName>
+			<Description>p Criar Lotacao</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarPessoa</QualifiedName>
+			<Description>Criar Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarPessoaEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarPessoaEndereco</QualifiedName>
+			<Description>p Criar Pessoa Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarServidorEfetivo">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarServidorEfetivo</QualifiedName>
+			<Description>p Criar Servidor Efetivo</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarServidorTemporario">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarServidorTemporario</QualifiedName>
+			<Description>p Criar Servidor Temporario</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pCriarUnidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pCriarUnidade</QualifiedName>
+			<Description>Criar Unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pEnderecoLotacaoEfetivo">
+			<Type>Procedure</Type>
+			<QualifiedName>pEnderecoLotacaoEfetivo</QualifiedName>
+			<Description>p Endereco Lotacao Efetivo</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirCidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirCidade</QualifiedName>
+			<Description>p Excluir Cidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirEndereco</QualifiedName>
+			<Description>p Excluir Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirLotacao">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirLotacao</QualifiedName>
+			<Description>p Excluir Lotacao</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirPessoa</QualifiedName>
+			<Description>Excluir Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirUnidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirUnidade</QualifiedName>
+			<Description>Excluir Unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pExcluirUnidadeEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pExcluirUnidadeEndereco</QualifiedName>
+			<Description>p Excluir Unidade Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pGerarRefreshToken">
+			<Type>Procedure</Type>
+			<QualifiedName>pGerarRefreshToken</QualifiedName>
+			<Description>p Gerar Refresh Token</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pGerarToken">
+			<Type>Procedure</Type>
+			<QualifiedName>pGerarToken</QualifiedName>
+			<Description>p Gerar Token</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pListarCidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pListarCidade</QualifiedName>
+			<Description>p Listar Cidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pListarEndereco">
+			<Type>Procedure</Type>
+			<QualifiedName>pListarEndereco</QualifiedName>
+			<Description>p Listar Endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pListarLotacao">
+			<Type>Procedure</Type>
+			<QualifiedName>pListarLotacao</QualifiedName>
+			<Description>p Listar Lotacao</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pListarPessoa">
+			<Type>Procedure</Type>
+			<QualifiedName>pListarPessoa</QualifiedName>
+			<Description>Listar Pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pListarUnidade">
+			<Type>Procedure</Type>
+			<QualifiedName>pListarUnidade</QualifiedName>
+			<Description>Listar Unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pPropriedadesStorageS3">
+			<Type>Procedure</Type>
+			<QualifiedName>pPropriedadesStorageS3</QualifiedName>
+			<Description>Propriedades Storage S3</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pValidarJWT">
+			<Type>Procedure</Type>
+			<QualifiedName>pValidarJWT</QualifiedName>
+			<Description>Validar JWT</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<CallProtocol>INTERNAL</CallProtocol>
+			<Online>true</Online>
+		</Object>
+		<Object Include="LinkList_LinkItem">
+			<Type>SDT</Type>
+			<QualifiedName>LinkList</QualifiedName>
+			<Description>Link List</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="Messages_Message">
+			<Type>SDT</Type>
+			<QualifiedName>GeneXus.Common.Messages</QualifiedName>
+			<Description>Messages</Description>
+			<Module>GeneXus.Common</Module>
+			<Collection>true</Collection>
+			<IsInterface>true</IsInterface>
+		</Object>
+		<Object Include="sdtCidade">
+			<Type>SDT</Type>
+			<QualifiedName>sdtCidade</QualifiedName>
+			<Description>Cidade</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtEfetivoPorUnidade_sdtEfetivoPorUnidadeItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtEfetivoPorUnidade</QualifiedName>
+			<Description>sdt Efetivo Por Unidade</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtEndereco">
+			<Type>SDT</Type>
+			<QualifiedName>sdtEndereco</QualifiedName>
+			<Description>sdt Endereco</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtEnderecoLotacaoEfetivo_sdtEnderecoLotacaoEfetivoItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtEnderecoLotacaoEfetivo</QualifiedName>
+			<Description>sdt Endereco Lotacao Efetivo</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtFoto">
+			<Type>SDT</Type>
+			<QualifiedName>sdtFoto</QualifiedName>
+			<Description>sdt Foto</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtFotoPessoa">
+			<Type>SDT</Type>
+			<QualifiedName>sdtFotoPessoa</QualifiedName>
+			<Description>sdt Foto Pessoa</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaCidade">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaCidade</QualifiedName>
+			<Description>sdt Lista Cidade</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaCidades_sdtListaCidadesItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaCidades</QualifiedName>
+			<Description>Lista Cidades</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaEndereco">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaEndereco</QualifiedName>
+			<Description>sdt Lista Endereco</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaEnderecos_sdtListaEnderecosItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaEnderecos</QualifiedName>
+			<Description>sdt Lista Enderecos</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaFotoPessoas_sdtListaFotoPessoasItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaFotoPessoas</QualifiedName>
+			<Description>sdt Lista Foto Pessoas</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaLotacao">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaLotacao</QualifiedName>
+			<Description>sdt Lista Lotacao</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaLotacoes_sdtListaLotacoesItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaLotacoes</QualifiedName>
+			<Description>sdt Lista Lotacoes</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaPessoa">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaPessoa</QualifiedName>
+			<Description>sdt Lista Pessoa</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaPessoas_sdtListaPessoasItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaPessoas</QualifiedName>
+			<Description>sdt Lista Pessoas</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaServidores_sdtListaServidoresItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaServidores</QualifiedName>
+			<Description>Lista Servidores</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtListaUnidade">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaUnidade</QualifiedName>
+			<Description>sdt Lista Unidade</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtListaUnidades_sdtListaUnidadesItem">
+			<Type>SDT</Type>
+			<QualifiedName>sdtListaUnidades</QualifiedName>
+			<Description>sdt Lista Unidades</Description>
+			<Collection>true</Collection>
+		</Object>
+		<Object Include="sdtLotacao">
+			<Type>SDT</Type>
+			<QualifiedName>sdtLotacao</QualifiedName>
+			<Description>sdt Lotacao</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtLotacaoV2">
+			<Type>SDT</Type>
+			<QualifiedName>sdtLotacaoV2</QualifiedName>
+			<Description>sdt Lotacao V2</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtPessoa">
+			<Type>SDT</Type>
+			<QualifiedName>sdtPessoa</QualifiedName>
+			<Description>sdt Pessoa</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtPessoaEndereco">
+			<Type>SDT</Type>
+			<QualifiedName>sdtPessoaEndereco</QualifiedName>
+			<Description>sdt Pessoa Endereco</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtServidor">
+			<Type>SDT</Type>
+			<QualifiedName>sdtServidor</QualifiedName>
+			<Description>sdt Servidor</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtUnidade">
+			<Type>SDT</Type>
+			<QualifiedName>sdtUnidade</QualifiedName>
+			<Description>sdt Unidade</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="sdtURLFoto">
+			<Type>SDT</Type>
+			<QualifiedName>sdtURLFoto</QualifiedName>
+			<Description>sdt URLFoto</Description>
+			<Collection>false</Collection>
+		</Object>
+		<Object Include="Carmine">
+			<Type>ThemeForWeb</Type>
+			<QualifiedName>Carmine</QualifiedName>
+			<Description>Carmine</Description>
+		</Object>
+		<Object Include="cidade">
+			<Type>Transaction</Type>
+			<QualifiedName>cidade</QualifiedName>
+			<Description>cidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="endereco">
+			<Type>Transaction</Type>
+			<QualifiedName>endereco</QualifiedName>
+			<Description>endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="foto_pessoa">
+			<Type>Transaction</Type>
+			<QualifiedName>foto_pessoa</QualifiedName>
+			<Description>foto_pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="lotacao">
+			<Type>Transaction</Type>
+			<QualifiedName>lotacao</QualifiedName>
+			<Description>lotacao</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pessoa">
+			<Type>Transaction</Type>
+			<QualifiedName>pessoa</QualifiedName>
+			<Description>pessoa</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="pessoa_endereco">
+			<Type>Transaction</Type>
+			<QualifiedName>pessoa_endereco</QualifiedName>
+			<Description>pessoa_endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="servidor_efetivo">
+			<Type>Transaction</Type>
+			<QualifiedName>servidor_efetivo</QualifiedName>
+			<Description>servidor_efetivo</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="servidor_temporario">
+			<Type>Transaction</Type>
+			<QualifiedName>servidor_temporario</QualifiedName>
+			<Description>servidor_temporario</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="unidade">
+			<Type>Transaction</Type>
+			<QualifiedName>unidade</QualifiedName>
+			<Description>unidade</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="unidade_endereco">
+			<Type>Transaction</Type>
+			<QualifiedName>unidade_endereco</QualifiedName>
+			<Description>unidade_endereco</Description>
+			<Generate>true</Generate>
+			<GenOpenAPI>false</GenOpenAPI>
+			<BC>true</BC>
+			<Online>true</Online>
+		</Object>
+		<Object Include="RwdRecentLinks">
+			<Type>WebComponent</Type>
+			<QualifiedName>RwdRecentLinks</QualifiedName>
+			<Description>Responsive Recent Links</Description>
+			<Generate>true</Generate>
+			<WebApplication>idDefault</WebApplication>
+		</Object>
+	</ItemGroup>
+
+	<!-- Selected Objects -->
+	<ItemGroup> 
+		<SelectedObject Include="autenticacao">
+			<Type>API</Type>
+			<QualifiedName>autenticacao</QualifiedName>
+			<Description>autenticacao</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_cidade">
+			<Type>API</Type>
+			<QualifiedName>crud_cidade</QualifiedName>
+			<Description>crud_cidade</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_endereco">
+			<Type>API</Type>
+			<QualifiedName>crud_endereco</QualifiedName>
+			<Description>crud_endereco</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_foto_pessoa">
+			<Type>API</Type>
+			<QualifiedName>crud_foto_pessoa</QualifiedName>
+			<Description>crud_foto_pessoa</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_lotacao">
+			<Type>API</Type>
+			<QualifiedName>crud_lotacao</QualifiedName>
+			<Description>crud_lotacao</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_pessoa">
+			<Type>API</Type>
+			<QualifiedName>crud_pessoa</QualifiedName>
+			<Description>crud_pessoa</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_servidor">
+			<Type>API</Type>
+			<QualifiedName>crud_servidor</QualifiedName>
+			<Description>crud_servidor</Description>
+		</SelectedObject>
+		<SelectedObject Include="crud_unidade">
+			<Type>API</Type>
+			<QualifiedName>crud_unidade</QualifiedName>
+			<Description>crud_unidade</Description>
+		</SelectedObject>
+	</ItemGroup>
+
+	<Target Name="ValidateDeployment">
+		<!-- overrideable on custom targets -->
+
+	</Target>
+
+	<Import Project="$(GX_PROGRAM_DIR)\Imports.targets"/>
+	<Import Project="$(AdditionalItems)" Condition="'$(AdditionalItems)'!='' and Exists('$(AdditionalItems)')" />
+
+</Project>
+

@@ -1,0 +1,4 @@
+bc_dt_elem_i([ 0,1,0 ],'Cid_id',allownulls,no).
+bc_dt_elem_i([ 0,1,0 ],'Cid_nome',allownulls,no).
+bc_dt_elem_i([ 0,1,0 ],'Cid_uf',allownulls,no).
+ 

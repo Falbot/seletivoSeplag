@@ -1,0 +1,4 @@
+bc_dt_elem_i([ 0,2,0 ],'Unid_id',allownulls,no).
+bc_dt_elem_i([ 0,2,0 ],'Unid_nome',allownulls,no).
+bc_dt_elem_i([ 0,2,0 ],'Unid_sigla',allownulls,no).
+ 
