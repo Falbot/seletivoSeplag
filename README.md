@@ -166,3 +166,82 @@ Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 
 **Candidato - XXXXXX**  
 📩 falbot@gmail.com
+
+## 📚 API Objects e Endpoints
+
+🏙️ crud_cidade
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+http://localhost:8080/cidade/Create
+GET	/cidade	Lista todas as cidades
+GET	/cidade/{id}	Consulta uma cidade por ID
+POST	/cidade	Cria uma nova cidade
+PUT	/cidade/{id}	Atualiza uma cidade existente
+DELETE	/cidade/{id}	Remove uma cidade
+##
+
+🏠 crud_endereco
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/endereco	Lista todos os endereços
+GET	/endereco/{id}	Consulta um endereço por ID
+POST	/endereco	Cria um novo endereço
+PUT	/endereco/{id}	Atualiza um endereço existente
+DELETE	/endereco/{id}	Remove um endereço
+##
+
+🖼️ crud_foto_pessoa
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/foto_pessoa	Lista todas as fotos de pessoas
+GET	/foto_pessoa/{id}	Consulta uma foto por ID
+POST	/foto_pessoa	Adiciona uma nova foto para uma pessoa
+PUT	/foto_pessoa/{id}	Atualiza uma foto existente
+DELETE	/foto_pessoa/{id}	Remove uma foto
+##
+
+👥 crud_lotacao
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/lotacao	Lista todas as lotações
+GET	/lotacao/{id}	Consulta uma lotação por ID
+POST	/lotacao	Cria uma nova lotação
+PUT	/lotacao/{id}	Atualiza uma lotação existente
+DELETE	/lotacao/{id}	Remove uma lotação
+##
+
+👤 crud_pessoa
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/pessoa	Lista todas as pessoas
+GET	/pessoa/{id}	Consulta uma pessoa por ID
+POST	/pessoa	Cria uma nova pessoa
+PUT	/pessoa/{id}	Atualiza uma pessoa existente
+DELETE	/pessoa/{id}	Remove uma pessoa
+##
+
+🧑‍💼 crud_servidor
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/servidor	Lista todos os servidores
+GET	/servidor/{id}	Consulta um servidor por ID
+POST	/servidor	Cria um novo servidor
+PUT	/servidor/{id}	Atualiza um servidor existente
+DELETE	/servidor/{id}	Remove um servidor
+##
+
+🏢 crud_unidade
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
+GET	/unidade	Lista todas as unidades
+GET	/unidade/{id}	Consulta uma unidade por ID
+POST	/unidade	Cria uma nova unidade
+PUT	/unidade/{id}	Atualiza uma unidade existente
+DELETE	/unidade/{id}	Remove uma unidade
