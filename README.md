@@ -52,7 +52,7 @@ Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPL
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/SEU_USUARIO/seletivo-seplag.git
+git clone https://github.com/Falbot/seletivoSeplag.git
 cd seletivo-seplag
 ```
 
