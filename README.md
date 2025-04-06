@@ -1,7 +1,7 @@
 
 # Seletivo SEPLAG - API REST em GeneXus
 
-Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPLAG (02/2025), com base em requisitos de autenticação, autorização, integração com MinIO, PostgreSQL, Docker e exposição de APIs REST geradas por GeneXus.
+Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPLAG-MT (02/2025), com base em requisitos de autenticação, autorização, integração com MinIO, PostgreSQL, Docker e exposição de APIs REST geradas por GeneXus.
 
 ---
 
@@ -41,7 +41,12 @@ Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPL
 │       └── static/                     # Todos os arquivos .yaml das APIs
 │           ├── autenticacao.yaml
 │           ├── crud_cidade.yaml
-│           └── ...
+│           ├── crud_endereco.yaml
+│           ├── crud_foto_pessoa.yaml
+│           ├── crud_lotacao.yaml
+│           ├── crud_pessoa.yaml
+│           ├── crud_servidor.yaml
+│           └── crud_unidade.yaml
 ```
 
 ---
@@ -53,7 +58,7 @@ Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPL
 1. Clone este repositório:
 ```bash
 git clone https://github.com/Falbot/seletivoSeplag.git
-cd seletivo-seplag
+cd seletivoSeplag
 ```
 
 2. Suba os containers:
@@ -158,4 +163,4 @@ Esta verificação foi implementada conforme exigido no edital.
 Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 
 **Candidato - XXXXXX**  
-📩 email@email.com
+📩 falbot@gmail.com
