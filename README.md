@@ -31,8 +31,9 @@ Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPL
 
 ```
 .
-├── RepositorioGeneXus/             # Inclui pasta KB com o projeto GeneXus
 ├── ArquivosParaDockerizacao/       # Inclui os arquivos para inicialização dos containers em docker
+├── MassaTestes/                    # Inclui arquivos json para testes
+├── RepositorioGeneXus/             # Inclui pasta KB com o projeto GeneXus
 │   ├── docker-compose.yml
 │   ├── popularTabelas.sql
 │   └── ROOT.war
@@ -65,18 +66,32 @@ cd seletivoSeplag
 ```bash
 docker compose up -d --build
 ```
+> O banco de dados é criado e populado automaticamente no primeiro start com `popularTabelas.sql`.
+> 
+> Todos os 142 municípios de Mato Grosso.
+> 
+> Algumas Unidades fictícias.
 
 3. Acesse os serviços:
 
-| Serviço                     | URL                                                                  |
-|-----------------------------|----------------------------------------------------------------------|
-| Link do projeto (Swagger)   | [http://localhost:8080](http://localhost:8080)                       |
-| MinIO Console               | [http://localhost:8083](http://localhost:8083) (user: minioadmin / minioadmin)                       |
-| Link Retorno Imagens MinIO  | [http://host.docker.internal:9001](http://host.docker.internal:9001) |
-| PostgreSQL                  | localhost:5432 (user: postgres / root)                               |
+| Serviço                     | URL                                                                              |
+|-----------------------------|----------------------------------------------------------------------------------|
+| Link do projeto (Swagger)   | [http://localhost:8080](http://localhost:8080)                                   |
+| MinIO Console               | [http://localhost:8083](http://localhost:8083) (user: minioadmin / minioadmin)   |
+| Link Retorno Imagens MinIO  | [http://host.docker.internal:9001](http://host.docker.internal:9001)             |
+| PostgreSQL                  | localhost:5432 (user: postgres / root)                                           |
 
 ---
+## 📘 Swagger UI
 
+O Swagger já está pronto com todas as APIs disponíveis em:
+
+📎 [http://localhost:8080](http://localhost:8080)
+
+Você poderá:
+- Testar os endpoints
+- Colar o JWT no botão **Authorize** e autenticar as rotas
+---
 ## 🔐 Autenticação
 
 ### Obtenção do Token
@@ -112,30 +127,17 @@ O link gerado tem validade de 5 minutos e usa o domínio `http://host.docker.int
 
 ---
 
-## 📘 Swagger UI
-
-O Swagger já está pronto com todas as APIs disponíveis em:
-
-📎 [http://localhost:8080](http://localhost:8080)
-
-Você poderá:
-- Testar os endpoints
-- Colar o JWT no botão **Authorize** e autenticar as rotas
-
----
-
 ## 🧪 Massa de Testes
 
-Inclui um arquivo Postman Collection com requisições para:
+Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias trabalhar com os endpoints:
 
+- Token autenticação `(autenticacaoToken.json)`
+- Criação de servidor efetivo `(ServidorEfetivoX.json)`
 - Criação de pessoa, cidade, endereço
 - Upload de imagem para MinIO
 - Consulta com JWT
 - Lotação e vínculo com unidade
 
-> O banco é populado automaticamente no primeiro start com `popularTabelas.sql`.
-- Todos os 142 municípios de Mato Grosso
-- Algumas Unidades fictícias
 
 ---
 
