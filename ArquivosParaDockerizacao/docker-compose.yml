@@ -1,0 +1,90 @@
+services:
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "8083:8083"   # Console Web (UI)
+      - "9001:9001"   # API compatível com S3
+    volumes:
+      - minio_data:/data
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server --address ":9001" --console-address ":8083" /data
+
+  minio-init:
+    image: minio/mc
+    container_name: minio_init
+    depends_on:
+      - postgres
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+        sleep 5;
+        mc alias set local http://host.docker.internal:9001 minioadmin minioadmin;
+        mc mb local/seletivo;
+        mc anonymous set public local/seletivo;
+        mc admin accesskey create local/ --access-key teste1 --secret-key 12345678
+        echo 'Bucket e accesskey criados com sucesso.';
+      "
+  postgres:
+    image: postgres:17
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: seletivoSEPLAG
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  tomcat:
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: tomcat:10.1-jdk21
+    container_name: tomcat_geneXus
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ROOT.war:/usr/local/tomcat/webapps/ROOT.war
+    depends_on:
+      - postgres
+      - minio
+
+  import-dados:
+    image: postgres:17
+    container_name: importador_dados
+    depends_on:
+      - postgres
+    volumes:
+      - ./popularTabelas.sql:/app/popularTabelas.sql
+    entrypoint: >
+      /bin/bash -c "
+        echo 'Esperando PostgreSQL ficar pronto...';
+        until psql -h postgres -U postgres -d seletivoSEPLAG -c 'SELECT 1;' > /dev/null 2>&1; do
+          sleep 2;
+        done;
+        echo 'Iniciando importação...';
+        psql -h postgres -U postgres -d seletivoSEPLAG -f /app/popularTabelas.sql;
+        echo 'Importação concluída.';
+      "
+    environment:
+      PGPASSWORD: root
+
+    restart: on-failure
+volumes:
+  minio_data:
+  postgres_data:
+
+
+
+
+
+
+
+
+

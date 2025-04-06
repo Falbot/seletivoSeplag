@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "39",
+      "end_bairro": "DESPRAIADO",
+      "end_logradouro": "CENTO E UM",
+      "end_numero": "1022",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "07/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "03/07/1987",
+      "pes_mae": "NOME MAE 10",
+      "pes_nome": "NOME SERVIDOR 10",
+      "pes_pai": "NOME PAI 10",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGPM3lDHQCXARC2DRs0aNWvUrFGzRs0aNWsYmQUAmfMByyUws0QAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGP8Op+NgUqAiVoGjZo1ataoWaNmjZo1atYwMgsAol8BzK8aemIAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "58"
+  },
+  "NumeroMatricula": "0010"
+}

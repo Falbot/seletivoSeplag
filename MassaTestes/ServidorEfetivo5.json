@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "68",
+      "end_bairro": "JARDIM AZUL",
+      "end_logradouro": "IPIRANGA",
+      "end_numero": "272",
+      "end_tipo_logradouro": "AVENIDA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "05/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "27/01/2000",
+      "pes_mae": "NOME MAE 5",
+      "pes_nome": "NOME SERVIDOR 5",
+      "pes_pai": "NOME PAI 5",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGNc2T+VgUqAiVoGjZo1ataoWaNmjZo1atYwMgsAG8AB/6tF/1YAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGOc/+EGA5UAE7UMGjVr1KxRs0bNGjVr1KxhZBYAkXMCmV5LeOYAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "20"
+  },
+  "NumeroMatricula": "0005"
+}

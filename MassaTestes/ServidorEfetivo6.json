@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "90",
+      "end_bairro": "ALVORADA",
+      "end_logradouro": "VINTE E NOVE",
+      "end_numero": "3",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "055/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "18/04/1979",
+      "pes_mae": "NOME MAE 6",
+      "pes_nome": "NOME SERVIDOR 6",
+      "pes_pai": "NOME PAI 6",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGPc/0mHgUqAiVoGjZo1ataoWaNmjZo1atYwMgsAkt8CDzGZnYgAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGPcue0YA5UAE7UMGjVr1KxRs0bNGjVr1KxhZBYAHtwCZ0/94FIAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "15"
+  },
+  "NumeroMatricula": "0006"
+}

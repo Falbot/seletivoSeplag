@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "25",
+      "end_bairro": "PROJETADA",
+      "end_logradouro": "SETENTA E UM",
+      "end_numero": "4",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "02/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "20/12/1980",
+      "pes_mae": "NOME MAE 7",
+      "pes_nome": "NOME SERVIDOR 7",
+      "pes_pai": "NOME PAI 7",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGO8/GceA5UAE7UMGjVr1KxRs0bNGjVr1KxhZBYAvl0Cn8TlA/UAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGM8tkOJgUqAiVoGjZo1ataoWaNmjZo1atYwMgsAzpAB0rQdUEoAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "3"
+  },
+  "NumeroMatricula": "0007"
+}

@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "39",
+      "end_bairro": "CPA 3",
+      "end_logradouro": "QUARENTA E UM",
+      "end_numero": "12",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "01/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "03/03/1983",
+      "pes_mae": "NOME MAE 1",
+      "pes_nome": "NOME SERVIDOR 1",
+      "pes_pai": "NOME PAI 1",
+      "pes_sexo": "MASCULINO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGOUzMlkoBJgopZBo2aNmjVq1qhZo2aNmjWMzAIApZ0BII2F3cEAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGNcqhTPQCXARC2DRs0aNWvUrFGzRs0aNWsYmQUARYEBWBq4ZzgAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "23"
+  },
+  "NumeroMatricula": "0001"
+}

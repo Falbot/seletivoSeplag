@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "39",
+      "end_bairro": "ALVORADA",
+      "end_logradouro": "VINTE E UM",
+      "end_numero": "102",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "02/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "03/05/1985",
+      "pes_mae": "NOME MAE 2",
+      "pes_nome": "NOME SERVIDOR 2",
+      "pes_pai": "NOME PAI 2",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGPce4efgUqAiVoGjZo1ataoWaNmjZo1atYwMgsACfkB2i9BYGoAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGOMfXiTgUqAiVoGjZo1ataoWaNmjZo1atYwMgsAP/ICSTaDUPcAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "3"
+  },
+  "NumeroMatricula": "0002"
+}

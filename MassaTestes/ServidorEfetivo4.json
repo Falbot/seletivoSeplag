@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "10",
+      "end_bairro": "JARDIM DOS PÁSSAROS",
+      "end_logradouro": "DAS ANDORINHAS",
+      "end_numero": "102",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "01/01/2022",
+      "lot_portaria": "02/SEPLAG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "03/09/1989",
+      "pes_mae": "NOME MAE 4",
+      "pes_nome": "NOME SERVIDOR 4",
+      "pes_pai": "NOME PAI 4",
+      "pes_sexo": "MASCULINO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGO00pVioBJgopZBo2aNmjVq1qhZo2aNmjWMzAIAfb4As5Fpq+4AAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAI0lEQVR4nGOUeMzFQCXARC2DRs0aNWvUrFGzRs0aNWsYmQUAUJABNyq+12UAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "9"
+  },
+  "NumeroMatricula": "0004"
+}
