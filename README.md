@@ -71,7 +71,7 @@ docker compose up -d --build
 | Serviço                     | URL                                                                  |
 |-----------------------------|----------------------------------------------------------------------|
 | Link do projeto (Swagger)   | [http://localhost:8080](http://localhost:8080)                       |
-| MinIO Console               | [http://localhost:8083](http://localhost:8083)                       |
+| MinIO Console               | [http://localhost:8083](http://localhost:8083) (user: minioadmin / minioadmin)                       |
 | Link Retorno Imagens MinIO  | [http://host.docker.internal:9001](http://host.docker.internal:9001) |
 | PostgreSQL                  | localhost:5432 (user: postgres / root)                               |
 
