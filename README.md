@@ -189,64 +189,62 @@ Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 🏠 crud_endereco
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/endereco	Lista todos os endereços
-GET	/endereco/{id}	Consulta um endereço por ID
-POST	/endereco	Cria um novo endereço
-PUT	/endereco/{id}	Atualiza um endereço existente
-DELETE	/endereco/{id}	Remove um endereço
+| POST   | [`endereco/Create`](http://localhost:8080/endereco/Create) | Criar um novo endereco |
+| GET    | [`endereco/Read_GetByKey`](http://localhost:8080/endereco/Read_GetByKey) | Dados de um endereco consultado pela chave |
+| GET    | [`endereco/Read_GetList`](http://localhost:8080/endereco/Read_GetList) | Lista paginada de enderecos |
+| PUT    | [`endereco/Update`](http://localhost:8080/endereco/Update) | Atualiza dados de um endereco |
+| DELETE | [`endereco/Delete`](http://localhost:8080/endereco/Delete) | Apaga um endereco |
 ##
 
 🖼️ crud_foto_pessoa
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/foto_pessoa	Lista todas as fotos de pessoas
-GET	/foto_pessoa/{id}	Consulta uma foto por ID
-POST	/foto_pessoa	Adiciona uma nova foto para uma pessoa
-PUT	/foto_pessoa/{id}	Atualiza uma foto existente
-DELETE	/foto_pessoa/{id}	Remove uma foto
+| POST   | [`foto_pessoa/Create`](http://localhost:8080/foto_pessoa/Create) | Criar uma nova foto de pessoa |
+| GET    | [`foto_pessoa/Read_GetByKey`](http://localhost:8080/foto_pessoa/Read_GetByKey) | Dados de foto de pessoa consultado pela chave (pes_id) |
+| GET    | [`foto_pessoa/Read_GetList`](http://localhost:8080/foto_pessoa/Read_GetList) | Lista paginada de foto de pessoas |
+| PUT    | [`foto_pessoa/Update`](http://localhost:8080/foto_pessoa/Update) | Atualiza foto de pessoa |
+| DELETE | [`foto_pessoa/Delete`](http://localhost:8080/foto_pessoa/Delete) | Apaga foto de pessoa |
 ##
 
 👥 crud_lotacao
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/lotacao	Lista todas as lotações
-GET	/lotacao/{id}	Consulta uma lotação por ID
-POST	/lotacao	Cria uma nova lotação
-PUT	/lotacao/{id}	Atualiza uma lotação existente
-DELETE	/lotacao/{id}	Remove uma lotação
+| POST   | [`lotacao/Create`](http://localhost:8080/lotacao/Create) | Criar uma nova lotação |
+| GET    | [`lotacao/Read_GetByKey`](http://localhost:8080/lotacao/Read_GetByKey) | Dados de uma lotação consultado pela chave |
+| GET    | [`lotacao/Read_GetList`](http://localhost:8080/lotacao/Read_GetList) | Lista paginada de lotações |
+| PUT    | [`lotacao/Update`](http://localhost:8080/lotacao/Update) | Atualiza dados de uma lotação |
+| DELETE | [`lotacao/Delete`](http://localhost:8080/lotacao/Delete) | Apaga uma lotação |
 ##
 
 👤 crud_pessoa
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/pessoa	Lista todas as pessoas
-GET	/pessoa/{id}	Consulta uma pessoa por ID
-POST	/pessoa	Cria uma nova pessoa
-PUT	/pessoa/{id}	Atualiza uma pessoa existente
-DELETE	/pessoa/{id}	Remove uma pessoa
+| POST   | [`pessoa/Create`](http://localhost:8080/pessoa/Create) | Criar uma nova pessoa |
+| GET    | [`pessoa/Read_GetByKey`](http://localhost:8080/pessoa/Read_GetByKey) | Dados de uma pessoa consultado pela chave |
+| GET    | [`pessoa/Read_GetList`](http://localhost:8080/pessoa/Read_GetList) | Lista paginada de pessoas |
+| PUT    | [`pessoa/Update`](http://localhost:8080/pessoa/Update) | Atualiza dados de uma pessoa |
+| DELETE | [`pessoa/Delete`](http://localhost:8080/pessoa/Delete) | Apaga uma pessoa |
+| DELETE | [`pessoa/Delete_Endereco`](http://localhost:8080/pessoa/Delete_Endereco) | Apaga endereço de uma pessoa |
 ##
 
 🧑‍💼 crud_servidor
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/servidor	Lista todos os servidores
-GET	/servidor/{id}	Consulta um servidor por ID
-POST	/servidor	Cria um novo servidor
-PUT	/servidor/{id}	Atualiza um servidor existente
-DELETE	/servidor/{id}	Remove um servidor
+| POST   | [`servidor/Create_ServidorEfetivo`](http://localhost:8080/servidor/Create_ServidorEfetivo) | Criar um novo servidor efetivo |
+| POST   | [`servidor/Create_ServidorTemporario`](http://localhost:8080/servidor/Create_ServidorTemporario) | Criar um novo servidor temporário |
+| GET    | [`servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) | Lista paginada de servidores efetivos consultado pela chave de unidade (uni_id) |
+| GET    | [`servidor/Read_GetByName_EnderecoFuncional`](http://localhost:8080/servidor/Read_GetByName_EnderecoFuncional) | Lista paginada de endereço de lotação de servidores efetivos consultado por nome de pessoa |
+| GET    | [`servidor/Read_GetList_Servidor`](http://localhost:8080/servidor/Read_GetList_Servidor) | Lista pagina de servidores |
+| GET    | [`servidor/Read_GetByKey`](http://localhost:8080/servidor/Read_GetByKey) | Dados de um servidor consultado pela chave (pes_id)|
+| PUT    | [`servidor/Update_DemissaoServidorTemporario`](http://localhost:8080/servidor/Update_DemissaoServidorTemporario) | Atualiza data de demissão de um servidor temporário |
 ##
 
 🏢 crud_unidade
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-GET	/unidade	Lista todas as unidades
-GET	/unidade/{id}	Consulta uma unidade por ID
-POST	/unidade	Cria uma nova unidade
-PUT	/unidade/{id}	Atualiza uma unidade existente
-DELETE	/unidade/{id}	Remove uma unidade
+| POST   | [`unidade/Create`](http://localhost:8080/unidade/Create) | Criar uma nova unidade |
+| GET    | [`unidade/Read_GetByKey`](http://localhost:8080/unidade/Read_GetByKey) | Dados de uma unidade consultado pela chave |
+| GET    | [`unidade/Read_GetList`](http://localhost:8080/unidade/Read_GetList) | Lista paginada de unidades |
+| PUT    | [`unidade/Update`](http://localhost:8080/unidade/Update) | Atualiza dados de uma unidade |
+| DELETE | [`unidade/Delete`](http://localhost:8080/unidade/Delete) | Apaga uma unidade |
+| DELETE | [`unidade/Delete_Endereco`](http://localhost:8080/unidade/Delete_Endereco) | Apaga endereço de uma unidade |
