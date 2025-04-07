@@ -169,16 +169,21 @@ Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 
 ## 📚 API Objects e Endpoints
 
+🔐 autenticacao
+| Método | Rota                                                   | Descrição            |
+|--------|--------------------------------------------------------|----------------------|
+| POST   | [`autenticacao/Token`](http://localhost:8080/autenticacao/Token) | Gerar um novo token |
+| POST   | [`autenticacao/RefreshToken`](http://localhost:8080/autenticacao/RefreshToken) | Receber um novo token atualizado |
+##
+
 🏙️ crud_cidade
 | Método | Rota                                                   | Descrição            |
 |--------|--------------------------------------------------------|----------------------|
-| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Cria uma nova cidade |
-http://localhost:8080/cidade/Create
-GET	/cidade	Lista todas as cidades
-GET	/cidade/{id}	Consulta uma cidade por ID
-POST	/cidade	Cria uma nova cidade
-PUT	/cidade/{id}	Atualiza uma cidade existente
-DELETE	/cidade/{id}	Remove uma cidade
+| POST   | [`cidade/Create`](http://localhost:8080/cidade/Create) | Criar uma nova cidade |
+| GET    | [`cidade/Read_GetByKey`](http://localhost:8080/cidade/Read_GetByKey) | Dados de uma cidade consultado pela chave |
+| GET    | [`cidade/Read_GetList`](http://localhost:8080/cidade/Read_GetList) | Lista paginada de cidades |
+| PUT    | [`cidade/Update`](http://localhost:8080/cidade/Update) | Atualiza dados de uma cidade |
+| DELETE | [`cidade/Delete`](http://localhost:8080/cidade/Delete) | Apaga uma cidade |
 ##
 
 🏠 crud_endereco
