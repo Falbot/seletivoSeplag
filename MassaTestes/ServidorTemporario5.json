@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "12",
+      "end_bairro": "BOLIVIA",
+      "end_logradouro": "CINCO",
+      "end_numero": "5",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/05/2024",
+      "lot_portaria": "05/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/05/1980",
+      "pes_mae": "MAE TEMPORARIO 5",
+      "pes_nome": "SERVIDOR TEMPORARIO 5",
+      "pes_pai": "PAI TEMPORARIO 5",
+      "pes_sexo": "MASCULINO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABYElEQVR4nO2bQY7DQAgEmVX+/2XvwZIvcVbx0NDAdj3AM0VhK5es4zjsP/HDvkA2Ep6OhKcj4elIeDoSno6EpyPhLNZalHM5wixb4640RZsgTMxr9I9Wvny2MDev0Qvnkyp8mze5uQqHQX97T0oUzpxFknCRvFaksCVOJEO4Tl5LEC5la3VW2rJGEytcLa+VKpxDoPBG3oSNUGEQ262iI6swgoIf54uKhUPnhReunNfgwijbuKlVXOlQkMLFl/mkbuGg8cGEW+S1yoWDwAgH5Y14rAo/J/TthT9chR/S5eN80aAwdqYu4XZ5zSOcaQs8q8FKY9kU7rjMJ20Ko0a8I9w3rzUqjOKxMDEv5GgV/hP62+u/gAp/hp4XwnL+f5gyBc+dX/Cziy+CV/id2/HXmYJ3pV1nO6awfW184e+h7AKz8Jd8GsHezRsI33JOYePyXYW30S+t6Uh4OhKejoSn8wtCMygWiCAgKAAAAABJRU5ErkJggg=="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABaklEQVR4nO2cSW7EMAwEW0H+/2Xn4FvgcbSQzSbDeoCtYnEEzMXjui78J76iD8CmhavTwtVp4eq0cHVamMUYI+S9kYVDnGOEo/Ii/DfMNw8QDsyL8MKg+8cLk2ELP/ZkRu7CnryUpEXuwnFwIvOEZ3wIzkKFOZCE59N5R+7CArhGZgjH/lv4hWJheM7IXVgqL2QLw21SusLwcfYVVttniBeGw8gchQXzQr8wrAeXQNgWL2HbLIZP68KqWEV2Eda8n2/SFIbRHO2FXfOePzxTYRPyCR9GNhZWvq5u8hXG2VgthfXzImlhHAw3q/A2ZsL8fd57Y+7CG842wimuq5vchbE+6/TCqxgIh+/z0gG68CLheW/mj9GF0zIZ+UhYZJ+XqFMYcwH2hTXz/nmqUoVnKCj8HnlTWHOfZyhYGK89doTz5kXVwvhc5XvjWR4fhqBtzSj8WYsxHuzKrjQ+bGJl4UdauDotXJ0Wrs4P8tMQQEo+wLMAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "12"
+  },
+  "DataAdmissao": "10/05/2024"
+}

@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "16",
+      "end_bairro": "SUIÇA",
+      "end_logradouro": "TRINTA E CINCO",
+      "end_numero": "35",
+      "end_tipo_logradouro": "AVENIDA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/07/2024",
+      "lot_portaria": "07/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/07/1980",
+      "pes_mae": "MAE TEMPORARIO 7",
+      "pes_nome": "SERVIDOR TEMPORARIO 7",
+      "pes_pai": "PAI TEMPORARIO 7",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABNUlEQVR4nO2cQQ6DQAwDs/3/n+mBSyXUim6c7Np4PgATzw2JcRxHPInX6hfoxsLqWLiLMcaS53rhFs55l4zshdVZIPxZcn/VXlidbuFrw81Ve2F1WoW/1dtZtRdWp0/4d7dtVXthdZqE7xTbU7UXVqdD+H6rDVV7YXXKhf+ttLpqL6xOrfBcn6VVe2F1CoUzZdZV7YXVqRLON1lUtRdGsOrr/h22XrjicFsLV4AX3rnn2H9h+Pl2F4YDFt6856BYGHtEAmEsSOH9ew6WhYGn5BAGAhOm6DmIFkYdlEYYBUaYpefgWhhyViZhCABhop6DbuH8ccmE82SFuXoOxoWTJ+YTTpISpus5SBfOHJpSOMO8MGPPwbvw9LkH6T8ATuGJl2cVnoY16WksrI6F1bGwOhZW53HCb8pqDRahfkCJAAAAAElFTkSuQmCC"
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABSUlEQVR4nO2cMQ7DMAwD6f7/z+kQIOjWxJZoSuE9oPHpBHvrOI4Db+Kz+wBsLNwdC3fHwt2xcHcs3B0Ld8fCLMYYW77rwhTOvFsiu3A+v2H5kV2YDjkyW3jXa3SxvzC4U6AKb88LkcIgzkJFmAZPWGGfIVWYMxGSsEheSBUGZS4MYZ28UCuM/OnICWeTLjxRLDWyC4cy3SovsgvLkBQ5UVjq+b3QLZxElnBI3owdcWExwiOnCGteVyfqhRE9vnhh5bwoURihQ6whHEiwcN4+R/2yCy8gfl2dVCocMtBKwiGECXP2ef0rLjwF87pa/JYLV2AlcoBwief3omRhLEx5VbhWXtQtjNlZLwmXy4vSheeoLTyxYvPCFfcZ1Qvj+dwnhYvmRYPCeDj9DsKPmBEW3Of7R3LhfwjmPbl5sNcVHv5rmuZYuDuvE/4CDuUHNUyXZ4IAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "16"
+  },
+  "DataAdmissao": "10/07/2024"
+}

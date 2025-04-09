@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "20",
+      "end_bairro": "ALAGOAS",
+      "end_logradouro": "ZURIQUE",
+      "end_numero": "61",
+      "end_tipo_logradouro": "AVENIDA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/10/2024",
+      "lot_portaria": "10/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/10/1980",
+      "pes_mae": "MAE TEMPORARIO 10",
+      "pes_nome": "SERVIDOR TEMPORARIO 10",
+      "pes_pai": "PAI TEMPORARIO 10",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABc0lEQVR4nO3bWQ7CMAxFUYf977l8WEIRKmkGjw/fBdCcOu4f7bou+qde3gewrsDoFRi9AqNXYPQKjF6B0XMDt9ZcnusDZq2Lua60fv1g7YdsDfZa3U+m4Fut8SsIscOWZjuw+2XmjMCPWrPXYQGexNiYQ+ywZergpbkZDFkXHORD1RfuSmu/I0Xw9tFVzVrggJeZUwGfa/XeV7gd1k4eLDUcpSELg2VPqWGWBIf9UPVF32HxlygGTjFekgKramV/PPqV5gTNAuAsl5k7BZtppR50BDaercjjcuywYPtgl9U9f+gmONeHqm8H7Ks9fHrKHT4xL4PzXmZuDRxHu32SBXAc7Ukpd5jbG8AsOOZ4N041BY6p3SvxleZWh/EMRhovPYJTaJcOOQKn0HLzR02/w6v9BCcaLzd54HtwOi03c+wbcFLtZGg7/DitbzD2eImo4f2dtrURCu1KE9F4hIDgcQVGr8DoFRi9AqNXYPQKjF6B0XsDg90NWeYw0cMAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABYUlEQVR4nO2bUa7CMAwEHcT9r1w+IlWoSICS9Xrteg7wyGS2hZ83juOwO/GIPgCbFq5OC7MYY4R8bhemMPOGRO7C1QkQjnpdTYIL8+V70s7E7tkUCpOvIF6YDFU4fM/WhWNglucJK+zZRAozIQn/zEvr34WrwxAWeV1NhApz7kVImIO7sNSeTa0w4Xa0hAn4Cqvt2bpwPN6jcBQW3LMJFvZGUdh1Gl7Cmns2zcKutDCC/T37PRFduDp4YdQanVbdhasDFpb9vXEiXdjj+qSFPUAK6+/Z9AvDL1FdGA5MOMWerQsv4poX+8e7cHUAwoTXFfAjunB1doWzfP2epCmMutk0wii2hNPt2XIVhtxvJmEI68IZ92w3LDxQ/xJPC7554KfHOZTXDhN+5xJByh826X8/DyG/c2aXwl8Ij88WvsB/8oOF3+HEZz/Da3zKLx87h/CF6b928pTCO9zup2ULV+cFBYwuCAphYyEAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "20"
+  },
+  "DataAdmissao": "10/10/2024"
+}

@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "18",
+      "end_bairro": "MATO GROSSO",
+      "end_logradouro": "TRINTA E OITO",
+      "end_numero": "38",
+      "end_tipo_logradouro": "AVENIDA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/08/2024",
+      "lot_portaria": "08/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/08/1980",
+      "pes_mae": "MAE TEMPORARIO 8",
+      "pes_nome": "SERVIDOR TEMPORARIO 8",
+      "pes_pai": "PAI TEMPORARIO 8",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABeElEQVR4nO2buxLDMAgEUSb//8tOoRkXsZPowcFB2NKNWO5kV27Hccg/8fAewJoSzk4JZ6eEs1PC2XETbq25nOsj7GUrvpV20XYQdoxX7IXfbO3l6y2N5DZP45DthH2v7klVGsP3eC3DtxAmKXOHpdJmS4ELU8UraOEpW5vVAIXZsu2w3OGOwY5QwpzxCkiY1lbYKi34ZekLM8cr6sIqttCV0VUajaawYjK4kNWEya/uSVV6CUS8oMooCEcpc4e60ohV7grHilc2hQ1s1Y+grjSCdWGzMusetCgc7uqeVKUHsI9X8cRp4bhl7oSptNai54SjxytTwu62KgOMCrvbahHmDmsxJMwT7/4kv4V5bFWIV+nNAH4IJ4tXvgvT2u4MFq/Sm3wUpo23szzevTC57Q5V6Tjxrs35vD4a+f0yylKuNNDfpWYbmZ3/JmGzOVxqgkpYhcGNTClQC4/QlzJuEV54lvoOZ6eEs1PC2Snh7JRwdko4O38n/AL8Jh88qska4QAAAABJRU5ErkJggg=="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABSUlEQVR4nO2cuw4CMQwEHcT///JRRKKiyMNer81OD7nxmOgqxvM89k+8sh8AjYS7I+HuSLg7Eu6OhLsjYRRjjJRzVRjCzJsSWYWx4CMnCGddV5P8lQb75wuDQQv/7ImMrMJJwCJDhXPv5wlLYRhEwpj+OGGGfTaqwgYZCpcwAJDwerroyCpMQGhkhDDJ/TxhLGyRMyIVjiNc+LhVUGQV7k6s8OVaRmy1CpPhHjlQmOp94wt7YfMeXAFhX6KEfbM4fpsKs+IVOUSY836elCnsRSVhl8XxF2beZ6tV2DymWUz4HmdhwD5fHqHCFbiJ7ClMfj9PSha2i+FWFT7GTRi/z2cnqnB3fISz7ueDc1W4GruRHYRLvG98KV/YNifeQXiLW2GSfV5/DBUuy2LkK2GSfd7iffzJaVvuf09GuSe+pM9veBEJd0fC3fkAWKgKK30RN8cAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "18"
+  },
+  "DataAdmissao": "10/08/2024"
+}

@@ -3,6 +3,7 @@ services:
   minio:
     image: minio/minio
     container_name: minio
+    restart: always
     ports:
       - "8083:8083"   # Console Web (UI)
       - "9001:9001"   # API compatível com S3
@@ -42,11 +43,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   tomcat:
-    #build:
-    #  context: .
-    #  dockerfile: Dockerfile
     image: tomcat:10.1-jdk21
     container_name: tomcat_geneXus
+    restart: always
     ports:
       - "8080:8080"
     volumes:

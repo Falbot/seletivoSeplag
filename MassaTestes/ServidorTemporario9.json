@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "19",
+      "end_bairro": "ALAGOAS",
+      "end_logradouro": "TRINTA E NOVE",
+      "end_numero": "39",
+      "end_tipo_logradouro": "AVENIDA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/09/2024",
+      "lot_portaria": "09/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/09/1980",
+      "pes_mae": "MAE TEMPORARIO 9",
+      "pes_nome": "SERVIDOR TEMPORARIO 9",
+      "pes_pai": "PAI TEMPORARIO 9",
+      "pes_sexo": "FEMININO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABTklEQVR4nO2bOxLDIAwFRSb3v7JT0LjIJIA+T5LfHgBYLWbSZFzXJU/ihT5ANBTuDoW7Q+HuULg7FO4OhbsDEx5jQPZFFoY4Y4RReQX+DcebA4SBeQVeWML98cLBRAt/7RkZmYVBhEUOFf5tFeOcpXAYccIrAQMiszAa78hBwtifk3fSFRbn6WQUdiVC+KCYX+S8hZ2c3YXzPFeTvIXFZ1iphT3wFdYnMo/MwvmwjewonO19nhQoLKaz8xI2z2u1YI3ChlQSNonsIpzzuZpUKiwWoywmrMde2Ps+K9cvWVjjbCyc+bmalCwsislWFT7GUjj4Pp9tx8KlOIhsJpz/fZ7ULiz7g7YRxubd2r184V2aCK9HNhCu8lxNmhSW5bn3EV5EK5zqPq8choV3SJV38vdIb+XS5f5RP8qdWAm/4e5QuDsU7g6Fu0Ph7jxO+ANVVAox6KlQzAAAAABJRU5ErkJggg=="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABbUlEQVR4nO2cSxLDIAzFHr3/ndMFU1aZBPy3ax2gIMth2XFdF/6Jj/cFrGnh6rRwdVq4Om7CYwyXc32EvWzhu9Iu2g7Cjnnh/mjZy1sL++aFe2F7TIVv8xo378JqPJS0jNyFdXB/nBdRCptNxEI4Tl4YCO/b2swlykqboSscapknsQobDEhROGBeRCsM/TFpCcfMi4CFtVERZuZV3Y4uzEakj17kLswj7OO8kBSWtVWaXa80FY0gGr/ZhUnEf6sW0QuLj1JAOFFexC8M6YFyhXPlRYrCsrCEzfIKHkQXTrfMkzQrLTVfonDSvEhUWAqKsFdekXO78Bu+Xy//9C78SN7HeZGvMHPoB8IF8iJjYfBGvytcIy82hcvYIulKg9HgXbhSXuQtDGqJF+FieZG6MI0n4fh5CTfswj/i552c3rMLA8iTl0CFwkd5boQL5wUwLP/HQ3WUmyKmwnrMUe64FBHep8KjdUQLV6eFq/MFDIETRet9EtsAAAAASUVORK5CYII="
+      }
+    ],
+    "unid_id": "19"
+  },
+  "DataAdmissao": "10/09/2024"
+}

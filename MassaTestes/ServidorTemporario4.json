@@ -1,0 +1,32 @@
+{
+  "DadosServidor": {
+    "DadosEndereco": {
+      "cid_id": "10",
+      "end_bairro": "CPA 2",
+      "end_logradouro": "DEZ",
+      "end_numero": "10",
+      "end_tipo_logradouro": "RUA"
+    },
+    "DadosLotacao": {
+      "lot_data_lotacao": "10/04/2024",
+      "lot_portaria": "04/2024/SEPALG"
+    },
+    "DadosPessoa": {
+      "pes_data_nascimento": "10/04/1980",
+      "pes_mae": "MAE TEMPORARIO 4",
+      "pes_nome": "SERVIDOR TEMPORARIO 4",
+      "pes_pai": "PAI TEMPORARIO 4",
+      "pes_sexo": "MASCULINO"
+    },
+    "foto": [
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABVUlEQVR4nO2cQW4DMQwD5SD///Lm4EuQIIDXpmTS4XygOxzV6Kntuq74Jx67P6AaC5+OhU/Hwqdj4dOxcBWttS0/14VL6Hm3RHbhfN7D1kd24dOpFv6+4eKrduFMfsWsjOzCaez6W/IDlsJlc7AIl1EkPBKwJrILJ0DyXHW4ChdMwyVcQLrw3WjZkV0YCtVz1WEsnDoTo3AqicIrofIiuzAIwueqw1s4aTJe4SRShFFxMiK78DK0z1WHvTB8PrAwed7gLxzoEQWEsSCF+e85VAoDp4QJS+QNlcKBG1RGGAVGWOWeQ6swZFaAsFDe0CociHHFhNdZFda651AsvDjxkrBc3lAsHGtDzwsr5g3RwiuoCk/f16Sw6D2HbuGYHX1GWDdvSBeeoyX9D4CyK7j7/c+N37HlVyOrMITBRW4pUAuP0EcZt5AXvsvfvdIWPh0Ln46FT+cF6gocGQ2bomAAAAAASUVORK5CYII="
+      },
+      {
+        "arquivoBase64": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABd0lEQVR4nO2cy4rDQAwEe8L+/y87B0MIC8vOQ2q1ZNU5ZFwqYScXj+u68CRe0RfApoWr08Isxhgh53ZhCnfekMhd2J/vsPzIXZgOOTJbOOpp9CG+MBmq8F95mdm7cBC0yDzh8NvVjUphsCZCEhbJC6nCHLSECYvAENbZZ6gVhv903IWl8kKwMJxn5CuslheahV0RFfZbDUdhwX2GbGG4zctLWDMvlAvDZ2rSwh64CMvuM/QLm8/OXlg5L/QLw3qCCYRtMRZ22mfDr+3CB7jerqy+vAtXx0yY8Pg1OaILb0H7dXV+UBeW5zCygbD4v4Vf5Ct8yKlwSN6TQ7twErYjHwnnul3dZC2M3XHvC2fMi9SF99gUFsm7cRldOBurkXeERfZ5j/SFsRhgWTh1XtQovEQR4fm9WxPOvs8oUxjTMRaEC+RFpcKYS1JKeIafyc/F7rPhuzdmhT0IeYXIlPBSXvE3ofwvfNuKa8wzyphM8ri7dAtX53HCb6IOE0OspmlkAAAAAElFTkSuQmCC"
+      }
+    ],
+    "unid_id": "10"
+  },
+  "DataAdmissao": "10/04/2024"
+}
