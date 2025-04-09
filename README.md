@@ -60,7 +60,7 @@ Analista de TI – Perfil Junior, Pleno e Sênior
 1. Clone este repositório:
 ```bash
 git clone https://github.com/Falbot/seletivoSeplag.git
-cd seletivoSeplag
+cd seletivoSeplag\ArquivosParaDockerizacao
 ```
 
 2. Suba os containers:
