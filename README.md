@@ -6,11 +6,12 @@ Este projeto foi desenvolvido para o teste prático do processo seletivo da SEPL
 ---
 
 ## 📌 Dados de Inscrição
-
+Processo Seletivo Simplificado 02/2025/SEPLAG
+Analista de TI – Perfil Junior, Pleno e Sênior
 - **Nome:** Andrei Falbot Mendes  
 - **Email:** falbot@gmail.com  
-- **Inscrição:** XXXXXX  
-
+- **Inscrição:** 9612  
+- **Função/Perfil:** DESENVOLVEDOR GENEXUS SENIOR
 ---
 
 ## 🚀 Tecnologias Utilizadas
@@ -129,10 +130,11 @@ O link gerado tem validade de 5 minutos e usa o domínio `http://host.docker.int
 
 ## 🧪 Massa de Testes
 
-Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias trabalhar com os endpoints:
+Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias para trabalhar com os endpoints:
 
 - Token autenticação `(autenticacaoToken.json)`
 - Criação de servidor efetivo `(ServidorEfetivoX.json)`
+- Criação de servidor temporário `(ServidorTemporarioX.json)`
 - Criação de pessoa, cidade, endereço
 - Upload de imagem para MinIO
 - Consulta com JWT
@@ -234,7 +236,7 @@ Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 | POST   | [`servidor/Create_ServidorTemporario`](http://localhost:8080/servidor/Create_ServidorTemporario) | Criar um novo servidor temporário |
 | GET    | [`servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) | Lista paginada de servidores efetivos consultado pela chave de unidade (uni_id) |
 | GET    | [`servidor/Read_GetByName_EnderecoFuncional`](http://localhost:8080/servidor/Read_GetByName_EnderecoFuncional) | Lista paginada de endereço de lotação de servidores efetivos consultado por nome de pessoa |
-| GET    | [`servidor/Read_GetList_Servidor`](http://localhost:8080/servidor/Read_GetList_Servidor) | Lista pagina de servidores |
+| GET    | [`servidor/Read_GetList_Servidor`](http://localhost:8080/servidor/Read_GetList_Servidor) | Lista paginada de servidores |
 | GET    | [`servidor/Read_GetByKey`](http://localhost:8080/servidor/Read_GetByKey) | Dados de um servidor consultado pela chave (pes_id)|
 | PUT    | [`servidor/Update_DemissaoServidorTemporario`](http://localhost:8080/servidor/Update_DemissaoServidorTemporario) | Atualiza data de demissão de um servidor temporário |
 ##
