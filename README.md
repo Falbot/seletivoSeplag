@@ -121,13 +121,6 @@ POST http://localhost:8080/autenticacao/Token
 
 ---
 
-## 📂 Upload e Download de Imagens (MinIO)
-
-O endpoint `/foto_pessoa/Create` permite o upload de imagens.  
-O link gerado tem validade de 5 minutos e usa o domínio `http://host.docker.internal:9001`.
-
----
-
 ## 🧪 Massa de Testes
 
 Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias para trabalhar com os endpoints:
@@ -140,6 +133,18 @@ Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias par
 - Consulta com JWT
 - Lotação e vínculo com unidade
 
+---
+
+### ✅ Requisitos Específicos Atendidos
+
+| Requisito | Descrição | Endpoint |
+|----------|------------|----------|
+| 1 | CRUD para **Servidor Efetivo**, **Servidor Temporário**, **Unidade** e **Lotação** | `POST/GET/PUT/DELETE` em:<br> [`/servidor/Create_ServidorEfetivo`](http://localhost:8080/servidor/Create_ServidorEfetivo)<br>[`/servidor/Create_ServidorTemporario`](http://localhost:8080/servidor/Create_ServidorTemporario)<br>[`/unidade/Create`](http://localhost:8080/unidade/Create)<br>[`/lotacao/Create`](http://localhost:8080/lotacao/Create) |
+| 2 | Consultar **servidores efetivos por unidade** (`unid_id`) | [`/servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) |
+| 3 | Retornar **Nome, Idade, Unidade de Lotação e Fotografia** do servidor | Incluído na resposta de:<br>[`/servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) |
+| 4 | Consultar **endereço funcional** a partir de parte do nome do servidor efetivo | [`/servidor/Read_GetByName_EnderecoFuncional`](http://localhost:8080/servidor/Read_GetByName_EnderecoFuncional) |
+| 5 | **Upload de imagens** para o MinIO | [`/foto_pessoa/Create`](http://localhost:8080/foto_pessoa/Create) |
+| 6 | **Recuperação de imagem** via link temporário com expiração de 5 min | Implementado com SDK do MinIO – link gerado na resposta do upload. |
 
 ---
 
@@ -161,13 +166,6 @@ Esta verificação foi implementada conforme exigido no edital.
 ✅ Pronto para validação
 
 ---
-
-## 📞 Contato
-
-Caso tenha dúvidas ou precise de mais informações, estou à disposição.
-
-**Candidato - XXXXXX**  
-📩 falbot@gmail.com
 
 ## 📚 API Objects e Endpoints
 
@@ -250,3 +248,12 @@ Caso tenha dúvidas ou precise de mais informações, estou à disposição.
 | PUT    | [`unidade/Update`](http://localhost:8080/unidade/Update) | Atualiza dados de uma unidade |
 | DELETE | [`unidade/Delete`](http://localhost:8080/unidade/Delete) | Apaga uma unidade |
 | DELETE | [`unidade/Delete_Endereco`](http://localhost:8080/unidade/Delete_Endereco) | Apaga endereço de uma unidade |
+
+---
+
+## 📞 Contato
+
+Caso tenha dúvidas ou precise de mais informações, estou à disposição.
+
+**Candidato - Andrei Falbot**  
+📩 falbot@gmail.com
