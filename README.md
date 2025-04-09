@@ -72,6 +72,8 @@ docker compose up -d --build
 > Todos os 142 municípios de Mato Grosso.
 > 
 > Algumas Unidades fictícias.
+> 
+> A entrada de dados do tipo data, será no padrão **dd/mm/aaaa**.
 
 3. Acesse os serviços:
 
@@ -123,15 +125,13 @@ POST http://localhost:8080/autenticacao/Token
 
 ## 🧪 Massa de Testes
 
-Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias para trabalhar com os endpoints:
+Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias para trabalhar com alguns endpoints:
 
 - Token autenticação `(autenticacaoToken.json)`
 - Criação de servidor efetivo `(ServidorEfetivoX.json)`
 - Criação de servidor temporário `(ServidorTemporarioX.json)`
-- Criação de pessoa, cidade, endereço
-- Upload de imagem para MinIO
-- Consulta com JWT
-- Lotação e vínculo com unidade
+- Upload de imagem para MinIO `(FotoPessoa1.json)`
+
 
 ---
 
