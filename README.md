@@ -141,10 +141,10 @@ Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias par
 |----------|------------|----------|
 | 1 | CRUD para **Servidor Efetivo**, **Servidor Temporário**, **Unidade** e **Lotação** | `POST/GET/PUT/DELETE` em:<br> [`/servidor/Create_ServidorEfetivo`](http://localhost:8080/servidor/Create_ServidorEfetivo)<br>[`/servidor/Create_ServidorTemporario`](http://localhost:8080/servidor/Create_ServidorTemporario)<br>[`/unidade/Create`](http://localhost:8080/unidade/Create)<br>[`/lotacao/Create`](http://localhost:8080/lotacao/Create) |
 | 2 | Consultar **servidores efetivos por unidade** (`unid_id`) | [`/servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) |
-| 3 | Retornar **Nome, Idade, Unidade de Lotação e Fotografia** do servidor | Incluído na resposta de:<br>[`/servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) |
-| 4 | Consultar **endereço funcional** a partir de parte do nome do servidor efetivo | [`/servidor/Read_GetByName_EnderecoFuncional`](http://localhost:8080/servidor/Read_GetByName_EnderecoFuncional) |
-| 5 | **Upload de imagens** para o MinIO | [`/foto_pessoa/Create`](http://localhost:8080/foto_pessoa/Create) |
-| 6 | **Recuperação de imagem** via link temporário com expiração de 5 min | Implementado com SDK do MinIO – link gerado na resposta do upload. |
+| 3 | Retornar **Nome, Idade, Unidade de Lotação e Fotografia** do servidor | Incluído na resposta de:<br>[`servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade) |
+| 4 | Consultar **endereço funcional** a partir de parte do nome do servidor efetivo | [`servidor/Read_GetByName_EnderecoFuncional`](http://localhost:8080/servidor/Read_GetByName_EnderecoFuncional) |
+| 5 | **Upload de imagens** para o MinIO | Espera-se imagem em base64 em lista<br>[`foto_pessoa/Create`](http://localhost:8080/foto_pessoa/Create)<br> [`foto_pessoa/Update`](http://localhost:8080/foto_pessoa/Update)<br> [`servidor/Create_ServidorEfetivo`](http://localhost:8080/servidor/Create_ServidorEfetivo)<br> [`servidor/Create_ServidorTemporario`](http://localhost:8080/servidor/Create_ServidorTemporario) |
+| 6 | **Recuperação de imagem** via link temporário com expiração de 5 min | [`foto_pessoa/Read_GetByKey`](http://localhost:8080/foto_pessoa/Read_GetByKey)<br> [`foto_pessoa/Read_GetList`](http://localhost:8080/foto_pessoa/Read_GetList)<br> [`servidor/Read_GetByKey_ServidorEfetivoPorUnidade`](http://localhost:8080/servidor/Read_GetByKey_ServidorEfetivoPorUnidade)<br> [`servidor/Read_GetList_Servidor`](http://localhost:8080/servidor/Read_GetList_Servidor)<br> [`servidor/Read_GetByKey`](http://localhost:8080/servidor/Read_GetByKey) |
 
 ---
 
@@ -152,18 +152,6 @@ Na pasta `MassaTestes`, existem arquivos `json` com informações fictícias par
 
 A aplicação não permite chamadas de domínios diferentes ao hospedado.  
 Esta verificação foi implementada conforme exigido no edital.
-
----
-
-## ✅ Status
-
-✅ APIs criadas  
-✅ JWT funcionando  
-✅ CORS ativo  
-✅ Integração com MinIO  
-✅ Docker funcional  
-✅ Swagger dinâmico  
-✅ Pronto para validação
 
 ---
 
